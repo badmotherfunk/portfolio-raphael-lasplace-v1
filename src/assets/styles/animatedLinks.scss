@@ -22,7 +22,7 @@
     &:before {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: 2px;
         left: 0;
         width: 100%;
         height: 1px;
@@ -34,9 +34,22 @@
     &:after {
        content: attr(data-text);
        position: absolute;
-       top: 0;
+       bottom: 2px;
        height: 100%; 
        transform: translate3d(150%, 0, 0);
+       font-family: $third-font;
+       font-size: 18px;
+
+        // Media queries
+        @include desktop {
+            font-size: 16px;
+        }
+        @include tablet {
+            font-size: 14px;
+        }
+        @include mobile {
+            font-size: 51px;
+        }
     }
     & span {
         transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
@@ -51,6 +64,7 @@
     }
     &:hover span {
         transform: translate3d(-150%, 0, 0);
+        padding: 0 4px;
     }
 }
 
@@ -293,20 +307,20 @@ span.media__text {
     }
     &:hover span {
         transform: translate3d(-200%, 0, 0);
-        width: 146px;
+        width: 162px;
         height: 36px;
 
         // Media queries
         @include desktop {
-            width: 125px;
+            width: 139px;
             height: 31px;
         }
         @include tablet {
-            width: 112px;
+            width: 126px;
             height: 29px;
         }
         @include mobile {
-            width: 104px;
+            width: 115px;
             height: 30px;
         }
     }
