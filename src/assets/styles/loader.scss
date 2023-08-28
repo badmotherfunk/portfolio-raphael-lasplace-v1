@@ -1,0 +1,174 @@
+@import './variables.scss';
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 99;
+    background: $black-color;
+    display: grid;
+    place-items: center;
+    font-family: $third-font;
+    font-style: italic;
+    font-weight: 300;
+
+    // display: none;
+
+    &__box {
+        position: relative;
+        width: 500px;
+        height: 200px;
+        @media (max-width: 780px) {
+            & {
+                width: 90vw;
+            } 
+        }
+    }
+    &__bar {
+        width: 40%;
+        height: 9px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $white-color;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    &__bar--inner {
+        height: 100%;
+        width: 0;
+        border-radius: 10px;
+        opacity: 0.7;
+        background-image: radial-gradient(circle at left, rgb(71, 71, 71),rgb(8, 8, 8));
+    }
+    &__text--container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    &__text--break {
+        overflow: hidden;
+    }
+    &__text {
+        position: relative;
+        color: $white-color;
+        padding: 1rem;
+        font-size: 25px;
+        animation: swipe 4s ease-in-out  infinite;
+        overflow: hidden;
+   
+        @keyframes swipe {
+            from {
+                margin-right: -600px;
+                opacity: 0;
+
+            }
+            to {
+                margin-right: 0;
+                opacity: 1;
+            }
+        }
+    }
+    &__text2 {
+        position: relative;
+        color: $white-color;
+        padding: 1rem;
+        font-size: 25px;
+        animation: swipe2 4s ease-in-out -1.5s infinite;
+        @keyframes swipe2 {
+            from {
+                margin-right: -600px;
+                opacity: 0;
+            }
+            to {
+                margin-right: 0;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__slash {
+        font-weight: bold;
+        animation: pulse 1s ease-in-out infinite;
+        @keyframes pulse {
+           from {
+            opacity: 0;
+           } 
+           to {
+            opacity: 1;
+           }
+        }
+    }
+    &__border {
+       width: 90%;
+       height: 1px; 
+       background: $white-color;
+       position: absolute;
+       left: 50%;
+       transform: translatex(-50%);
+    }
+    &__counter {
+        position: absolute;
+        margin-top: 75px;
+        color: $white-color;
+        font-family: $title-font2;
+        font-size: 18px;
+        font-weight: 300;
+        cursor: default;
+    }
+    &__counter.active {
+        animation: counterScale 0.5s linear forwards;
+        @keyframes counterScale {
+            from {
+                scale: 1;
+            }
+            to {
+                scale: (var(--vw-scale)); 
+                margin-top: 100px;
+            }
+        }  
+    }
+}
+
+.layout {
+    width: calc(100vw - 85%);
+    height: 100vh;
+    position: absolute;
+    right: calc(100vw - 148%);
+     opacity: 0.3;
+     background-image: linear-gradient(to right, $black-color, rgb(71, 71, 71), $black-color);
+}
+
+.background {
+    position: absolute;
+    width: 500px;
+    height: 150px;
+    border: 3px solid $white-color;
+    border-radius: 50%;
+    visibility: hidden;
+    cursor: default;
+
+    &__svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+// Media queries //
+
+@media screen and (max-width: 1024px) {
+    .loader__counter.active {
+        margin-bottom: 100px;
+    }
+}

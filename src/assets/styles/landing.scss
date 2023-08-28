@@ -1,0 +1,365 @@
+@import "./breakpoints.scss";
+
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: $white-color;
+    overflow: hidden;
+    .header {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 10;
+        &__name {
+            position: absolute;
+            left: 40px;
+            font-size: 19px;
+            padding-top: 18px;
+            // Media queries
+            @include mobile {
+                padding-top: 18px;
+            }
+        }
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            width: 100%;
+            padding-top: 20px;
+
+            @include mobile {
+                display: none;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                z-index: 99;
+                width: 100vw;
+                height: 100vh;
+                background: $black-color;
+                position: absolute;
+                padding: 0;
+                top: -1000px;
+                border-bottom: 1px solid $white-color;
+            }
+        }
+        &__wrapper.active {
+            display: flex;
+            margin-top: 0;
+            animation: dropDown 1s ease-in-out forwards;
+            z-index: 99;
+
+            @keyframes dropDown {
+                to {
+                    top: 0;
+                }
+            }
+        }
+        &__wrapper.remove {
+            animation: removeDropDown 1s ease-in-out forwards;
+
+            @keyframes removeDropDown {
+                from {
+                    top: 0;
+                }
+                to {
+                    top: -1000px;
+                }
+            }
+        }
+        &__closeDropDown {
+            position: absolute;
+            right: 20px;
+            top: 17px;
+            font-size: 19px;
+            font-weight: 300;
+            visibility: hidden;
+            @include mobile {
+                visibility: visible;
+            }
+        }
+        &__left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            & li {
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            // Media queries
+            @include tablet {
+                gap: 0.9rem;
+            }
+            @include mobile {
+                flex-direction: column;
+                padding: 0;
+            }
+        }
+        &__right {
+            position: absolute;
+            right: 50px;
+
+            // Media queries
+            @include mobile {
+                display: flex;
+                justify-content: center;
+                position: relative;
+                width: 100%;
+            }
+        }
+        &__border {
+            height: 1px;
+            background-color: $white-color;
+            width: 100vw;
+            position: absolute;
+            top: 60px;
+            z-index: -1;
+            @include mobile {
+                top: 55px;
+            }
+        }
+            // Media queries
+            // Hide some categories from navbar
+            @include tablet {
+                &__sm {
+                    display: none;
+                }
+            }
+    }
+}
+
+.dropDown {
+    display: none;
+
+    // Media queries
+    @include mobile {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 17px;
+    }
+    &__hamburger {
+        width: 23px;
+    }
+    &__hamburger.active {
+        transform: rotate(-180deg);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+.socials {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 9rem;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    z-index: 5;
+}
+
+.scrollDown {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    bottom: 20px;
+    opacity: 0.8;
+    transform: translateX(-50%);
+    cursor: pointer;
+    &__wheel {
+        height: 42px;
+        width: 24px;
+        border-radius: 10px;
+        border: 2px solid $white-color;
+        &--inner {
+            position: absolute;
+            left: 10px;
+            margin-top: 5px;
+            width: 4px;
+            height: 4px;
+            background: $white-color;
+            border-radius: 50%;
+            animation: movingWheel 0.5s linear infinite;
+            @keyframes movingWheel {
+                0% {
+                    top: 1px;
+                }
+                25% {
+                    top: 2px;
+                }
+                50% {
+                    top: 3px;
+                }
+                75% {
+                    top: 2px;
+                }
+                100% {
+                    top: 1px;
+                }
+            }
+        }
+    }
+    &__arrows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__arrow {
+       width: 15px;
+       height: 15px;
+       border-right: 2px solid $white-color; 
+       border-bottom: 2px solid $white-color; 
+       transform: rotate(45deg);
+       animation: scrollAnimation 0.3s infinite;
+       animation-direction: alternate;
+    //    &:nth-child(1) {
+    //     animation-delay: 0.1s;
+    //    }
+    //    &:nth-child(2) {
+    //     animation-delay: 0.2s;
+    //    }
+    //    &:nth-child(3) {
+    //     animation-delay: 0.3s;
+    //    }
+       @keyframes scrollAnimation {
+        0% {
+            opacity: 0;  
+        }
+        50% {
+            opacity: 0.5;  
+        }
+        100% {
+            opacity: 1;  
+        }
+       }
+    }
+}
+
+// Introduction text
+.introduction {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    right: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding-left: 50px;
+
+    &__container {
+        display: flex;
+        padding: 0 50px;
+
+        // Media queries
+        @include desktop {
+            padding: 0 40px;
+        }
+        @include tablet {
+            padding: 0 30px;
+        }
+        @include mobile {
+            padding: 0 20px;
+        }
+    }
+    &__hey {
+        font-family: $third-font;
+        font-style: italic;
+        font-size: 80px;
+        font-weight: 100;
+        
+        // Media queries
+        @include desktop {
+            font-size: 60px;
+        }
+        @include tablet {
+            font-size: 45px;
+        }
+        @include mobile {
+            font-size: 30px;
+        }
+    }
+    &__title {
+        position: relative;
+        font-size: 60px;
+        font-weight: 300;
+        top: 25px;
+        left: 12px;
+
+        // Media queries
+        @include desktop {
+            font-size: 40px;
+        }
+        @include tablet {
+            font-size: 30px;
+            top: 18px;
+        }
+        @include mobile {
+            font-size: 23px;
+            top: 9px;
+            left: 6px;
+        }
+    }
+    &__container--txt {
+        padding: 0 50px;
+        font-weight: 400;
+
+        // Media queries
+        @include desktop {
+            padding: 0 40px;
+        }
+        @include tablet {
+            padding: 0 30px;
+        }
+        @include mobile {
+            padding: 0 20px;
+        }
+    }
+    &__text {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 30px;
+
+        // Media queries
+        @include desktop {
+            font-size: 25px;
+        }
+        @include tablet {
+            font-size: 20px;
+        }
+        @include mobile {
+            font-size: 17px;
+        }
+    }
+}
+
+// Background noise animation
+.opacity__overlay {
+    background: $black-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    opacity: 0.5;
+}
+.noise::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
+    background: url("../images/noise400.gif");
+
+}
+
+
