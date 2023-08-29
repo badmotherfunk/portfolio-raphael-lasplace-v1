@@ -4,6 +4,49 @@ const loaderBar = document.querySelector(".loader__bar--inner");
 const loaderCounter = document.querySelector(".loader__counter");
 const introductionTxt =document.querySelector('.introduction');
 
+const handleMousePos = (e) => {
+    const CURSOR = document.querySelector('.cursor');
+    const CIRCLE = document.querySelector('.circle');
+    const HOVER = document.querySelectorAll('.animatedButton');
+    const BIG = document.querySelectorAll('.animatedLinks');
+    const TEXT = document.querySelectorAll('.animatedText');
+    const TEXT2 = document.querySelectorAll('.animatedText2');
+    const SOCIAL = document.querySelectorAll('.socials');
+    // const BIG = document.querySelectorAll('.header__wrapper');
+  
+    const runMouseOver = () => {
+        CURSOR.style.display = "none";
+      };
+
+      const runMouseOverScale = () => {
+        CIRCLE.style.transform = 'scale(2.5)';
+      };
+
+      HOVER.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
+      SOCIAL.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
+      BIG.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
+      TEXT.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
+      TEXT2.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
+
+  
+        const runMouseLeave = () => {
+        CURSOR.style.display = "flex";     
+        };
+
+        const runMouseLeave2 = () => {
+            CIRCLE.style.transform = '';  
+        };
+
+        HOVER.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
+        SOCIAL.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
+        BIG.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
+        TEXT.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
+        TEXT2.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
+
+    
+    };
+  document.addEventListener('mousemove', handleMousePos);
+
 // Mouse animation
 
 const coords = { x: 0, y: 0 };
@@ -245,6 +288,5 @@ typeWriter
 .deleteChars(12)
 .typeString('<em><span class="media__text">React.js !</span></em>')
 .pauseFor(1000)
-.typeString('<br> I\'m passionate about crafting <em><div class="animatedText"; data-text="interactive";><span class="animatedText">beautiful</span></div></em> & <em><div class="animatedText2"; data-text="creative";><span class"animatedText2">designed</span></div></em> websites.')
+.typeString('<br> I\'m passionate about crafting <em><div class="animatedText"; data-text="interactive";><span>beautiful</span></div></em> & <em><div class="animatedText2"; data-text="creative";><span>designed</span></div></em> websites.')
 .start()
-

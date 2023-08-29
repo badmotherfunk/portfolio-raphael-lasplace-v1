@@ -10,7 +10,12 @@
     mix-blend-mode: difference;
     top: 0;
     left: 0;
-    z-index: 999999;
+    z-index: 9999;
+
+    // Media queriess
+    @include tablet {
+        display: none;
+    }
 }
   
 .circle {

@@ -5546,6 +5546,60 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var loaderBar = document.querySelector(".loader__bar--inner");
 var loaderCounter = document.querySelector(".loader__counter");
 var introductionTxt = document.querySelector('.introduction');
+var handleMousePos = function handleMousePos(e) {
+  var CURSOR = document.querySelector('.cursor');
+  var CIRCLE = document.querySelector('.circle');
+  var HOVER = document.querySelectorAll('.animatedButton');
+  var BIG = document.querySelectorAll('.animatedLinks');
+  var TEXT = document.querySelectorAll('.animatedText');
+  var TEXT2 = document.querySelectorAll('.animatedText2');
+  var SOCIAL = document.querySelectorAll('.socials');
+  // const BIG = document.querySelectorAll('.header__wrapper');
+
+  var runMouseOver = function runMouseOver() {
+    CURSOR.style.display = "none";
+  };
+  var runMouseOverScale = function runMouseOverScale() {
+    CIRCLE.style.transform = 'scale(2.5)';
+  };
+  HOVER.forEach(function (hover) {
+    return hover.addEventListener('mouseenter', runMouseOver);
+  });
+  SOCIAL.forEach(function (hover) {
+    return hover.addEventListener('mouseenter', runMouseOver);
+  });
+  BIG.forEach(function (hover) {
+    return hover.addEventListener('mouseenter', runMouseOverScale);
+  });
+  TEXT.forEach(function (hover) {
+    return hover.addEventListener('mouseenter', runMouseOverScale);
+  });
+  TEXT2.forEach(function (hover) {
+    return hover.addEventListener('mouseenter', runMouseOverScale);
+  });
+  var runMouseLeave = function runMouseLeave() {
+    CURSOR.style.display = "flex";
+  };
+  var runMouseLeave2 = function runMouseLeave2() {
+    CIRCLE.style.transform = '';
+  };
+  HOVER.forEach(function (hover) {
+    return hover.addEventListener('mouseleave', runMouseLeave);
+  });
+  SOCIAL.forEach(function (hover) {
+    return hover.addEventListener('mouseleave', runMouseLeave);
+  });
+  BIG.forEach(function (hover) {
+    return hover.addEventListener('mouseleave', runMouseLeave2);
+  });
+  TEXT.forEach(function (hover) {
+    return hover.addEventListener('mouseleave', runMouseLeave2);
+  });
+  TEXT2.forEach(function (hover) {
+    return hover.addEventListener('mouseleave', runMouseLeave2);
+  });
+};
+document.addEventListener('mousemove', handleMousePos);
 
 // Mouse animation
 
@@ -5748,7 +5802,7 @@ var typeWriter = new Typewriter(txtAnim, {
   loop: false,
   deleteSpeed: 20
 });
-typeWriter.pauseFor(8100).changeDelay(20).typeString('I\'m <span class="media__text"> Raphaël</span>').pauseFor(300).typeString(',  a thirty-years-old <em><span class="media__text"> front-end </span></em> web developer from <em><span class="media__text">france</span></em>.').pauseFor(1000).typeString('<br> I like to do stuff with <em><span class="media__text">Css</span></em>.').pauseFor(1000).deleteChars(5).typeString('<em><span class="media__text">Javascript</span></em>.').pauseFor(1000).deleteChars(12).typeString('<em><span class="media__text">React.js !</span></em>').pauseFor(1000).typeString('<br> I\'m passionate about crafting <em><div class="animatedText"; data-text="interactive";><span class="animatedText">beautiful</span></div></em> & <em><div class="animatedText2"; data-text="creative";><span class"animatedText2">designed</span></div></em> websites.').start();
+typeWriter.pauseFor(8100).changeDelay(20).typeString('I\'m <span class="media__text"> Raphaël</span>').pauseFor(300).typeString(',  a thirty-years-old <em><span class="media__text"> front-end </span></em> web developer from <em><span class="media__text">france</span></em>.').pauseFor(1000).typeString('<br> I like to do stuff with <em><span class="media__text">Css</span></em>.').pauseFor(1000).deleteChars(5).typeString('<em><span class="media__text">Javascript</span></em>.').pauseFor(1000).deleteChars(12).typeString('<em><span class="media__text">React.js !</span></em>').pauseFor(1000).typeString('<br> I\'m passionate about crafting <em><div class="animatedText"; data-text="interactive";><span>beautiful</span></div></em> & <em><div class="animatedText2"; data-text="creative";><span>designed</span></div></em> websites.').start();
 },{"gsap":"../node_modules/gsap/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
