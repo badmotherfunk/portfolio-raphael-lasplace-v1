@@ -5547,6 +5547,42 @@ var loaderBar = document.querySelector(".loader__bar--inner");
 var loaderCounter = document.querySelector(".loader__counter");
 var introductionTxt = document.querySelector('.introduction');
 
+// Mouse animation
+
+var coords = {
+  x: 0,
+  y: 0
+};
+var circles = document.querySelectorAll(".circle");
+var cursor = document.querySelector(".cursor");
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = "#FFFFFF";
+});
+window.addEventListener("mousemove", function (e) {
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+});
+function animateCircles() {
+  var x = coords.x;
+  var y = coords.y;
+  cursor.style.top = x;
+  cursor.style.left = y;
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
+    circle.style.scale = (circles.length - index) / circles.length;
+    circle.x = x;
+    circle.y = y;
+    var nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+  requestAnimationFrame(animateCircles);
+}
+animateCircles();
+
 // Counter size depending screen size
 var range = 15 / 400;
 var vw = range * Math.min(window.innerWidth, window.innerHeight);
@@ -5738,7 +5774,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57633" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60517" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -230,6 +230,26 @@ ul {
     margin-bottom: 100px;
   }
 }
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+}
+
+.circle {
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
+
 .landing {
   position: relative;
   width: 100%;
@@ -404,6 +424,7 @@ ul {
   bottom: 20px;
   opacity: 0.8;
   transform: translateX(-50%);
+  z-index: 1;
   cursor: pointer;
 }
 .scrollDown__wheel {
