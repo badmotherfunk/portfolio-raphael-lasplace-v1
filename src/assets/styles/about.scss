@@ -44,7 +44,7 @@
     &__title {
         font-family: $third-font;
         font-style: italic;
-        font-size: 60px;
+        font-size: 50px;
         color: $black-color;
         padding: 20px;
         cursor: none;
@@ -63,7 +63,7 @@
     &__border {
         position: relative;
         height: 2px;
-        width: 261px;
+        width: 220px;
         background-color: $black-color;
         bottom: 32px;
         left: 10px;
@@ -76,11 +76,13 @@
         @include tablet {
             width: 150px;
             left: 14px;
+            bottom: 30px;
         }
         @include mobile {
             width: 130px;
             left: 15px;
             height: 1px;
+            bottom: 28px;
         }
   
     }
