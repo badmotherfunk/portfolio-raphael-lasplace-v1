@@ -16,9 +16,31 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
 }
 *:after, *:before {
   box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(53, 52, 52);
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  border: 1px solid rgb(56, 56, 56);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(35, 35, 35);
+  border-radius: 20px;
+  border: 1px solid rgb(40, 40, 40);
 }
 
 html,
@@ -65,6 +87,12 @@ a {
 
 ul {
   list-style: none;
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0;
 }
 
 .loader {
@@ -82,6 +110,7 @@ ul {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 300;
+  display: none;
 }
 .loader__box {
   position: relative;
@@ -269,6 +298,14 @@ ul {
   width: 100%;
   z-index: 10;
 }
+@media screen and (max-width: 480px) {
+  .landing .header {
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    background-color: #151515;
+  }
+}
 .landing .header__name {
   position: absolute;
   left: 40px;
@@ -298,7 +335,7 @@ ul {
     z-index: 99;
     width: 100vw;
     height: 100vh;
-    background: #151515;
+    background: #000;
     position: absolute;
     padding: 0;
     top: -1000px;
@@ -307,6 +344,7 @@ ul {
 }
 .landing .header__wrapper.active {
   display: flex;
+  overflow-y: hidden;
   margin-top: 0;
   animation: dropDown 1s ease-in-out forwards;
   z-index: 99;
@@ -524,6 +562,7 @@ ul {
   font-style: italic;
   font-size: 80px;
   font-weight: 100;
+  cursor: none;
 }
 @media screen and (max-width: 1024px) {
   .introduction__hey {
@@ -546,6 +585,7 @@ ul {
   font-weight: 300;
   top: 25px;
   left: 12px;
+  cursor: none;
 }
 @media screen and (max-width: 1024px) {
   .introduction__title {
@@ -588,6 +628,7 @@ ul {
   font-size: 30px;
   font-weight: 300;
   line-height: 30px;
+  cursor: none;
 }
 @media screen and (max-width: 1024px) {
   .introduction__text {
@@ -610,18 +651,18 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 0;
   opacity: 0.5;
 }
 
 .noise::before {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   content: "";
   opacity: 0.1;
   z-index: -1;
@@ -710,6 +751,7 @@ ul {
   overflow: hidden;
   width: 180%;
   font-weight: 400;
+  cursor: pointer;
 }
 @media screen and (max-width: 1024px) {
   .animatedMail {
@@ -913,8 +955,8 @@ span.media__text {
   overflow: hidden;
   font-weight: 300;
   font-size: 35px;
-  cursor: pointer;
   font-family: "Playfair Display", serif;
+  cursor: none;
 }
 @media screen and (max-width: 1024px) {
   .animatedText {
@@ -1024,7 +1066,7 @@ span.animatedText {
   overflow: hidden;
   font-weight: 300;
   font-size: 35px;
-  cursor: pointer;
+  cursor: none;
   font-family: "Playfair Display", serif;
 }
 @media screen and (max-width: 1024px) {
@@ -1159,6 +1201,322 @@ span.animatedText2 {
   100% {
     text-shadow: -5px 0 #cc0f39, -5px -4px #743cfb;
   }
+}
+
+.about__container {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  background-color: #FFFFFF;
+  z-index: -2;
+}
+
+.about__image {
+  width: 100%;
+  height: 340px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/Raphael_stage.e57b0c9e.webp");
+}
+@media screen and (max-width: 768px) {
+  .about__image {
+    height: 230px;
+  }
+}
+
+.about__image__black__border {
+  height: 1px;
+  background-color: #151515;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.about__title__container {
+  display: flex;
+  flex-direction: column;
+}
+.about__title {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 60px;
+  color: #151515;
+  padding: 20px;
+  cursor: none;
+}
+@media screen and (max-width: 1024px) {
+  .about__title {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__title {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__title {
+    font-size: 30px;
+  }
+}
+.about__border {
+  position: relative;
+  height: 2px;
+  width: 261px;
+  background-color: #151515;
+  bottom: 32px;
+  left: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .about__border {
+    width: 195px;
+    left: 13px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__border {
+    width: 150px;
+    left: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__border {
+    width: 130px;
+    left: 15px;
+    height: 1px;
+  }
+}
+.about__quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 75%;
+}
+@media screen and (max-width: 1024px) {
+  .about__quote {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__quote {
+    margin-bottom: 30px;
+  }
+}
+.about__text {
+  font-family: "Neue Montreal", sans-serif;
+  font-style: italic;
+  font-size: 31px;
+  color: #151515;
+  line-height: 40px;
+  font-weight: 400;
+  cursor: none;
+  padding: 20px 0 0 0;
+}
+@media screen and (max-width: 1024px) {
+  .about__text {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__text {
+    font-size: 20px;
+    padding: 10px 0 0 0;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__text {
+    font-size: 17px;
+    padding: 0;
+    line-height: 25px;
+  }
+}
+.about__text__styled {
+  font-family: "Playfair Display", serif;
+  font-size: 31px;
+  font-style: italic;
+  font-weight: 800;
+  cursor: none;
+}
+@media screen and (max-width: 1024px) {
+  .about__text__styled {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__text__styled {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__text__styled {
+    font-size: 17px;
+  }
+}
+
+.link {
+  position: relative;
+}
+
+.link:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  top: 40px;
+  right: 0;
+  background: #151515;
+  transition: width 0.2s ease;
+  -webkit-transition: width 0.2s ease;
+}
+@media screen and (max-width: 1024px) {
+  .link:after {
+    top: 30px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .link:after {
+    top: 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .link:after {
+    display: none;
+  }
+}
+
+.link:hover:after {
+  width: 100%;
+  left: 0;
+  background: #151515;
+}
+
+.about__description__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #151515;
+  font-family: "Neue Montreal", sans-serif;
+  font-size: 22px;
+  padding-bottom: 50px;
+  width: 75%;
+}
+@media screen and (max-width: 1024px) {
+  .about__description__container {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__description__container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__description__container {
+    padding-bottom: 20px;
+  }
+}
+.about__description__container__separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 2px;
+  background-color: #151515;
+  margin: 0 50px;
+}
+@media screen and (max-width: 768px) {
+  .about__description__container__separator {
+    width: 45%;
+    height: 2px;
+    margin: 30px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__description__container__separator {
+    width: 50%;
+    height: 1px;
+    margin: 20px 0;
+  }
+}
+.about__description__container__text {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .about__description__container__text {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__description__container__text {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__description__container__text {
+    font-size: 16px;
+  }
+}
+.about__description__container__text2 {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .about__description__container__text2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__description__container__text2 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__description__container__text2 {
+    font-size: 16px;
+  }
+}
+.about__description__container__number {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 18px;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+@media screen and (max-width: 768px) {
+  .about__description__container__number {
+    margin-right: 0;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__description__container__number {
+    font-size: 15px;
+  }
+}
+
+.noise__about::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  opacity: 0.05;
+  z-index: 0;
+  pointer-events: none;
+  background: url("/noise400.62d23a24.gif");
 }
 
 /*# sourceMappingURL=/style.0cb76823.css.map */

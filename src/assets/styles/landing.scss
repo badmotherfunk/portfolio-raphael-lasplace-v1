@@ -11,6 +11,7 @@
     top: 0;
     left: 0;
     z-index: 9999;
+    
 
     // Media queriess
     @include tablet {
@@ -39,6 +40,14 @@
         transform: translateX(-50%);
         width: 100%;
         z-index: 10;
+        
+        // Media queries
+        @include mobile {
+            position: fixed;
+            width: 100%;
+            height: 55px;
+            background-color: $black-color;
+        }
         &__name {
             position: absolute;
             left: 40px;
@@ -66,7 +75,7 @@
                 z-index: 99;
                 width: 100vw;
                 height: 100vh;
-                background: $black-color;
+                background: #000;
                 position: absolute;
                 padding: 0;
                 top: -1000px;
@@ -75,6 +84,7 @@
         }
         &__wrapper.active {
             display: flex;
+            overflow-y: hidden;
             margin-top: 0;
             animation: dropDown 1s ease-in-out forwards;
             z-index: 99;
@@ -300,6 +310,7 @@
         font-style: italic;
         font-size: 80px;
         font-weight: 100;
+        cursor: none;
         
         // Media queries
         @include desktop {
@@ -318,6 +329,7 @@
         font-weight: 300;
         top: 25px;
         left: 12px;
+        cursor: none;
 
         // Media queries
         @include desktop {
@@ -352,6 +364,7 @@
         font-size: 30px;
         font-weight: 300;
         line-height: 30px;
+        cursor: none;
 
         // Media queries
         @include desktop {
@@ -372,22 +385,21 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: 0;
     opacity: 0.5;
 }
 .noise::before {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     content: "";
     opacity: 0.1;
     z-index: -1;
     pointer-events: none;
     background: url("../images/noise400.gif");
-
 }
 

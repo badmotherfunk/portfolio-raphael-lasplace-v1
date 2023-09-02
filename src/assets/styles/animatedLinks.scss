@@ -75,6 +75,7 @@
     overflow: hidden;
     width: 180%;
     font-weight: 400;
+    cursor: pointer;
 
     // Media queries
     @include desktop {
@@ -249,9 +250,8 @@ span.media__text {
     overflow: hidden;
     font-weight: 300;
     font-size: 35px;
-    cursor: pointer;
     font-family: $third-font;
-
+    cursor: none;
     // Media queries
     @include desktop {
         font-size: 30px;
@@ -350,7 +350,7 @@ span.animatedText {
     overflow: hidden;
     font-weight: 300;
     font-size: 35px;
-    cursor: pointer;
+    cursor: none;
     font-family: $third-font;
 
     // Media queries

@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { TimelineMax } from "gsap/gsap-core";
 
 const loaderBar = document.querySelector(".loader__bar--inner");
 const loaderCounter = document.querySelector(".loader__counter");
@@ -8,11 +9,13 @@ const handleMousePos = (e) => {
     const CURSOR = document.querySelector('.cursor');
     const CIRCLE = document.querySelector('.circle');
     const HOVER = document.querySelectorAll('.animatedButton');
-    const BIG = document.querySelectorAll('.animatedLinks');
+    const BIGABOUT = document.querySelectorAll('.link');
+    const BIGABOUTTITLE = document.querySelectorAll('.about__title');
     const TEXT = document.querySelectorAll('.animatedText');
     const TEXT2 = document.querySelectorAll('.animatedText2');
     const SOCIAL = document.querySelectorAll('.socials');
-    // const BIG = document.querySelectorAll('.header__wrapper');
+    const ANIMATEDLINKS = document.querySelectorAll('.header__left');
+    const ANIMATEDMAIL = document.querySelectorAll('.header__name');
   
     const runMouseOver = () => {
         CURSOR.style.display = "none";
@@ -24,7 +27,11 @@ const handleMousePos = (e) => {
 
       HOVER.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
       SOCIAL.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
-      BIG.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
+      ANIMATEDLINKS.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
+      ANIMATEDMAIL.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
+
+      BIGABOUT.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
+      BIGABOUTTITLE.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
       TEXT.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
       TEXT2.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
 
@@ -39,7 +46,11 @@ const handleMousePos = (e) => {
 
         HOVER.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
         SOCIAL.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
-        BIG.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
+        ANIMATEDLINKS.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
+        ANIMATEDMAIL.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
+
+        BIGABOUT.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
+        BIGABOUTTITLE.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
         TEXT.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
         TEXT2.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
 
@@ -246,6 +257,7 @@ const hamburger = document.querySelector('.dropDown__hamburger');
 const closeDropDown = document.querySelector('.header__closeDropDown')
 const crossDropDown = document.querySelector('.animated__closeDropDown');
 const wrapper = document.querySelector('.header__wrapper');
+const links = document.querySelectorAll('.animatedLinks');
 
 hamburgerContainer.addEventListener('click', () => {
     hamburger.classList.add('active');
@@ -261,6 +273,22 @@ closeDropDown.addEventListener('click', () => {
     crossDropDown.classList.add('remove');
     wrapper.classList.add('remove');
 })
+
+// links.forEach.addEventListener('click', () => {
+//     hamburger.classList.remove("active");
+//     closeDropDown.classList.remove('active');
+//     crossDropDown.classList.add('remove');
+//     wrapper.classList.add('remove');
+// })
+
+links.forEach(function (item) {
+    item.addEventListener('click', function () {
+        hamburger.classList.remove("active");
+        closeDropDown.classList.remove('active');
+        crossDropDown.classList.add('remove');
+        wrapper.classList.add('remove');
+    });
+});
 
 
 // Writing animation
@@ -290,3 +318,27 @@ typeWriter
 .pauseFor(1000)
 .typeString('<br> I\'m passionate about crafting <em><div class="animatedText"; data-text="interactive";><span>beautiful</span></div></em> & <em><div class="animatedText2"; data-text="creative";><span>designed</span></div></em> websites.')
 .start()
+
+
+// GSAP Animation ScrollMagic About
+
+const presentationContainer = document.querySelector('.about__image');
+const titrePres = document.querySelector('.about__title__container');
+const textPres = document.querySelector('.about__text');
+const textDesc = document.querySelector('.about__description__container');
+
+const tlpres = new TimelineMax();
+
+tlpres
+.from(titrePres, {y: 2000, opacity: 0, duration: 0.8})
+.from(textPres, {y: 300, opacity: 0, duration: 0.6})
+.from(textDesc, {y: 300, opacity: 0, duration: 0.6})
+
+const controller = new ScrollMagic.Controller();
+
+const scene = new ScrollMagic.Scene({
+    triggerElement: presentationContainer,
+    reverse: false
+})
+.setTween(tlpres)
+.addTo(controller)

@@ -1,0 +1,288 @@
+@import './breakpoints.scss';
+
+.about__container {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    background-color: $white-color;
+    z-index: -2;
+}
+
+.about__image {
+    width: 100%;
+    height: 340px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../images/Raphael_stage.webp');
+
+    // Media queries
+    @include tablet {
+        height: 230px;
+    }
+}
+.about__image__black__border {
+    height: 1px;
+    background-color: $black-color;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+    &__title__container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__title {
+        font-family: $third-font;
+        font-style: italic;
+        font-size: 60px;
+        color: $black-color;
+        padding: 20px;
+        cursor: none;
+
+        // Media queries
+        @include desktop {
+            font-size: 45px;
+        }
+        @include tablet {
+            font-size: 35px;
+        }
+        @include mobile {
+            font-size: 30px;
+        }
+    }
+    &__border {
+        position: relative;
+        height: 2px;
+        width: 261px;
+        background-color: $black-color;
+        bottom: 32px;
+        left: 10px;
+
+        // Media queries
+        @include desktop {
+            width: 195px;
+            left: 13px;
+        }
+        @include tablet {
+            width: 150px;
+            left: 14px;
+        }
+        @include mobile {
+            width: 130px;
+            left: 15px;
+            height: 1px;
+        }
+  
+    }
+    &__quote {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        width: 75%;
+
+        // Media queries
+        @include desktop {
+            width: 85%;
+        }
+        @include mobile {
+            margin-bottom: 30px;
+        }
+
+    }
+    &__text {
+        font-family: $title-font;
+        font-style: italic;
+        font-size: 31px;
+        color: $black-color;
+        line-height: 40px;
+        font-weight: 400;
+        cursor: none;
+        padding: 20px 0 0 0;
+
+        // Media queries
+        @include desktop {
+            font-size: 25px;
+            line-height: 35px;
+        }
+        @include tablet {
+            font-size: 20px;
+            padding: 10px 0 0 0;
+            line-height: 30px;
+        }
+        @include mobile {
+            font-size: 17px;
+            padding: 0;
+            line-height: 25px;
+        }
+    }
+    &__text__styled {
+        font-family: $third-font;
+        font-size: 31px;
+        font-style: italic;
+        font-weight: 800;
+        cursor: none;
+
+        // Media queries
+        @include desktop {
+            font-size: 25px;
+        }
+        @include tablet {
+            font-size: 20px;
+        }
+        @include mobile {
+            font-size: 17px;
+        }
+    }
+}
+
+.link{
+    position: relative;
+  }
+  
+  .link:after{
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 2px;
+    display: block;
+    top: 40px;
+    right: 0;
+    background: $black-color;
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+
+    // Media queries
+    @include desktop {
+        top: 30px;
+    }
+    @include desktop {
+        top: 25px;
+    }
+    @include desktop {
+        
+        display: none;
+    }
+  }
+   
+  .link:hover:after{
+    width: 100%;
+    left: 0;
+    background: $black-color;
+  }
+
+
+.about__description__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: $black-color;
+    font-family: $title-font;
+    font-size: 22px;
+    padding-bottom: 50px;
+    width: 75%;
+
+    // Media queries
+    @include desktop {
+        width: 85%;
+    }
+    @include tablet {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+    }
+    @include mobile {
+        padding-bottom: 20px;
+    }
+
+    &__separator {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 2px;
+        background-color: $black-color;
+        margin: 0 50px;
+
+        @include tablet {
+            width: 45%;
+            height: 2px;
+            margin: 30px 0;
+        }
+        @include mobile {
+            width: 50%;
+            height: 1px;
+            margin: 20px 0;
+        }
+    }
+    &__text {
+        width: 100%;
+
+        //Media queries
+        @include desktop {
+            font-size: 20px;
+        }
+        @include tablet {
+            font-size: 18px;
+        }
+        @include mobile {
+            font-size: 16px;
+        }
+
+    }
+    &__text2 {
+        width: 100%;
+
+        //Media queries
+        @include desktop {
+            font-size: 20px;
+        }
+        @include tablet {
+            font-size: 18px;
+        }
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+    &__number {
+        font-family: $title-font2;
+        font-size: 18px;
+        margin-right: 10px;
+        margin-top: 3px;
+
+        // Media queries
+        @include tablet {
+            margin-right: 0;
+            margin-top: 0;
+        }
+        @include mobile {
+            font-size: 15px;
+        }
+    }
+
+}
+
+.noise__about::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    opacity: 0.05;
+    z-index: 0;
+    pointer-events: none;
+    background: url("../images/noise400.gif");
+}
+

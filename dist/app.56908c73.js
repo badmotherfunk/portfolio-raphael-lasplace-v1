@@ -5542,6 +5542,7 @@ exports.default = exports.gsap = gsapWithCSS;
 "use strict";
 
 var _gsap = _interopRequireDefault(require("gsap"));
+var _gsapCore = require("gsap/gsap-core");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var loaderBar = document.querySelector(".loader__bar--inner");
 var loaderCounter = document.querySelector(".loader__counter");
@@ -5550,12 +5551,13 @@ var handleMousePos = function handleMousePos(e) {
   var CURSOR = document.querySelector('.cursor');
   var CIRCLE = document.querySelector('.circle');
   var HOVER = document.querySelectorAll('.animatedButton');
-  var BIG = document.querySelectorAll('.animatedLinks');
+  var BIGABOUT = document.querySelectorAll('.link');
+  var BIGABOUTTITLE = document.querySelectorAll('.about__title');
   var TEXT = document.querySelectorAll('.animatedText');
   var TEXT2 = document.querySelectorAll('.animatedText2');
   var SOCIAL = document.querySelectorAll('.socials');
-  // const BIG = document.querySelectorAll('.header__wrapper');
-
+  var ANIMATEDLINKS = document.querySelectorAll('.header__left');
+  var ANIMATEDMAIL = document.querySelectorAll('.header__name');
   var runMouseOver = function runMouseOver() {
     CURSOR.style.display = "none";
   };
@@ -5568,7 +5570,16 @@ var handleMousePos = function handleMousePos(e) {
   SOCIAL.forEach(function (hover) {
     return hover.addEventListener('mouseenter', runMouseOver);
   });
-  BIG.forEach(function (hover) {
+  ANIMATEDLINKS.forEach(function (hover) {
+    return hover.addEventListener('mouseenter', runMouseOver);
+  });
+  ANIMATEDMAIL.forEach(function (hover) {
+    return hover.addEventListener('mouseenter', runMouseOver);
+  });
+  BIGABOUT.forEach(function (hover) {
+    return hover.addEventListener('mouseenter', runMouseOverScale);
+  });
+  BIGABOUTTITLE.forEach(function (hover) {
     return hover.addEventListener('mouseenter', runMouseOverScale);
   });
   TEXT.forEach(function (hover) {
@@ -5589,7 +5600,16 @@ var handleMousePos = function handleMousePos(e) {
   SOCIAL.forEach(function (hover) {
     return hover.addEventListener('mouseleave', runMouseLeave);
   });
-  BIG.forEach(function (hover) {
+  ANIMATEDLINKS.forEach(function (hover) {
+    return hover.addEventListener('mouseleave', runMouseLeave);
+  });
+  ANIMATEDMAIL.forEach(function (hover) {
+    return hover.addEventListener('mouseleave', runMouseLeave);
+  });
+  BIGABOUT.forEach(function (hover) {
+    return hover.addEventListener('mouseleave', runMouseLeave2);
+  });
+  BIGABOUTTITLE.forEach(function (hover) {
     return hover.addEventListener('mouseleave', runMouseLeave2);
   });
   TEXT.forEach(function (hover) {
@@ -5781,6 +5801,7 @@ var hamburger = document.querySelector('.dropDown__hamburger');
 var closeDropDown = document.querySelector('.header__closeDropDown');
 var crossDropDown = document.querySelector('.animated__closeDropDown');
 var wrapper = document.querySelector('.header__wrapper');
+var links = document.querySelectorAll('.animatedLinks');
 hamburgerContainer.addEventListener('click', function () {
   hamburger.classList.add('active');
   closeDropDown.classList.add('active');
@@ -5795,6 +5816,22 @@ closeDropDown.addEventListener('click', function () {
   wrapper.classList.add('remove');
 });
 
+// links.forEach.addEventListener('click', () => {
+//     hamburger.classList.remove("active");
+//     closeDropDown.classList.remove('active');
+//     crossDropDown.classList.add('remove');
+//     wrapper.classList.add('remove');
+// })
+
+links.forEach(function (item) {
+  item.addEventListener('click', function () {
+    hamburger.classList.remove("active");
+    closeDropDown.classList.remove('active');
+    crossDropDown.classList.add('remove');
+    wrapper.classList.add('remove');
+  });
+});
+
 // Writing animation
 
 var txtAnim = document.querySelector('.introduction__text');
@@ -5803,7 +5840,33 @@ var typeWriter = new Typewriter(txtAnim, {
   deleteSpeed: 20
 });
 typeWriter.pauseFor(8100).changeDelay(20).typeString('I\'m <span class="media__text"> Raphaël</span>').pauseFor(300).typeString(',  a thirty-years-old <em><span class="media__text"> front-end </span></em> web developer from <em><span class="media__text">france</span></em>.').pauseFor(1000).typeString('<br> I like to do stuff with <em><span class="media__text">Css</span></em>.').pauseFor(1000).deleteChars(5).typeString('<em><span class="media__text">Javascript</span></em>.').pauseFor(1000).deleteChars(12).typeString('<em><span class="media__text">React.js !</span></em>').pauseFor(1000).typeString('<br> I\'m passionate about crafting <em><div class="animatedText"; data-text="interactive";><span>beautiful</span></div></em> & <em><div class="animatedText2"; data-text="creative";><span>designed</span></div></em> websites.').start();
-},{"gsap":"../node_modules/gsap/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+// GSAP Animation ScrollMagic About
+
+var presentationContainer = document.querySelector('.about__image');
+var titrePres = document.querySelector('.about__title__container');
+var textPres = document.querySelector('.about__text');
+var textDesc = document.querySelector('.about__description__container');
+var tlpres = new _gsapCore.TimelineMax();
+tlpres.from(titrePres, {
+  y: 2000,
+  opacity: 0,
+  duration: 0.8
+}).from(textPres, {
+  y: 300,
+  opacity: 0,
+  duration: 0.6
+}).from(textDesc, {
+  y: 300,
+  opacity: 0,
+  duration: 0.6
+});
+var controller = new ScrollMagic.Controller();
+var scene = new ScrollMagic.Scene({
+  triggerElement: presentationContainer,
+  reverse: false
+}).setTween(tlpres).addTo(controller);
+},{"gsap":"../node_modules/gsap/index.js","gsap/gsap-core":"../node_modules/gsap/gsap-core.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -5828,7 +5891,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60517" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "20492" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
