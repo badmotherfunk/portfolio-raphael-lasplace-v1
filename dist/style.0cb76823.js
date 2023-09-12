@@ -172,7 +172,7 @@ module.exports = reloadCSS;
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\noise400.gif":[["noise400.62d23a24.gif","assets/images/noise400.gif"],"assets/images/noise400.gif"],"./..\\images\\Raphael_stage.webp":[["Raphael_stage.e57b0c9e.webp","assets/images/Raphael_stage.webp"],"assets/images/Raphael_stage.webp"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\fonts\\neue-montreal\\NeueMontreal-Regular.otf":[["NeueMontreal-Regular.528635e5.otf","assets/fonts/neue-montreal/NeueMontreal-Regular.otf"],"assets/fonts/neue-montreal/NeueMontreal-Regular.otf"],"./..\\fonts\\neue-montreal\\NeueMontreal-Light.otf":[["NeueMontreal-Light.bf5314e3.otf","assets/fonts/neue-montreal/NeueMontreal-Light.otf"],"assets/fonts/neue-montreal/NeueMontreal-Light.otf"],"./..\\images\\noise400.gif":[["noise400.62d23a24.gif","assets/images/noise400.gif"],"assets/images/noise400.gif"],"./..\\images\\Raphael_stage.webp":[["Raphael_stage.e57b0c9e.webp","assets/images/Raphael_stage.webp"],"assets/images/Raphael_stage.webp"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -197,7 +197,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "20492" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "16759" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

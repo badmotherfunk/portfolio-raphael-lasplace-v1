@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+@font-face {
+    font-family: 'Neue Montreal Regular';
+    src: url('../fonts/neue-montreal/NeueMontreal-Regular.otf') format('otf');
+}
+@font-face {
+    font-family: 'Neue Montreal Light';
+    src: url('../fonts/neue-montreal/NeueMontreal-Light.otf') format('otf');
+}
 
 
 // Font
-$title-font: 'Neue Montreal', sans-serif;
-$title-font2: 'Abril Fatface', sans-serif;
-$text-font: 'Noto Sans JP', sans-serif;
+$text-font: 'Neue Montreal Regular', sans-serif;
+$text-font-light : 'Neue Montreal Light', sans-serif;
+$title-font: 'Abril Fatface', sans-serif;
 $third-font: 'Playfair Display', serif;
-$loader-font: 'Pattaya', sans-serif;
 
 // Color
 $white-color: #FFFFFF;

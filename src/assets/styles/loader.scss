@@ -118,7 +118,7 @@
         position: absolute;
         margin-top: 75px;
         color: $white-color;
-        font-family: $title-font2;
+        font-family: $title-font;
         font-size: 18px;
         font-weight: 300;
         cursor: default;
@@ -163,6 +163,31 @@
         transform: translate(-50%, -50%);
         opacity: 0;
     }
+}
+
+
+// Background noise animation
+.opacity__overlay {
+    background: $black-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+.noise::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    opacity: 0.1;
+    z-index: -1;
+    pointer-events: none;
+    background: url("../images/noise400.gif");
 }
 
 // Media queries //

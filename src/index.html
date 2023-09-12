@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/style.scss">
     <script src="https://kit.fontawesome.com/b5aeac9446.js" crossorigin="anonymous"></script>
     <title>Raphaël Lasplace - Front-end web developer</title>
-    <meta name="description" content="Bienvenue sur mon portfolio, je suis Raphaël Lasplace développeur front-end. Je mets à votre disposition ma créativité et mes compétences en HTML, CSS, Javascript React.js et Node.js pour créer vos sites web !">
+    <meta name="description" content="Welcome to my portfolio. I'm Raphaël Lasplace, front-end web developer. I put my creativity and my skills in HTML, CSS, Javascript React.js and Node.js at your disposal to design and build your websites!">
     <meta name="author" content="Raphaël Lasplace">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
@@ -20,37 +20,33 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <!-- Mouse animation -->
-    
+    <!-- Mouse animation -->   
     <div class="cursor">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
     </div>
-    <!-- Loader -->
+  <!-- Loader -->
 <div class="loader">
     <div class="opacity__overlay">
-        <div class="noise"></div>
-    </div>
-    <div class="background">
-        <!-- <img src="./assets/images/loader.svg" alt="Sphere" class="background__svg"> -->
+      <div class="noise"></div>
     </div>
     <div class="loader__box">
         <div class="loader__text--container">
@@ -82,20 +78,20 @@
 </div>
 
 <!-- Landing -->
-<div class="landing" id="homepage">
+<section class="landing" id="homepage">
     <div class="opacity__overlay">
+        <div class="noise"></div>
     </div>
-    <div class="noise"></div>
     <!-- Header -->
     <header class="header">
         <div class="header__name">
             <a href="mailto:raphael.lasplace@gmail.com" class="animatedMail" data-text="@gmail.com">raphael.lasplace</a>
         </div>
         <div class="header__wrapper">
+          <div class="header__closeDropDown">
+            <img src="./assets/images/cross-small.svg" class="animated__closeDropDown"></img>
+          </div>
             <ul class="header__left">
-                <div class="header__closeDropDown">
-                    <img src="./assets/images/cross-small.svg" class="animated__closeDropDown"></img>
-                </div>
                 <li>
                     <a href="#homepage" class="animatedLinks" data-text="HOME"><span>HOME</span></a>
                 </li>
@@ -103,10 +99,10 @@
                     <a href="#about" class="animatedLinks" data-text="ABOUT"><span>ABOUT</span></a>
                 </li>
                 <li>
-                    <a href="#" class="animatedLinks" data-text="PROJECTS"><span>PROJECTS</span></a>
+                    <a href="#skills" class="animatedLinks" data-text="SKILLS"><span>SKILLS</span></a>
                 </li>
-                <li class="header__sm">
-                    <a href="#" class="animatedLinks" data-text="SKILLS"><span>SKILLS</span></a>
+                <li>
+                    <a href="#projects" class="animatedLinks" data-text="PROJECTS"><span>PROJECTS</span></a>
                 </li>
             </ul>
             <div class="header__right">
@@ -121,7 +117,10 @@
         <div class="header__border"></div>
     </header>
     <!-- Introduction -->
-    <section class="introduction">
+    <div class="introduction__image">
+      <img src="./assets/images/black-sand.webp" alt="abstract black sand" class="introduction__picture">
+     </div>
+    <div class="introduction">
         <div class="introduction__global">
             <div class="introduction__container">
                 <span class="introduction__hey">Hey!</span>
@@ -131,7 +130,7 @@
                 <div class="introduction__text"></div>
             </div>
         </div>
-    </section>
+      </div>
     <!-- Socials -->
     <div class="socials">
         <a href="https://www.linkedin.com/in/rapha%C3%ABl-lasplace-869a93219/" target="_blank">
@@ -155,15 +154,15 @@
             <span class="scrollDown__arrow"></span>
         </div>
     </div>
-</div>
+</section>
 <!-- About me -->
-<div class="about__container" id="about">
+<section class="about__container" id="about">
     <div class="noise__about"></div>
     <div class="about__image" role="img" aria-label="Raphaël playing bass on stage"></div>
     <div class="about__image__black__border"></div>
     <div class="about">
         <div class="about__title__container">
-            <h2 class="about__title">About me.</h2>
+            <h2 class="about__title title">About me.</h2>
             <div class="about__border"></div>
         </div>
         <div class="about__quote">
@@ -186,13 +185,280 @@
                 I usually work in vanilla javascript, but I'm always curious to learn new things that can improve my knowledge and possibilities in my working environment.</p>
         </div>
     </div>
-</div>
+</section>
+<section class="skills" id="skills">
+    <div class="opacity__overlay">
+        <div class="noise"></div>
+    </div>
+    <div class="skills__text">
+        <div class="skills__text__p skills__text--left">
+            Web Development &nbsp;&nbsp;&nbsp;Front-End &nbsp;&nbsp;&nbsp;Design &nbsp;&nbsp;&nbsp;Responsive &nbsp;&nbsp;&nbsp;UI/UX Design&nbsp;&nbsp;&nbsp;Animations &nbsp;&nbsp;&nbsp;Accessibility &nbsp;&nbsp;&nbsp;SEO &nbsp;&nbsp;&nbsp;Team work &nbsp;&nbsp;&nbsp;Agile &nbsp;&nbsp;&nbsp;Git&nbsp;&nbsp;&nbsp;GitHub &nbsp;&nbsp;&nbsp;Debug &nbsp;&nbsp;&nbsp;Web Development &nbsp;&nbsp;&nbsp;Front-End &nbsp;&nbsp;&nbsp;Design &nbsp;&nbsp;&nbsp;Responsive &nbsp;&nbsp;&nbsp;UI/UX Design&nbsp;&nbsp;&nbsp;Animations &nbsp;&nbsp;&nbsp;Accessibility &nbsp;&nbsp;&nbsp;SEO &nbsp;&nbsp;&nbsp;Team work &nbsp;&nbsp;&nbsp;Agile &nbsp;&nbsp;&nbsp;Git&nbsp;&nbsp;&nbsp;GitHub &nbsp;&nbsp;&nbsp;Debug &nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="skills__text__p skills__text--right">
+            HTML &nbsp;&nbsp;&nbsp;CSS &nbsp;&nbsp;&nbsp;Sass &nbsp;&nbsp;&nbsp;Javascript &nbsp;&nbsp;&nbsp;React &nbsp;&nbsp;&nbsp;Redux &nbsp;&nbsp;&nbsp;Node.js &nbsp;&nbsp;&nbsp;MongoDb &nbsp;&nbsp;&nbsp;WebGL &nbsp;&nbsp;&nbsp;GreenSock &nbsp;&nbsp;&nbsp;Three.js &nbsp;&nbsp;&nbsp;ScrollMagic &nbsp;&nbsp;&nbsp;Parcel &nbsp;&nbsp;&nbsp;Swagger &nbsp;&nbsp;&nbsp;Bulma &nbsp;&nbsp;&nbsp;Figma &nbsp;&nbsp;&nbsp;HTML &nbsp;&nbsp;&nbsp;CSS &nbsp;&nbsp;&nbsp;Sass &nbsp;&nbsp;&nbsp;Javascript &nbsp;&nbsp;&nbsp;React &nbsp;&nbsp;&nbsp;Redux &nbsp;&nbsp;&nbsp;Node.js &nbsp;&nbsp;&nbsp;MongoDb &nbsp;&nbsp;&nbsp;WebGL &nbsp;&nbsp;&nbsp;GreenSock &nbsp;&nbsp;&nbsp;Three.js &nbsp;&nbsp;&nbsp;ScrollMagic &nbsp;&nbsp;&nbsp;Parcel &nbsp;&nbsp;&nbsp;Swagger &nbsp;&nbsp;&nbsp;Bulma &nbsp;&nbsp;&nbsp;Figma &nbsp;&nbsp;&nbsp;
+        </div>
+        <div class="skills__border"></div>
+    </div>
+    <div class="skills__header">
+        <h2 class="skills__header__text title">My skills.</h2>
+        <div class="skills__header__border"></div>
+    </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-<script src="./assets/js/app.js"></script>
+    <div class="section-skills">
+        <div class="wall">
+          <div class="v-boxes">
+            <div class="box box1">
+              <span class="tooltip">CSS</span>
+              <div class="box-face">
+                <div class="box-text"><i class="fab fa-css3-alt"></i></div>
+              </div>
+              <div class="box-back">
+                <div class="box-text">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+            <div class="box box2">
+              <span class="tooltip">JavaScript</span>
+              <div class="box-face">
+                <div class="box-text"><i class="fab fa-js-square"></i></div>
+              </div>
+              <div class="box-back">
+                <div class="box-text">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>        
+            </div>
+            <div class="box box3">
+              <span class="tooltip">Bulma</span>
+              <div class="box-face">
+                <div class="box-text">
+                  <img src="https://bulma.io/favicons/favicon-32x32.png?v=201701041855" alt="">
+                </div>
+              </div>
+              <div class="box-back">
+                <div class="box-text">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+            <div class="box box4">
+              <span class="tooltip">React</span>
+              <div class="box-face">
+                <div class="box-text"><i class="fa-brands fa-react"></i></div>
+              </div>
+              <div class="box-back">
+                <div class="box-text">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="v-boxes second">
+            <div class="box box5">
+              <span class="tooltip">MongoDb</span>
+              <div class="box-face">
+                <div class="box-text">
+                  <i class="fab fa-envira"></i>
+                </div>
+              </div>
+              <div class="box-back">
+                <div class="box-text">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="box box6">
+              <span class="tooltip">Figma</span>
+              <div class="box-face">
+                <div class="box-text">
+                  <i class="fab fa-figma"></i>
+                </div>
+              </div>
+              <div class="box-back">
+                <div class="box-text">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="box box7">
+              <span class="tooltip">NodeJs</span>
+              <div class="box-face">
+                <div class="box-text"><i class="fab fa-node-js"></i></div>
+              </div>
+              <div class="box-back">
+                <div class="box-text">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="v-boxes third">
+            <div class="box box8">
+              <span class="tooltip">Accessibility</span>
+              <div class="box-face">
+                <div class="box-text">
+                    <i class="fa-regular fa-eye"></i>
+                </div>
+              </div>
+              <div class="box-back">
+                <div class="box-text">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="box box9">
+              <span class="tooltip">SEO</span>
+              <div class="box-face">
+                <div class="box-text">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                </div>
+              </div>
+              <div class="box-back">
+                <div class="box-text">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="v-boxes forth box10">
+            <div class="box links">
+              <div class="box-face">
+                <div class="box-text"><i class="fab fa-github-alt"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects section -->
+<section class="projects-container" id="projects">
+  <div class="noise__about"></div>
+  <div class="projects-border"></div>
+  <div class="projects__title">
+    <h2 class="projects__title__h2 title">Projects.</h2>
+    <div class="projects__title__border"></div>
+  </div>
+
+  <div class="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+    <i class="fas fa-chevron-left chevron"></i>
+    <div class="overlay-container">
+      <div class="project-overlay ohmyfood">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div>
+    <img src="./assets/images/projects/ohmyfood.webp" alt="Ohmyfood dishes" class="image" draggable="false">
+    <div class="overlay-container">
+      <div class="project-overlay kasa">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div>
+    <img src="./assets/images/projects/kasa.webp" alt="Example of a rental room" class="image" draggable="false">
+    <div class="overlay-container">
+      <div class="project-overlay argentBank">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div>
+    <img src="./assets/images/projects/argentbank.webp" alt="Little tree in a glass full of coins" class="image" draggable="false">
+    <div class="overlay-container">
+      <div class="project-overlay sophieBuel">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div>
+    <img src="./assets/images/projects/sophie-bluel.webp" alt="Sophie Buel architect portrait" class="image" draggable="false">
+    <div class="overlay-container">
+      <div class="project-overlay booki">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div>
+    <img src="./assets/images/projects/Booki.webp" alt="Example of a rental room" alt="" class="image" draggable="false">
+    <div class="overlay-container">
+      <div class="project-overlay menuMaker">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div>
+    <img src="./assets/images/projects/menuMaker.webp" alt="Menu maker logo, and a menu of a restaurant" class="image" draggable="false">
+    <div class="overlay-container">
+      <div class="project-overlay ninaCarducci">
+        <i class="fas fa-plus"></i>
+      </div>
+    </div> 
+    <img src="./assets/images/projects/ninaCarducci.webp" alt="Dancing bride and groom" class="image" draggable="false">
+    <i class="fas fa-chevron-right chevron"></i>
+  </div>
+
+  <div class="modal">
+    <!-- <div class="modal__overlay"></div> -->
+    <!-- <div class="modal__container">
+      <img src="./assets/images/cross-small.svg" alt="cross close modal" class="modal-cross title">
+      <h3 class="modal__container__title title">Ohmyfood</h3>
+      <p class="modal__container__description">Ohmyfood is a start-up whose purpose is to reduce waiting time in restaurants by putting online their menus and allowing customers to order them in advance.<br> This project was focused on animations created in CSS and the use of Sass.</p>
+      <div class="modal__container__button--container">
+        <a href="https://github.com/badmotherfunk/ohmyfood" target="_blank">
+          <button class="project__button">
+            <span class="project__button__text">GitHub</span>
+          </button>
+        </a>
+      </div>
+      <div class="modal__container__image__container">
+        <img src="./assets/images/projects/OhMyFood_mockup.png" alt="Ohmyfood website on different device" class="modal__container__image">
+      </div>
+      <div class="tags__container">
+        <div class="tags__container__layout">
+          <div class="tags__container__layout--tags tag1">CSS</div>
+        </div>
+        <div class="tags__container__layout">
+          <div class="tags__container__layout--tags tag2">Sass</div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+
+</section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="./assets/js/app.js"></script>
 </body>
 </html>
