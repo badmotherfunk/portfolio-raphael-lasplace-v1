@@ -1036,6 +1036,11 @@ ul {
   transform: translate3d(220%, 0, 0);
   font-size: 35px;
 }
+@media screen and (max-width: 480px) {
+  .animatedButton:after {
+    display: none;
+  }
+}
 @media screen and (max-width: 1024px) {
   .animatedButton:after {
     font-size: 32px;
@@ -1090,6 +1095,11 @@ ul {
 }
 .animatedButton:hover span {
   transform: translate3d(-220%, 0, 0);
+}
+@media screen and (max-width: 480px) {
+  .animatedButton:hover span {
+    transform: translate(0);
+  }
 }
 
 span.media__text {

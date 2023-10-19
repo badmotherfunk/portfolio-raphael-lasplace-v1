@@ -188,6 +188,11 @@
        transform: translate3d(220%, 0, 0);
        font-size: 35px;
 
+       //Media queries
+       @include mobile {
+        display: none;
+       }
+
     // Media queries 
     @include desktop {
         font-size: 32px;
@@ -224,6 +229,10 @@
     }
     &:hover span {
         transform: translate3d(-220%, 0, 0);
+
+        @include mobile {
+            transform: translate(0);
+        }
     }
 }
 
