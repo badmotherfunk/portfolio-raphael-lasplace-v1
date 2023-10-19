@@ -295,7 +295,7 @@ ul {
   width: 100%;
   height: 100%;
   content: "";
-  opacity: 0.1;
+  opacity: 0.05;
   z-index: -1;
   pointer-events: none;
   background: url("/noise400.62d23a24.gif");
