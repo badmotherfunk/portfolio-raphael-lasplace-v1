@@ -258,6 +258,7 @@
             padding: 30px;
         }
         @include mobile {
+            width: 100vw;
             padding: 20px;
         }
     }
@@ -319,6 +320,10 @@
         @include tablet {
             width: 100%;
             margin-top: 20px;
+        }
+        @include mobile {
+            margin-top: 0;
+            margin: 30px 0 10px 0;
         }
     
     }
@@ -551,7 +556,7 @@
         gap: 25px;
     }
     @include mobile {
-        margin: 10px 0 5px 0;
+        margin: 10px 0 10px 0;
         gap: 20px;
     }
 }
@@ -580,7 +585,6 @@
     }
     @include mobile {
         margin: 0 0 20px 0;
-        padding: 4px 7px;
     }
 }
 
@@ -606,7 +610,7 @@
         font-size: 13px;
     }
     @include mobile {
-        font-size: 11px;
+        font-size: 12px;
     }
 }
 
@@ -669,7 +673,7 @@
     }
     @include mobile {
         padding-top: 0;
-        padding-bottom: 4px;
+        padding-bottom: 2px;
     }
 }
 
@@ -701,7 +705,7 @@
         font-size: 35px;
     }
     @include mobile {
-        font-size: 25px;
+        font-size: 28px;
     }
 }
 
@@ -722,7 +726,8 @@
         font-size: 16px;
     }
     @include mobile {
-        font-size: 14px;
+        font-size: 15px;
+        margin-top: 3px;
     }
     
 }
