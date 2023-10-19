@@ -1632,7 +1632,7 @@ span.animatedText2 {
   .about__description__container__separator {
     width: 50%;
     height: 1px;
-    margin: 20px 0;
+    margin: 40px 0 30px 0;
   }
 }
 .about__description__container__text {
@@ -3458,6 +3458,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   .footer {
+    padding-top: 10px;
     flex-direction: column-reverse;
   }
 }

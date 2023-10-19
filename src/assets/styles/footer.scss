@@ -28,6 +28,7 @@ footer {
 
     //Media queries
     @include mobile {
+        padding-top: 10px;
         flex-direction: column-reverse;
     }
 }
