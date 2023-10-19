@@ -256,7 +256,7 @@ ul {
   position: absolute;
   right: calc(100vw - 148%);
   opacity: 0.3;
-  background-image: linear-gradient(to right, #151515, rgb(71, 71, 71), #151515);
+  background-image: linear-gradient(to right, #111111, rgb(71, 71, 71), #111111);
 }
 
 .background {
@@ -278,7 +278,7 @@ ul {
 }
 
 .opacity__overlay {
-  background: #151515;
+  background: #111111;
   position: absolute;
   top: 0;
   left: 0;
@@ -395,7 +395,7 @@ ul {
     position: fixed;
     width: 100%;
     height: 55px;
-    background-color: #151515;
+    background-color: #111111;
   }
 }
 .landing .header__name {
@@ -432,7 +432,7 @@ ul {
     z-index: 99;
     width: 100vw;
     height: 100vh;
-    background: #151515;
+    background: #111111;
     position: absolute;
     padding: 0;
     top: -1200px;
@@ -1377,7 +1377,7 @@ span.animatedText2 {
   position: relative;
   width: 100vw;
   height: auto;
-  background-color: #151515;
+  background-color: #111111;
   z-index: 2;
 }
 
@@ -1708,7 +1708,7 @@ span.animatedText2 {
   position: relative;
   width: 100vw;
   height: 800px;
-  background-color: #151515;
+  background-color: #111111;
   z-index: 2;
   overflow: hidden;
   text-align: center;
@@ -2090,8 +2090,8 @@ span.animatedText2 {
   width: 100%;
   height: auto;
   padding-bottom: 110px;
-  background-color: #151515;
-  color: #151515;
+  background-color: #111111;
+  color: #111111;
   z-index: 2;
 }
 
@@ -2236,7 +2236,7 @@ span.animatedText2 {
   padding: 20px;
   width: 100%;
   height: 100%;
-  border: 1px solid #151515;
+  border: 1px solid #111111;
   border-radius: 20px;
   background: #efefef;
   transition: transform 0.25s ease-in-out;
@@ -2327,7 +2327,7 @@ span.animatedText2 {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: #151515;
+  background-color: #111111;
   overflow: hidden;
   cursor: grab;
   z-index: 2;
@@ -2523,7 +2523,7 @@ span.animatedText2 {
 
 .project-overlay {
   position: absolute;
-  background-color: #151515;
+  background-color: #111111;
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -2562,7 +2562,7 @@ span.animatedText2 {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #151515;
+  background-color: #111111;
   opacity: 0.8;
   cursor: pointer;
   z-index: 99;
@@ -2600,7 +2600,7 @@ span.animatedText2 {
 }
 .modal__container__title {
   display: flex;
-  color: #151515;
+  color: #111111;
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: 50px;
@@ -2624,7 +2624,7 @@ span.animatedText2 {
 }
 .modal__container__description {
   display: flex;
-  color: #151515;
+  color: #111111;
   font-family: "Neue Montreal Regular", sans-serif;
   width: 40%;
   font-size: 18px;
@@ -2831,7 +2831,7 @@ span.animatedText2 {
 }
 .project__button:before {
   content: "";
-  background: #151515;
+  background: #111111;
   border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
   clip-path: path("M154.5,88.5 C131,113.5 62.5,110 30,89.5 C-2.5,69 -3.5,42 4.5,25.5 C12.5,9 33.5,-6 85,3.5 C136.5,13 178,63.5 154.5,88.5 Z");
   transition: clip-path 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
@@ -2847,7 +2847,7 @@ span.animatedText2 {
   height: 80%;
   width: 90%;
   top: 7px;
-  border: 1px solid #151515;
+  border: 1px solid #111111;
   border-radius: 58% 42% 55% 45%/56% 45% 55% 44%;
   transform: rotate(-20deg);
   transition: transform 0.5s cubic-bezier(0.585, 2.5, 0.645, 0.55);
@@ -3146,7 +3146,7 @@ span.animatedText2 {
 
 .contact {
   position: relative;
-  background: #151515;
+  background: #111111;
   font-family: "Playfair Display", serif;
 }
 .contact__header__h2 {
@@ -3432,7 +3432,7 @@ footer {
   position: relative;
   width: 100%;
   height: auto;
-  background-color: #151515;
+  background-color: #111111;
   padding: 20px 40px;
   z-index: 2;
 }
