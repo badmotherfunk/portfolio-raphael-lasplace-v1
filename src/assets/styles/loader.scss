@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './breakpoints.scss';
 
 .loader {
     position: fixed;
@@ -12,11 +13,10 @@
     background: #000;
     display: grid;
     place-items: center;
-    font-family: $third-font;
-    font-style: italic;
+    font-family: $text-font;
     font-weight: 300;
 
-    display: none;
+    // display: none;
 
     &__box {
         position: relative;
@@ -38,6 +38,13 @@
         background: $white-color;
         border-radius: 10px;
         cursor: pointer;
+        //Media queries
+        @include tablet {
+            width: 25%;
+        } 
+        @include mobile {
+            width: 40%;
+        } 
     }
     &__bar--inner {
         height: 100%;
@@ -46,66 +53,18 @@
         opacity: 0.7;
         background-image: radial-gradient(circle at left, rgb(71, 71, 71),rgb(8, 8, 8));
     }
+    //Available
     &__text--container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 20px;
+        position: relative;
+        top: -65px;
         cursor: pointer;
-    }
-    &__text--break {
-        overflow: hidden;
-    }
-    &__text {
-        position: relative;
-        color: $white-color;
-        padding: 1rem;
-        font-size: 25px;
-        animation: swipe 4s ease-in-out  infinite;
-        overflow: hidden;
-   
-        @keyframes swipe {
-            from {
-                margin-right: -600px;
-                opacity: 0;
 
-            }
-            to {
-                margin-right: 0;
-                opacity: 1;
-            }
-        }
-    }
-    &__text2 {
-        position: relative;
-        color: $white-color;
-        padding: 1rem;
-        font-size: 25px;
-        animation: swipe2 4s ease-in-out -1.5s infinite;
-        @keyframes swipe2 {
-            from {
-                margin-right: -600px;
-                opacity: 0;
-            }
-            to {
-                margin-right: 0;
-                opacity: 1;
-            }
+        //Media queries
+        @include tablet {
+            top: -55px;
         }
     }
 
-    &__slash {
-        font-weight: bold;
-        animation: pulse 1s ease-in-out infinite;
-        @keyframes pulse {
-           from {
-            opacity: 0;
-           } 
-           to {
-            opacity: 1;
-           }
-        }
-    }
     &__border {
        width: 90%;
        height: 1px; 
@@ -121,7 +80,18 @@
         font-family: $title-font;
         font-size: 18px;
         font-weight: 300;
+        font-style: italic;
         cursor: default;
+
+        //Media queries
+        @include tablet {
+            font-size: 14px;
+            margin-bottom: 25px;
+        } 
+        @include mobile {
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
     }
     &__counter.active {
         animation: counterScale 0.5s linear forwards;
@@ -131,19 +101,32 @@
             }
             to {
                 scale: (var(--vw-scale)); 
-                margin-top: 100px;
             }
         }  
     }
 }
+
+.slash {
+    font-weight: bold;
+    animation: pulse 1s ease-in-out infinite;
+    @keyframes pulse {
+       from {
+        opacity: 0;
+       } 
+       to {
+        opacity: 1;
+       }
+    }
+}
+
 
 .layout {
     width: calc(100vw - 85%);
     height: 100vh;
     position: absolute;
     right: calc(100vw - 148%);
-     opacity: 0.3;
-     background-image: linear-gradient(to right, $black-color, rgb(71, 71, 71), $black-color);
+    opacity: 0.3;
+    background-image: linear-gradient(to right, $black-color, rgb(71, 71, 71), $black-color);
 }
 
 .background {
@@ -190,10 +173,3 @@
     background: url("../images/noise400.gif");
 }
 
-// Media queries //
-
-@media screen and (max-width: 1024px) {
-    .loader__counter.active {
-        margin-bottom: 100px;
-    }
-}

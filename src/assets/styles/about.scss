@@ -4,13 +4,13 @@
     position: relative;
     width: 100vw;
     height: auto;
-    background-color: $white-color;
+    background-color: $black-color;
     z-index: 2;
 }
 
 .about__image {
     width: 100%;
-    height: 340px;
+    height: 310px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +24,7 @@
 }
 .about__image__black__border {
     height: 1px;
-    background-color: $black-color;
+    background-color: $white-color;
 }
 
 .about {
@@ -44,7 +44,7 @@
         font-family: $third-font;
         font-style: italic;
         font-size: 50px;
-        color: $black-color;
+        color: $white-color;
         padding: 20px;
         cursor: none;
 
@@ -56,14 +56,15 @@
             font-size: 35px;
         }
         @include mobile {
-            font-size: 30px;
+            margin-top: 10px;
+            font-size: 25px;
         }
     }
     &__border {
         position: relative;
         height: 2px;
         width: 220px;
-        background-color: $black-color;
+        background-color: $white-color;
         bottom: 32px;
         left: 10px;
 
@@ -78,10 +79,10 @@
             bottom: 30px;
         }
         @include mobile {
-            width: 130px;
+            width: 110px;
             left: 15px;
             height: 1px;
-            bottom: 28px;
+            bottom: 27px;
         }
   
     }
@@ -97,10 +98,10 @@
             width: 85%;
         }
         @include tablet {
-            margin-bottom: 40px;
+            margin-bottom: 35px;
         }
         @include mobile {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
     }
@@ -108,16 +109,17 @@
         font-family: $text-font;
         font-style: italic;
         font-size: 29px;
-        color: $black-color;
+        color: $white-color;
         line-height: 40px;
         font-weight: 400;
-        padding: 10px 0 0 0;
+        padding: 20px 0 0 0;
         cursor: none;
 
         // Media queries
         @include desktop {
             font-size: 25px;
             line-height: 35px;
+            padding: 20px 0 10px 0;
         }
         @include tablet {
             font-size: 20px;
@@ -126,6 +128,7 @@
         @include mobile {
             font-size: 17px;
             line-height: 25px;
+            padding: 10px 0 5px 0;
         }
     }
     &__text__styled {
@@ -160,7 +163,7 @@
     display: block;
     top: 35px;
     right: 0;
-    background: $black-color;
+    background: $white-color;
     transition: width .2s ease;
     -webkit-transition: width .2s ease;
 
@@ -179,7 +182,7 @@
   .link:hover:after{
     width: 100%;
     left: 0;
-    background: $black-color;
+    background: $white-color;
   }
 
 
@@ -187,25 +190,24 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: $black-color;
+    color: $white-color;
     font-family: $text-font;
     font-size: 22px;
-    // padding-bottom: 50px;
-    padding: 15px 0 65px 0;
+    padding: 30px 0 100px 0;
     width: 75%;
 
     // Media queries
     @include desktop {
-        padding: 0 0 55px 0;
+        padding: 10px 0 70px 0;
         width: 85%;
     }
     @include tablet {
         flex-direction: column;
         align-items: center;
-        padding-bottom: 50px;
+        padding-bottom: 70px;
     }
     @include mobile {
-        padding-bottom: 20px;
+        padding-bottom: 50px;
     }
 
     &__separator {
@@ -214,7 +216,7 @@
         align-items: center;
         height: auto;
         width: 2px;
-        background-color: $black-color !important;
+        background-color: $white-color !important;
         margin: 0 50px;
 
         @include tablet {

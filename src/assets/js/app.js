@@ -7,57 +7,36 @@ const loaderCounter = document.querySelector(".loader__counter");
 const handleMousePos = (e) => {
     const CURSOR = document.querySelector('.cursor');
     const CIRCLE = document.querySelector('.circle');
-    const HOVER = document.querySelectorAll('.animatedButton');
-    const BIGABOUT = document.querySelectorAll('.link');
-    const BIGTITLE = document.querySelectorAll('.title');
-    const TEXT = document.querySelectorAll('.animatedText');
-    const TEXT2 = document.querySelectorAll('.animatedText2');
-    const SOCIAL = document.querySelectorAll('.socials');
-    const ANIMATEDLINKS = document.querySelectorAll('.header__left');
-    const ANIMATEDMAIL = document.querySelectorAll('.header__name');
-    const BOX = document.querySelectorAll('.wall');
-    
+    const BIGHOVER = document.querySelectorAll('.bigHover');
+    const DISABLEDHOVER = document.querySelectorAll('.disabledHover');
+
     // Disabled background cursor
     const runMouseOver = () => {
         CURSOR.style.display = "none";
       };
 
-      HOVER.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
-      SOCIAL.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
-      ANIMATEDLINKS.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
-      ANIMATEDMAIL.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
-      BOX.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
+      DISABLEDHOVER.forEach(hover => hover.addEventListener('mouseenter', runMouseOver));
 
       // Enabled scaled background cursor
       const runMouseOverScale = () => {
         CIRCLE.style.transform = 'scale(2.5)';
       };
 
-      BIGABOUT.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
-      BIGTITLE.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
-      TEXT.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
-      TEXT2.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
+      BIGHOVER.forEach(hover => hover.addEventListener('mouseenter', runMouseOverScale));
 
         // Enabled background cursor
         const runMouseLeave = () => {
         CURSOR.style.display = "flex";     
         };
 
-        HOVER.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
-        SOCIAL.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
-        ANIMATEDLINKS.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
-        ANIMATEDMAIL.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
-        BOX.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
+        DISABLEDHOVER.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave));
 
         // Disabled scaled background cursor
         const runMouseLeave2 = () => {
             CIRCLE.style.transform = '';  
         };
 
-        BIGABOUT.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
-        BIGTITLE.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
-        TEXT.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
-        TEXT2.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
+        BIGHOVER.forEach(hover => hover.addEventListener('mouseleave', runMouseLeave2));
 
     
     };
@@ -107,9 +86,8 @@ function animateCircles() {
 animateCircles();
 
 
-
-// Counter size depending screen size
-var range = 15 / 400;
+// // Counter size depending screen size
+var range = 1.1 / 300;
 var vw = range * Math.min(window.innerWidth, window.innerHeight);
 
 document.documentElement.style.setProperty('--vw-scale', `${vw}`);
@@ -117,30 +95,6 @@ document.documentElement.style.setProperty('--vw-scale', `${vw}`);
 window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vw-scale', `${range * Math.min(window.innerWidth, window.innerHeight)}`);
 });
-
-// Media queries Counter
-let mm = gsap.matchMedia();
-mm.add("(min-width: 1950px)", () => {
-    var range = 13 / 400;
-    var vw = range * Math.min(window.innerWidth, window.innerHeight);
-    document.documentElement.style.setProperty('--vw-scale', `${vw}`);
-});
-mm.add("(max-width: 1505px)", () => {
-    var range = 11 / 400;
-    var vw = range * Math.min(window.innerWidth, window.innerHeight);
-    document.documentElement.style.setProperty('--vw-scale', `${vw}`);
-});
-mm.add("(max-width: 1024px)", () => {
-    var range = 9 / 400;
-    var vw = range * Math.min(window.innerWidth, window.innerHeight);
-    document.documentElement.style.setProperty('--vw-scale', `${vw}`);
-});
-mm.add("(max-width: 768px)", () => {
-    var range = 8 / 400;
-    var vw = range * Math.min(window.innerWidth, window.innerHeight);
-    document.documentElement.style.setProperty('--vw-scale', `${vw}`);
-});
-
 
 // GSAP Loader animation
 let count = 0;
@@ -153,6 +107,7 @@ let barInterval = setInterval(() => {
     if(count === 101) {
         counter.classList.add('active');
         clearInterval(barInterval);
+
         gsap.to(".loader__counter, loader__bar--inner, loader__bar", {
             duration: 1.5,
             display: "none",
@@ -181,7 +136,7 @@ let barInterval = setInterval(() => {
         });
         gsap.to(".layout", {
             delay: -0.5,
-            duration: 4, ease: "bounce.inOut",
+            duration: 3.8, ease: "bounce.inOut",
             right: "300%",
         });
         gsap.to(".loader", {
@@ -209,7 +164,7 @@ let barInterval = setInterval(() => {
             display: "none"
         });
     }
-}, 35)
+}, 20)
 
 
 // Background sphere following mouse position
@@ -246,6 +201,7 @@ const crossDropDown = document.querySelector('.animated__closeDropDown');
 const wrapper = document.querySelector('.header__wrapper');
 const links = document.querySelectorAll('.animatedLinks');
 const contact = document.querySelector('.header__right');
+const home = document.querySelector('.home')
 
 hamburgerContainer.addEventListener('click', () => {
     hamburger.classList.add('active');
@@ -253,6 +209,8 @@ hamburgerContainer.addEventListener('click', () => {
     crossDropDown.classList.remove('remove');
     wrapper.classList.add('active');
     wrapper.classList.remove('remove');
+    home.classList.add('active');
+    home.classList.remove('remove');
 })
 
 closeDropDown.addEventListener('click', () => {
@@ -260,6 +218,16 @@ closeDropDown.addEventListener('click', () => {
     closeDropDown.classList.remove('active');
     crossDropDown.classList.add('remove');
     wrapper.classList.add('remove');
+
+    setTimeout(function() {
+        home.classList.add('remove');
+    }, 1000) 
+})
+
+home.addEventListener('click', () => {
+    setTimeout(function() {
+        home.classList.add('remove');
+    }, 1000) 
 })
 
 contact.addEventListener('click', () => {
@@ -287,9 +255,8 @@ let typeWriter = new Typewriter(txtAnim, {
     deleteSpeed: 20
 })
 
-
 typeWriter
-.pauseFor(8100)
+.pauseFor(5500)
 .changeDelay(20)
 .typeString('I\'m <span class="media__text"> Raphaël</span>')
 .pauseFor(300)
@@ -303,7 +270,7 @@ typeWriter
 .deleteChars(12)
 .typeString('<em><span class="media__text">React.js !</span></em>')
 .pauseFor(1000)
-.typeString('<br> I\'m passionate about crafting <em><div class="animatedText"; data-text="interactive";><span>beautiful</span></div></em> & <em><div class="animatedText2"; data-text="creative";><span>designed</span></div></em> websites.')
+.typeString('<br> I\'m passionate about crafting <em><div class="animatedText bigHover"; data-text="interactive";><span>beautiful</span></div></em> & <em><div class="animatedText2 bigHover"; data-text="creative";><span>designed</span></div></em> websites.')
 .start()
 
 
@@ -368,10 +335,54 @@ const skillsScene = new ScrollMagic.Scene({
 .setTween(tlskills)
 .addTo(controllerSkills)
 
+// GSAP Experiences Animation ScrollMagic
+const bloc1 = document.querySelector('.bloc1');
+const bloc2 = document.querySelector('.bloc2');
+const bloc3 = document.querySelector('.bloc3');
+const bloc4 = document.querySelector('.bloc4');
+const experiencesTitle = document.querySelector('.experiences__title')
+
+const tlexp = new TimelineMax();
+
+tlexp
+.from(bloc1, {y: 300, opacity: 0, duration: 0.5})
+.from(bloc2, {y: 300, opacity: 0, duration: 0.5})
+.from(bloc3, {y: 300, opacity: 0, duration: 0.5})
+.from(bloc4, {y: 300, opacity: 0, duration: 0.5})
+
+const controllerExp = new ScrollMagic.Controller();
+
+const sceneExp = new ScrollMagic.Scene({
+    triggerElement: experiencesTitle,
+    reverse: false
+})
+.setTween(tlexp)
+.addTo(controllerExp)
+
+
+//GSAP Projects advice animation
+const projectsAdvice = document.querySelector('.projects__advice');
+const projectsTitle = document.querySelector('.projects__title__h2')
+
+const tlprojects = new TimelineMax();
+
+tlprojects
+.from(projectsAdvice, {display: "none", opacity: 0, duration: 0.5})
+.to(projectsAdvice, {display:"none", duration: 11.5})
+
+const projectsController = new ScrollMagic.Controller();
+
+const projectsScene = new ScrollMagic.Scene({
+    triggerElement: projectsTitle,
+    reverse: false,
+})
+
+.setTween(tlprojects)
+.addTo(projectsController)
+
 
 // Project slider image
-
-const track = document.querySelector(".image-track")
+const track = document.getElementById("image-track");
 
 const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
 
@@ -418,10 +429,8 @@ window.onmousemove = e => handleOnMove(e);
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 
 
-// Project Modal
-
+// PROJECT MODAL
 const modal = document.querySelector('.modal');
-const projectContainer = document.querySelector('.modal__overlay')
 const buttonContainer = document.querySelectorAll('.overlay-container');
 
 
@@ -432,109 +441,78 @@ buttonContainer.forEach(function (item) {
 });
 
 
- const kasa = document.querySelector('.kasa');
-
-//  const kasaModalTitle = document.querySelector('.modal__container__title');
-//  const kasaModalDescription = document.querySelector('.modal__container__description');
-//  const kasaTag1 = document.querySelector('.tag1')
-//  const kasaTag2 = document.querySelector('.tag2')
-//  const kasaPicture = document.querySelector('.modal__container__image__container')
-
- // When the user click anywhere outside the modal, close it
-//  const modalCross = document.querySelector('.modal-cross');
-// window.addEventListener('click', function(event) {
-//     if (event.target === projectContainer || event.target === modalCross) {
-//         modal.style.display = "none";
-//     }
-//  })
-
-
-//  kasa.addEventListener('click', () => {
-//     kasaModalTitle.innerText = "Kasa";
-//     kasaModalDescription.innerText = "Kasa is an 10-years-old agency specialized in the private rental. They recently decided to upgrade their web app using Node-Js for the back-end, and React-Js for the front-end.\n The aim of this project is to set up a React application with reusable components and to make API calls to retrieve data."
-//     kasaTag1.innerText = "Node.js"
-//     kasaTag2.innerText = "React"
-//     kasaPicture.innerHTML ='<img src="">';
-
-//  })
-
-
+// GENERATE PROJECTS CONTENT
 const modalContainer = document.querySelector('.modal')
 import crossIconImg from '../images/cross-small.svg';
 
+// We get the data from JSON folder
+const data = require('./projectsData.json');
+const projectsData = data.projectsData;
 
-//OHMYFOOD PROJECT MODAL
+const projectsCards = document.querySelectorAll('.project-overlay');
+projectsCards.forEach(project => project.addEventListener('click', (e) => {
+    generatedProjects(e)
+}))
 
-const ohmyfood = document.querySelector('.ohmyfood');
-ohmyfood.addEventListener("click", generatedOhmyfood)
+import pictures from '../images/projects/*.webp'
 
-import pictureOhmyfood from '../images/projects/OhMyFood_mockup.webp'
+function generatedProjects(e) {
 
-function generatedOhmyfood() {
+    // Get the projects by data-id
+    const projectId = e.target.dataset.id
+    const projects = projectsData[projectId]
     
+    // Get projects pictures imported because of parcel bundler
+    const projectPictures = pictures[projectId];
+
     const modal = document.createElement('div');
     modal.className = 'modal__container';
-
+    
     //Overlay
     const modalOverlay = document.createElement('div');
     modalOverlay.className = 'modal__overlay';
-
+    
     //Icon
     const crossIcon = document.createElement('img');
-    crossIcon.className = 'modal-cross title'
+    crossIcon.className = 'modal-cross bigHover'
     crossIcon.src = crossIconImg;
-
+    
     //Title
     const title = document.createElement('h3');
-    title.className = "modal__container__title title"
-    title.innerText = "Ohmyfood";
-
+    title.className = "modal__container__title bigHover"
+    title.innerText = projects.title;
+    
     //Container description image
     const descriptionImageContainer = document.createElement('div');
     descriptionImageContainer.className = 'description__image__container'
-
+    
     //Description
     const description = document.createElement('p');
     description.className = "modal__container__description";
-    description.innerText = "Ohmyfood is a start-up whose purpose is to reduce waiting time in restaurants by putting online their menus and allowing customers to order them in advance.\n This project was focused on animations created in CSS and the use of Sass."
-    
+    description.innerText = projects.description;
+        
     //image
     const imageContainer = document.createElement('div');
     imageContainer.className = "modal__container__image__container";
     const picture = document.createElement('img')
-    picture.src = pictureOhmyfood;
-
+    picture.src = projectPictures
+    
     //Button
     const buttonContainer = document.createElement('div');
     buttonContainer.className = 'modal__container__button--container';
     const buttonLink = document.createElement('a');
-    buttonLink.href = 'https://github.com/badmotherfunk/ohmyfood';
+    buttonLink.href = projects.link;
     buttonLink.target = '_blank';
-    const button = document.createElement('button');
-    button.className = 'project__button'
-    const buttonText = document.createElement('span')
-    buttonText.className = 'project__button__text';
-    buttonText.innerText = 'Github'
+    buttonLink.className = "githubLink  disabledHover"
+    const button = document.createElement('i');
+    button.className = 'fa-brands fa-github-alt githubIcon'
+    const github = document.createElement("span")
+    github.className = "githubButton"
+    github.innerText = "Github"
 
-    //Tags
-    const tags = document.createElement('div');
-    tags.className = 'tags__container';
-    const tagsLayout = document.createElement('div');
-    tagsLayout.className = 'tags__container__layout';
-    const tagsLayout2 = document.createElement('div');
-    tagsLayout2.className = 'tags__container__layout';
-    const tagsLayout3 = document.createElement('div');
-    tagsLayout3.className = 'tags__container__layout';
-    const tagsText = document.createElement('div')
-    tagsText.className = 'tags__container__layout--tags tag1';
-    tagsText.innerText = 'HTML'
-    const tagsText2 = document.createElement('div')
-    tagsText2.className = 'tags__container__layout--tags tag1';
-    tagsText2.innerText = 'CSS'
-    const tagsText3 = document.createElement('div')
-    tagsText3.className = 'tags__container__layout--tags tag2';
-    tagsText3.innerText = 'Javascript'
-    
+    const buttonsGlobal = document.createElement('div')
+    buttonsGlobal.className = "buttonsGlobal"
+
     //Overlay
     modalContainer.appendChild(modalOverlay)
     //Global Add
@@ -550,19 +528,50 @@ function generatedOhmyfood() {
     imageContainer.appendChild(picture);
     //Button
     modal.appendChild(buttonContainer);
-    buttonContainer.appendChild(buttonLink);
+    buttonContainer.appendChild(buttonsGlobal);
+    buttonsGlobal.appendChild(buttonLink);
     buttonLink.appendChild(button);
-    button.appendChild(buttonText);
-    //Tags
-    modal.appendChild(tags);
-    tags.appendChild(tagsLayout);
-    tags.appendChild(tagsLayout2);
-    tags.appendChild(tagsLayout3);
-    tagsLayout.appendChild(tagsText);
-    tagsLayout2.appendChild(tagsText2);
-    tagsLayout3.appendChild(tagsText3);
+    buttonLink.appendChild(github)
 
-    // When the user click anywhere outside the modal, close it
+    //Live button
+    if(projects.live) {
+
+        const liveButton = document.createElement('a');
+        liveButton.className = "liveButton";
+        liveButton.target = "_blank"
+        liveButton.href = projects.live
+
+        const liveContainer = document.createElement('div')
+        liveContainer.className = 'liveContainer disabledHover' 
+        liveContainer.innerText = "Watch Live"
+        
+        const liveIcon = document.createElement('span')
+        liveIcon.className = "live-icon"
+
+        buttonContainer.appendChild(buttonsGlobal)
+        buttonsGlobal.appendChild(liveButton)
+        liveButton.appendChild(liveContainer)
+        liveContainer.appendChild(liveIcon)
+    }
+
+    //Tags
+    const tags = document.createElement('div');
+    tags.className = 'tags__container';
+
+    for(let i = 0; i < projects.tags.length; i++) {
+
+        const tagsLayout = document.createElement('div');
+        tagsLayout.className = 'tags__container__layout';
+        const tagsText = document.createElement('div')
+        tagsText.className = 'tags__container__layout--tags tag1';
+        tagsText.innerText = projects.tags[i];
+            
+        tags.appendChild(tagsLayout);
+        tagsLayout.appendChild(tagsText);
+    }
+    buttonContainer.appendChild(tags);
+    
+    // When the user click anywhere outside the modal, or on the cross, close it
     const modalCross = document.querySelector('.modal-cross');
     const projectContainer = document.querySelector('.modal__overlay')
     window.addEventListener('click', function(event) {
@@ -570,675 +579,9 @@ function generatedOhmyfood() {
         modalContainer.style.display = "none";
         modalContainer.innerHTML = "";
         }
+        crossIcon.addEventListener('click', () => {
+            const CIRCLE = document.querySelector('.circle');
+                CIRCLE.style.transform = ''; 
+        })
     })
-
 }
-
-
-// KASA PROJECT MODAL
-
-import pictureKasa from '../images/projects/KasaMockup.webp'
-
-kasa.addEventListener("click", generatedKasa)
-
-function generatedKasa() {
-    const modal = document.createElement('div');
-    modal.className = 'modal__container'
-
-    //Overlay
-    const modalOverlay = document.createElement('div');
-    modalOverlay.className = 'modal__overlay';
-
-     //Icon
-    const crossIcon = document.createElement('img');
-    crossIcon.className = 'modal-cross title'
-    crossIcon.src = crossIconImg;
-
-    //Title
-    const title = document.createElement('h3');
-    title.className = "modal__container__title title"
-    title.innerText = "Kasa";
-
-    //Container description image
-    const descriptionImageContainer = document.createElement('div');
-    descriptionImageContainer.className = 'description__image__container'
-
-    //Description
-    const description = document.createElement('p');
-    description.className = "modal__container__description";
-    description.innerText = "Kasa is an 10-years-old agency specialized in the private rental. They recently decided to upgrade their web app using Node-Js for the back-end, and React-Js for the front-end.\n The aim of this project is to set up a React application with reusable components and to make API calls to retrieve data."
-    
-    //image
-    const imageContainer = document.createElement('div');
-    imageContainer.className = "modal__container__image__container";
-    const picture = document.createElement('img')
-    picture.src = pictureKasa;
-
-    //Button
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'modal__container__button--container';
-    const buttonLink = document.createElement('a');
-    buttonLink.href = 'https://github.com/badmotherfunk/kasa';
-    buttonLink.target = '_blank';
-    const button = document.createElement('button');
-    button.className = 'project__button';
-    const buttonText = document.createElement('span')
-    buttonText.className = 'project__button__text';
-    buttonText.innerText = 'Github';
-
-    //Tags
-    const tags = document.createElement('div');
-    tags.className = 'tags__container';
-    const tagsLayout = document.createElement('div');
-    tagsLayout.className = 'tags__container__layout';
-    const tagsLayout2 = document.createElement('div');
-    tagsLayout2.className = 'tags__container__layout';
-    const tagsLayout3 = document.createElement('div');
-    tagsLayout3.className = 'tags__container__layout';
-    const tagsText = document.createElement('div')
-    tagsText.className = 'tags__container__layout--tags tag1';
-    tagsText.innerText = 'Node.js'
-    const tagsText2 = document.createElement('div')
-    tagsText2.className = 'tags__container__layout--tags tag1';
-    tagsText2.innerText = 'React'
-    const tagsText3 = document.createElement('div')
-    tagsText3.className = 'tags__container__layout--tags tag2';
-    tagsText3.innerText = 'Sass'
-    
-    //Overlay
-     modalContainer.appendChild(modalOverlay)
-    //Global Add
-    modalContainer.appendChild(modal)
-    //Icon
-    modal.appendChild(crossIcon);
-    //Title
-    modal.appendChild(title);
-    //Description & image
-    modal.appendChild(descriptionImageContainer)
-    descriptionImageContainer.appendChild(description)
-    descriptionImageContainer.appendChild(imageContainer);
-    imageContainer.appendChild(picture);
-    //Button
-    modal.appendChild(buttonContainer);
-    buttonContainer.appendChild(buttonLink);
-    buttonLink.appendChild(button);
-    button.appendChild(buttonText);
-    //Tags
-    modal.appendChild(tags);
-    tags.appendChild(tagsLayout);
-    tags.appendChild(tagsLayout2);
-    tags.appendChild(tagsLayout3);
-    tagsLayout.appendChild(tagsText);
-    tagsLayout2.appendChild(tagsText2);
-    tagsLayout3.appendChild(tagsText3);
-
-     // When the user click anywhere outside the modal, close it
-    const modalCross = document.querySelector('.modal-cross');
-    const projectContainer = document.querySelector('.modal__overlay')
-    window.addEventListener('click', function(event) {
-     if (event.target === projectContainer || event.target === modalCross) {
-         modalContainer.style.display = "none";
-         modalContainer.innerHTML = "";
-        }
-    })
-
-}
-
-
-// ARGENTBANK PROJECT MODAL
-
-const argentBank = document.querySelector('.argentBank')
-
-import pictureArgentBank from '../images/projects/argentBank_mockup.webp'
-
-argentBank.addEventListener("click", generatedArgentBank)
-
-function generatedArgentBank() {
-    const modal = document.createElement('div');
-    modal.className = 'modal__container'
-
-    //Overlay
-    const modalOverlay = document.createElement('div');
-    modalOverlay.className = 'modal__overlay';
-
-     //Icon
-    const crossIcon = document.createElement('img');
-    crossIcon.className = 'modal-cross title'
-    crossIcon.src = crossIconImg;
-
-    //Title
-    const title = document.createElement('h3');
-    title.className = "modal__container__title title"
-    title.innerText = "ArgentBank";
-
-    //Container description image
-    const descriptionImageContainer = document.createElement('div');
-    descriptionImageContainer.className = 'description__image__container'
-
-    //Description
-    const description = document.createElement('p');
-    description.className = "modal__container__description";
-    description.innerText = "ArgentBank is an online banking site. It allows users to log in, view their transactions and modify their informations.\n The aim of this project was to implement a React application, set up user interactions using an API, and create the future Swagger implementation. \n Notably using Redux and MongoDb."
-    
-    //image
-    const imageContainer = document.createElement('div');
-    imageContainer.className = "modal__container__image__container";
-    const picture = document.createElement('img')
-    picture.src = pictureArgentBank;
-
-    //Button
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'modal__container__button--container';
-    const buttonLink = document.createElement('a');
-    buttonLink.href = 'https://github.com/badmotherfunk?tab=repositories';
-    buttonLink.target = '_blank';
-    const button = document.createElement('button');
-    button.className = 'project__button';
-    const buttonText = document.createElement('span')
-    buttonText.className = 'project__button__text';
-    buttonText.innerText = 'Github';
-
-    //Tags
-    const tags = document.createElement('div');
-    tags.className = 'tags__container';
-    const tagsLayout = document.createElement('div');
-    tagsLayout.className = 'tags__container__layout';
-    const tagsLayout2 = document.createElement('div');
-    tagsLayout2.className = 'tags__container__layout';
-    const tagsLayout3 = document.createElement('div');
-    tagsLayout3.className = 'tags__container__layout';
-    const tagsText = document.createElement('div')
-    tagsText.className = 'tags__container__layout--tags tag1';
-    tagsText.innerText = 'React'
-    const tagsText2 = document.createElement('div')
-    tagsText2.className = 'tags__container__layout--tags tag1';
-    tagsText2.innerText = 'Redux'
-    const tagsText3 = document.createElement('div')
-    tagsText3.className = 'tags__container__layout--tags tag2';
-    tagsText3.innerText = 'MongoDb'
-    
-    //Overlay
-     modalContainer.appendChild(modalOverlay)
-    //Global Add
-    modalContainer.appendChild(modal)
-    //Icon
-    modal.appendChild(crossIcon);
-    //Title
-    modal.appendChild(title);
-    //Description & image
-    modal.appendChild(descriptionImageContainer)
-    descriptionImageContainer.appendChild(description)
-    descriptionImageContainer.appendChild(imageContainer);
-    imageContainer.appendChild(picture);
-    //Button
-    modal.appendChild(buttonContainer);
-    buttonContainer.appendChild(buttonLink);
-    buttonLink.appendChild(button);
-    button.appendChild(buttonText);
-    //Tags
-    modal.appendChild(tags);
-    tags.appendChild(tagsLayout);
-    tags.appendChild(tagsLayout2);
-    tags.appendChild(tagsLayout3);
-    tagsLayout.appendChild(tagsText);
-    tagsLayout2.appendChild(tagsText2);
-    tagsLayout3.appendChild(tagsText3);
-
-
-     // When the user click anywhere outside the modal, close it
-    const modalCross = document.querySelector('.modal-cross');
-    const projectContainer = document.querySelector('.modal__overlay')
-    window.addEventListener('click', function(event) {
-     if (event.target === projectContainer || event.target === modalCross) {
-         modalContainer.style.display = "none";
-         modalContainer.innerHTML = "";
-        }
-    })
-
-}
-
-
-// SOPHIE BUEL PROJECT MODAL
-
-const sophieBuel = document.querySelector('.sophieBuel')
-
-import pictureSophie from '../images/projects/sophieBuel_mockup.webp'
-
-sophieBuel.addEventListener("click", generatedSophieBuel)
-
-function generatedSophieBuel() {
-    const modal = document.createElement('div');
-    modal.className = 'modal__container'
-
-    //Overlay
-    const modalOverlay = document.createElement('div');
-    modalOverlay.className = 'modal__overlay';
-
-     //Icon
-    const crossIcon = document.createElement('img');
-    crossIcon.className = 'modal-cross title'
-    crossIcon.src = crossIconImg;
-
-    //Title
-    const title = document.createElement('h3');
-    title.className = "modal__container__title title"
-    title.innerText = "Sophie Buel";
-
-    //Container description image
-    const descriptionImageContainer = document.createElement('div');
-    descriptionImageContainer.className = 'description__image__container'
-
-    //Description
-    const description = document.createElement('p');
-    description.className = "modal__container__description";
-    description.innerText = "Sophie Buel is an interior designer.\n The aim of this project was to create a portfolio that allows users to log in, add projects to the home page, filter projects, and delete projects via modals.\n This project involved making calls to an API, and creating projects dynamically in Javascript."
-    
-    //image
-    const imageContainer = document.createElement('div');
-    imageContainer.className = "modal__container__image__container";
-    const picture = document.createElement('img')
-    picture.src = pictureSophie;
-
-    //Button
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'modal__container__button--container';
-    const buttonLink = document.createElement('a');
-    buttonLink.href = 'https://github.com/badmotherfunk/portfolio-sophie-buel';
-    buttonLink.target = '_blank';
-    const button = document.createElement('button');
-    button.className = 'project__button';
-    const buttonText = document.createElement('span')
-    buttonText.className = 'project__button__text';
-    buttonText.innerText = 'Github';
-
-    //Tags
-    const tags = document.createElement('div');
-    tags.className = 'tags__container';
-    const tagsLayout = document.createElement('div');
-    tagsLayout.className = 'tags__container__layout';
-    const tagsLayout2 = document.createElement('div');
-    tagsLayout2.className = 'tags__container__layout';
-    const tagsLayout3 = document.createElement('div');
-    tagsLayout3.className = 'tags__container__layout';
-    const tagsText = document.createElement('div')
-    tagsText.className = 'tags__container__layout--tags tag1';
-    tagsText.innerText = 'HTML'
-    const tagsText2 = document.createElement('div')
-    tagsText2.className = 'tags__container__layout--tags tag1';
-    tagsText2.innerText = 'CSS'
-    const tagsText3 = document.createElement('div')
-    tagsText3.className = 'tags__container__layout--tags tag2';
-    tagsText3.innerText = 'Javascript'
-    
-    //Overlay
-     modalContainer.appendChild(modalOverlay)
-    //Global Add
-    modalContainer.appendChild(modal)
-    //Icon
-    modal.appendChild(crossIcon);
-    //Title
-    modal.appendChild(title);
-    //Description & image
-    modal.appendChild(descriptionImageContainer)
-    descriptionImageContainer.appendChild(description)
-    descriptionImageContainer.appendChild(imageContainer);
-    imageContainer.appendChild(picture);
-    //Button
-    modal.appendChild(buttonContainer);
-    buttonContainer.appendChild(buttonLink);
-    buttonLink.appendChild(button);
-    button.appendChild(buttonText);
-    //Tags
-    modal.appendChild(tags);
-    tags.appendChild(tagsLayout);
-    tags.appendChild(tagsLayout2);
-    tags.appendChild(tagsLayout3);
-    tagsLayout.appendChild(tagsText);
-    tagsLayout2.appendChild(tagsText2);
-    tagsLayout3.appendChild(tagsText3);
-
-
-     // When the user click anywhere outside the modal, close it
-    const modalCross = document.querySelector('.modal-cross');
-    const projectContainer = document.querySelector('.modal__overlay')
-    window.addEventListener('click', function(event) {
-     if (event.target === projectContainer || event.target === modalCross) {
-         modalContainer.style.display = "none";
-         modalContainer.innerHTML = "";
-        }
-    })
-
-}
-
-
-// BOOKI PROJECT MODAL
-
-const booki = document.querySelector('.booki');
-
-import pictureBooki from '../images/projects/booki_mockup.webp'
-
-booki.addEventListener("click", generatedBooki)
-
-function generatedBooki() {
-    const modal = document.createElement('div');
-    modal.className = 'modal__container'
-
-    //Overlay
-    const modalOverlay = document.createElement('div');
-    modalOverlay.className = 'modal__overlay';
-
-     //Icon
-    const crossIcon = document.createElement('img');
-    crossIcon.className = 'modal-cross title'
-    crossIcon.src = crossIconImg;
-
-    //Title
-    const title = document.createElement('h3');
-    title.className = "modal__container__title title"
-    title.innerText = "Booki";
-
-    //Container description image
-    const descriptionImageContainer = document.createElement('div');
-    descriptionImageContainer.className = 'description__image__container'
-
-    //Description
-    const description = document.createElement('p');
-    description.className = "modal__container__description";
-    description.innerText = "Booki is a company offering a vacation planning tool.\n The site allows users to find accommodation and activities in the city of their choice. \n The aim of this project was to create a prototype site by integrating the mock-up designed by the UI designer, in HTML and CSS. The site had to be responsive, of course."
-    
-    //image
-    const imageContainer = document.createElement('div');
-    imageContainer.className = "modal__container__image__container";
-    const picture = document.createElement('img')
-    picture.src = pictureBooki;
-
-    //Button
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'modal__container__button--container booki__button';
-    const buttonLink = document.createElement('a');
-    buttonLink.href = 'https://github.com/badmotherfunk?tab=repositories';
-    buttonLink.target = '_blank';
-    const button = document.createElement('button');
-    button.className = 'project__button';
-    const buttonText = document.createElement('span')
-    buttonText.className = 'project__button__text';
-    buttonText.innerText = 'Github';
-
-    //Tags
-    const tags = document.createElement('div');
-    tags.className = 'tags__container booki__tags';
-    const tagsLayout = document.createElement('div');
-    tagsLayout.className = 'tags__container__layout';
-    const tagsLayout2 = document.createElement('div');
-    tagsLayout2.className = 'tags__container__layout';
-    const tagsText = document.createElement('div')
-    tagsText.className = 'tags__container__layout--tags tag1';
-    tagsText.innerText = 'HTML'
-    const tagsText2 = document.createElement('div')
-    tagsText2.className = 'tags__container__layout--tags tag2';
-    tagsText2.innerText = 'CSS'
-    
-    //Overlay
-     modalContainer.appendChild(modalOverlay)
-    //Global Add
-    modalContainer.appendChild(modal)
-    //Icon
-    modal.appendChild(crossIcon);
-    //Title
-    modal.appendChild(title);
-    //Description & image
-    modal.appendChild(descriptionImageContainer)
-    descriptionImageContainer.appendChild(description)
-    descriptionImageContainer.appendChild(imageContainer);
-    imageContainer.appendChild(picture);
-    //Button
-    modal.appendChild(buttonContainer);
-    buttonContainer.appendChild(buttonLink);
-    buttonLink.appendChild(button);
-    button.appendChild(buttonText);
-    //Tags
-    modal.appendChild(tags);
-    tags.appendChild(tagsLayout);
-    tags.appendChild(tagsLayout2)
-    tagsLayout.appendChild(tagsText);
-    tagsLayout2.appendChild(tagsText2);
-
-     // When the user click anywhere outside the modal, close it
-    const modalCross = document.querySelector('.modal-cross');
-    const projectContainer = document.querySelector('.modal__overlay')
-    window.addEventListener('click', function(event) {
-     if (event.target === projectContainer || event.target === modalCross) {
-         modalContainer.style.display = "none";
-         modalContainer.innerHTML = "";
-        }
-    })
-
-}
-
-
-// MENU MAKER BY QWENTA PROJECT MODAL
-
-const menuMaker = document.querySelector('.menuMaker');
-
-import pictureMenuMaker from '../images/projects/booki_mockup.webp'
-
-menuMaker.addEventListener("click", generatedMenuMaker)
-
-function generatedMenuMaker() {
-    const modal = document.createElement('div');
-    modal.className = 'modal__container'
-
-    //Overlay
-    const modalOverlay = document.createElement('div');
-    modalOverlay.className = 'modal__overlay';
-
-     //Icon
-    const crossIcon = document.createElement('img');
-    crossIcon.className = 'modal-cross title'
-    crossIcon.src = crossIconImg;
-
-    //Title
-    const title = document.createElement('h3');
-    title.className = "modal__container__title title"
-    title.innerText = "Menu Maker by Qwenta";
-
-    //Container description image
-    const descriptionImageContainer = document.createElement('div');
-    descriptionImageContainer.className = 'description__image__container'
-
-    //Description
-    const description = document.createElement('p');
-    description.className = "modal__container__description";
-    description.innerText = "Booki is a company offering a vacation planning tool.\n The site allows users to find accommodation and activities in the city of their choice. \n The aim of this project was to create a prototype site by integrating the mock-up designed by the UI designer, in HTML and CSS. The site had to be responsive, of course."
-    
-    //image
-    const imageContainer = document.createElement('div');
-    imageContainer.className = "modal__container__image__container";
-    const picture = document.createElement('img')
-    picture.src = pictureBooki;
-
-    //Button
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'modal__container__button--container';
-    const buttonLink = document.createElement('a');
-    buttonLink.href = 'https://github.com/badmotherfunk?tab=repositories';
-    buttonLink.target = '_blank';
-    const button = document.createElement('button');
-    button.className = 'project__button';
-    const buttonText = document.createElement('span')
-    buttonText.className = 'project__button__text';
-    buttonText.innerText = 'Github';
-
-    //Tags
-    const tags = document.createElement('div');
-    tags.className = 'tags__container';
-    const tagsLayout = document.createElement('div');
-    tagsLayout.className = 'tags__container__layout';
-    const tagsLayout2 = document.createElement('div');
-    tagsLayout2.className = 'tags__container__layout';
-    const tagsLayout3 = document.createElement('div');
-    tagsLayout3.className = 'tags__container__layout';
-    const tagsText = document.createElement('div')
-    tagsText.className = 'tags__container__layout--tags tag1';
-    tagsText.innerText = 'Agile'
-    const tagsText2 = document.createElement('div')
-    tagsText2.className = 'tags__container__layout--tags tag1';
-    tagsText2.innerText = 'Kanban'
-    const tagsText3 = document.createElement('div')
-    tagsText3.className = 'tags__container__layout--tags tag2';
-    tagsText3.innerText = 'Gestion'
-    
-    //Overlay
-     modalContainer.appendChild(modalOverlay)
-    //Global Add
-    modalContainer.appendChild(modal)
-    //Icon
-    modal.appendChild(crossIcon);
-    //Title
-    modal.appendChild(title);
-    //Description & image
-    modal.appendChild(descriptionImageContainer)
-    descriptionImageContainer.appendChild(description)
-    descriptionImageContainer.appendChild(imageContainer);
-    imageContainer.appendChild(picture);
-    //Button
-    modal.appendChild(buttonContainer);
-    buttonContainer.appendChild(buttonLink);
-    buttonLink.appendChild(button);
-    button.appendChild(buttonText);
-    //Tags
-    modal.appendChild(tags);
-    tags.appendChild(tagsLayout);
-    tags.appendChild(tagsLayout2);
-    tags.appendChild(tagsLayout3);
-    tagsLayout.appendChild(tagsText);
-    tagsLayout2.appendChild(tagsText2);
-    tagsLayout3.appendChild(tagsText3);
-
-     // When the user click anywhere outside the modal, close it
-    const modalCross = document.querySelector('.modal-cross');
-    const projectContainer = document.querySelector('.modal__overlay')
-    window.addEventListener('click', function(event) {
-     if (event.target === projectContainer || event.target === modalCross) {
-         modalContainer.style.display = "none";
-         modalContainer.innerHTML = "";
-        }
-    })
-
-}
-
-
-
-// NNINA CARDUCCI PROJECT MODAL
-
-const ninaCarducci = document.querySelector('.ninaCarducci');
-
-import pictureNina from '../images/projects/booki_mockup.webp'
-
-ninaCarducci.addEventListener("click", generatedNinaCarducci)
-
-function generatedNinaCarducci() {
-    const modal = document.createElement('div');
-    modal.className = 'modal__container'
-
-    //Overlay
-    const modalOverlay = document.createElement('div');
-    modalOverlay.className = 'modal__overlay';
-
-     //Icon
-    const crossIcon = document.createElement('img');
-    crossIcon.className = 'modal-cross title'
-    crossIcon.src = crossIconImg;
-
-    //Title
-    const title = document.createElement('h3');
-    title.className = "modal__container__title title"
-    title.innerText = "Nina Carducci - Photographer";
-
-    //Container description image
-    const descriptionImageContainer = document.createElement('div');
-    descriptionImageContainer.className = 'description__image__container'
-
-    //Description
-    const description = document.createElement('p');
-    description.className = "modal__container__description";
-    description.innerText = "Booki is a company offering a vacation planning tool.\n The site allows users to find accommodation and activities in the city of their choice. \n The aim of this project was to create a prototype site by integrating the mock-up designed by the UI designer, in HTML and CSS. The site had to be responsive, of course."
-    
-    //image
-    const imageContainer = document.createElement('div');
-    imageContainer.className = "modal__container__image__container";
-    const picture = document.createElement('img')
-    picture.src = pictureBooki;
-
-    //Button
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'modal__container__button--container booki__button';
-    const buttonLink = document.createElement('a');
-    buttonLink.href = 'https://github.com/badmotherfunk/Nina-Carducci-web-site-optimisation';
-    buttonLink.target = '_blank';
-    const button = document.createElement('button');
-    button.className = 'project__button';
-    const buttonText = document.createElement('span')
-    buttonText.className = 'project__button__text';
-    buttonText.innerText = 'Github';
-
-    //Tags
-    const tags = document.createElement('div');
-    tags.className = 'tags__container';
-    const tagsLayout = document.createElement('div');
-    tagsLayout.className = 'tags__container__layout';
-    const tagsLayout2 = document.createElement('div');
-    tagsLayout2.className = 'tags__container__layout';
-    const tagsLayout3 = document.createElement('div');
-    tagsLayout3.className = 'tags__container__layout';
-    const tagsText = document.createElement('div')
-    tagsText.className = 'tags__container__layout--tags tag1';
-    tagsText.innerText = 'SEO'
-    const tagsText2 = document.createElement('div')
-    tagsText2.className = 'tags__container__layout--tags tag1';
-    tagsText2.innerText = 'Accessibility'
-    const tagsText3 = document.createElement('div')
-    tagsText3.className = 'tags__container__layout--tags tag2';
-    tagsText3.innerText = 'Optimisation'
-    
-    //Overlay
-     modalContainer.appendChild(modalOverlay)
-    //Global Add
-    modalContainer.appendChild(modal)
-    //Icon
-    modal.appendChild(crossIcon);
-    //Title
-    modal.appendChild(title);
-    //Description & image
-    modal.appendChild(descriptionImageContainer)
-    descriptionImageContainer.appendChild(description)
-    descriptionImageContainer.appendChild(imageContainer);
-    imageContainer.appendChild(picture);
-    //Button
-    modal.appendChild(buttonContainer);
-    buttonContainer.appendChild(buttonLink);
-    buttonLink.appendChild(button);
-    button.appendChild(buttonText);
-    //Tags
-    modal.appendChild(tags);
-    tags.appendChild(tagsLayout);
-    tags.appendChild(tagsLayout2);
-    tags.appendChild(tagsLayout3);
-    tagsLayout.appendChild(tagsText);
-    tagsLayout2.appendChild(tagsText2);
-    tagsLayout3.appendChild(tagsText3);
-
-     // When the user click anywhere outside the modal, close it
-    const modalCross = document.querySelector('.modal-cross');
-    const projectContainer = document.querySelector('.modal__overlay')
-    window.addEventListener('click', function(event) {
-     if (event.target === projectContainer || event.target === modalCross) {
-         modalContainer.style.display = "none";
-         modalContainer.innerHTML = "";
-        }
-    })
-
-}
-
-
-

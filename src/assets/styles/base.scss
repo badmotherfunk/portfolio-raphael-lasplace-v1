@@ -1,4 +1,5 @@
 @import './variables.scss';
+@import './breakpoints.scss';
 
 * {
     margin: 0;
@@ -34,6 +35,11 @@
 html,
 body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    @include mobile {
+        scroll-behavior: initial;
+    }
 }
 
 body {
@@ -81,6 +87,12 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 0;
 }
-.title {
+.bigHover {
     user-select: none; /* -- Prevent image highlighting -- */
+}
+
+:target {
+    @include mobile {
+        scroll-margin-top: 50px;
+    }
 }

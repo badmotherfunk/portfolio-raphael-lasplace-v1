@@ -3,7 +3,7 @@
 .skills {
     position: relative;
     width: 100vw;
-    height: 770px;
+    height: 800px;
     background-color: $black-color;
     z-index: 2;
     overflow: hidden;
@@ -11,13 +11,13 @@
 
     // Media queries
     @include desktop {
-      height: 700px;
+      height: 730px;
     }
     @include tablet {
-      height: 540px;
+      height: 560px;
     }
     @include mobile {
-      height: 385px;
+      height: 450px;
     }
     &__text {
         height: 145px;
@@ -102,7 +102,6 @@
         font-family: $third-font;
         font-style: italic;
         font-size: 50px;
-        font-weight: 500;
         color: $white-color;
         z-index: 2;
         top: -5px;
@@ -118,7 +117,7 @@
         }
         @include mobile {
           font-size: 25px;
-          top: -83px;
+          top: -70px;
         }
     }
     &__header__border {
@@ -140,7 +139,7 @@
           right: 10px;
         }
         @include mobile {
-          top: -85px;
+          top: -76px;
           height: 1px;
           width: 98px;
           right: 7px;
@@ -172,7 +171,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    bottom: 50px;
+    bottom: 40px;
     width: 100%;
     height: auto;
     transform: rotate(-90deg);
@@ -183,12 +182,12 @@
       bottom: 85px;
     }
     @include tablet {
-      bottom: 170px;
+      bottom: 165px;
       transform: scale(0.7) rotate(-90deg);
     }
     @include mobile {
-      bottom: 255px;
-      transform: scale(0.5) rotate(-90deg);
+      bottom: 225px;
+      transform: scale(0.54) rotate(-90deg);
     }
   }
   .wall {

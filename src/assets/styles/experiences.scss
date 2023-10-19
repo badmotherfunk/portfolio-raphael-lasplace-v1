@@ -1,0 +1,217 @@
+@import "./breakpoints.scss";
+
+.travail-exp {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 110px;
+    background-color: $black-color;
+    color: $black-color;
+}
+
+.titre-travail-exp {
+    text-align: center;
+    color: $white-color;
+    font-family: $third-font;
+    font-style: italic;
+    font-size: 50px;
+
+    //Media queries
+    @include desktop {
+        font-size: 45px;
+    }
+    @include tablet {
+        font-size: 38px;
+    }
+    @include mobile {
+        font-size: 25px;
+    }
+}
+
+.experiences__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0 90px 0;
+}
+
+.experiences__border {
+    position: relative;
+    background-color: $white-color;
+    height: 2px;
+    width: 276px;
+    bottom: 10px;
+    right: 12px;
+
+    //Media queries
+    @include desktop {
+        width: 237px;
+        right: 12px;
+        bottom: 8px;
+    }
+    @include tablet {
+        width: 200px;
+        right: 10px;
+    }
+    @include mobile {
+        width: 139px;
+        right: 5px;
+        bottom: 4px;
+        height: 1px;
+    }
+    
+}
+
+.cont-exp-travail {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.barre-verticale {
+    height: 1000px;
+    width: 5px;
+    background: #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    left: -30px;
+
+    //Media queries
+    @include desktop {
+        height: 1200px;
+        margin-left: 60px;
+    }
+    @include tablet {
+        height: 1515px;
+    }
+}
+
+.boule-ico {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boule-ico img {
+    width: 25px;
+}
+
+.flex-cont-bloc-exp {
+    width: 800px;
+    flex-shrink: 1;
+    height: 1000px;
+    position: relative;
+
+    //Media queries
+    @include desktop {
+        margin-right: 30px;
+    }
+}
+.bloc {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 37.5px;
+    cursor: pointer;
+    border: 1px solid #333;
+    position: relative;
+    border-radius: 20px;
+
+    //Media queries
+    @include desktop {
+        height: 250px;
+        margin-bottom: 37.5px;
+    }
+    //Media queries
+    @include tablet {
+        height: 330px;
+    }
+}
+.contenu-bloc {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $black-color;
+    border-radius: 20px;
+    background: #efefef;
+    transition: transform 0.25s ease-in-out;
+    position: relative;
+    transform: translate(10px, -10px);
+
+    //Media queries
+    @include tablet {
+        height: 330px;
+        padding: 10px;
+    }
+
+}
+.contenu-bloc:hover {
+    transform: translate(0,0);
+}
+.bloc1 {
+    background: #555555;
+}
+.bloc2 {
+    background: #777777;
+}
+.bloc3 {
+    background: #555555;
+}
+.bloc4 {
+    background: #777777;
+}
+
+.titre-section-bloc {
+    font-family: $third-font;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 26px;
+    padding-bottom: 10px;
+
+    //Media queries
+    @include tablet {
+        font-size: 20px;
+    }
+    @include mobile {
+        font-size: 17px;
+    }
+}
+
+.txt-section {
+    font-family: $text-font-light;
+    font-size: 18px;
+
+    //Media queries
+    @include tablet {
+        font-size: 16px;
+    }
+    @include mobile {
+        font-size: 14px;
+    }
+}
+
+.avion {
+    transform: rotate(-90deg);
+}
+
+.fa-space-shuttle {
+    font-size: 20px;
+}
+
+.fa-graduation-cap {
+    font-size: 20px;
+}
+
+.fa-tasks {
+    font-size: 20px;
+}
+
+.fa-location-dot {
+    font-size: 22px;
+}
+

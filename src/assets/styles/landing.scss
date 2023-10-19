@@ -28,6 +28,56 @@
     background-color: #FFFFFF;
 }
 
+//AVAILABLE STATE
+.available {
+    position: absolute;   
+    top: 6rem;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+
+    //Media queries 
+    @include tablet {
+        transform: translateX(-50%) scale(0.8);
+    }
+    @include mobile {
+        transform: translateX(-50%) scale(0.75);
+    }
+
+    &__border {
+        width: 280px;
+        overflow: hidden;
+        border: solid 1px $white-color;
+        padding: 0.5rem 3rem;
+        display: flex;
+        line-break: none;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    &__text {           
+        position: relative;
+        top: 1px;
+        right: 57px;
+        font-size: 0.9rem;
+        animation: moveleft 9s linear infinite;
+    }
+}
+
+.available p {
+    display: inline-block;
+}
+
+.dots {
+    width: 8px;
+    height: 8px;
+    background-color: #bfff07;
+    display: inline-block;
+    border-radius: 50px;
+    position: relative;
+    top: -1px;
+    left: 4px;
+}
   
 .landing {
     position: relative;
@@ -67,6 +117,10 @@
             width: 100%;
             padding-top: 20px;
 
+            @include tablet {
+                padding-top: 28px;
+            }
+
             @include mobile {
                 display: none;
                 flex-direction: column;
@@ -76,10 +130,10 @@
                 z-index: 99;
                 width: 100vw;
                 height: 100vh;
-                background: #000;
+                background: $black-color;
                 position: absolute;
                 padding: 0;
-                top: -1000px;
+                top: -1200px;
                 border-bottom: 1px solid $white-color;
             }
         }
@@ -104,7 +158,7 @@
                     top: 0;
                 }
                 to {
-                    top: -1000px;
+                    top: -1200px;
                 }
             }
         }
@@ -130,12 +184,24 @@
             }
 
             // Media queries
+            @include desktop {
+                gap: 1rem;
+            }
             @include tablet {
-                gap: 0.9rem;
+                position: absolute;
+                right: 81px;
+                gap: 0.7rem;
             }
             @include mobile {
                 flex-direction: column;
+                position: initial;
                 padding: 0;
+            }
+        }
+        &__left a {
+            //Media queries
+            @include mobile {
+                font-size: 30px;
             }
         }
         &__right {
@@ -157,19 +223,47 @@
             position: absolute;
             top: 60px;
             z-index: -1;
+
+            //Media qeuries
+            @include tablet {
+                top: 50px;
+            }
             @include mobile {
                 top: 55px;
             }
         }
-            // Media queries
-            // Hide some categories from navbar
-            @include tablet {
-                &__sm {
-                    display: none;
-                }
-            }
     }
 }
+
+.overlay__header {
+    display: none;
+
+    //Media queries
+    @include mobile {
+        display: block;
+    }
+}
+.overlay__wrapper {
+    display: none;
+
+    //Media queries
+    @include mobile {
+        display: block;
+    }
+}
+
+.home {
+    display: none;
+    
+    &.active {
+        display: block;
+    }
+
+    &.remove {
+        display: none;
+    }
+}
+
 
 .dropDown {
     display: none;
@@ -193,12 +287,23 @@
 .socials {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    bottom: 9rem;
+    transform: translateX(-50%) scale(1.1);
+    bottom: 10.5rem;
     display: flex;
     align-items: center;
     gap: 1.1rem;
     z-index: 5;
+
+    //Media queries
+    @include desktop {
+        transform: translateX(-50%) scale(1);
+    } 
+    @include tablet {
+        transform: translateX(-50%) scale(0.9);
+    }
+    @include mobile {
+        transform: translateX(-50%) scale(0.8);
+    }
 }
 
 .scrollDown {
@@ -210,6 +315,18 @@
     transform: translateX(-50%);
     z-index: 1;
     cursor: pointer;
+
+    //Media queries
+    @include desktop {
+        transform: translateX(-50%) scale(0.95);
+    }
+    @include tablet {
+        transform: translateX(-50%) scale(0.9);
+    }
+    @include mobile {
+        transform: translateX(-50%) scale(0.8);
+    }
+
     &__wheel {
         height: 42px;
         width: 24px;
@@ -274,12 +391,15 @@
 .introduction {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     right: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    // mix-blend-mode: difference;
+
+    &__global {
+        margin-bottom: 30px;
+    }
 
     &__image {
         position: absolute;
@@ -294,7 +414,6 @@
         object-fit: cover;
         object-position: center;
     }
-
 
     &__container {
         display: flex;
@@ -326,7 +445,7 @@
             font-size: 45px;
         }
         @include mobile {
-            font-size: 30px;
+            font-size: 25px;
         }
     }
     &__title {
@@ -346,8 +465,9 @@
             top: 18px;
         }
         @include mobile {
-            font-size: 23px;
-            top: 9px;
+            font-size: 21px;
+            top: 6px;
+            margin-bottom: 10px;
             left: 6px;
         }
     }
@@ -369,7 +489,7 @@
     &__text {
         font-size: 30px;
         font-weight: 300;
-        line-height: 30px;
+        line-height: 40px;
         cursor: none;
 
         // Media queries
@@ -378,9 +498,11 @@
         }
         @include tablet {
             font-size: 20px;
+            line-height: 35px;
         }
         @include mobile {
             font-size: 17px;
+            line-height: 30px;
         }
     }
 }
