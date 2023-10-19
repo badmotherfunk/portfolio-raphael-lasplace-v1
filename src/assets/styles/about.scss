@@ -21,6 +21,9 @@
     @include tablet {
         height: 230px;
     }
+    @include mobile {
+        background-attachment:inherit;
+    }
 }
 .about__image__black__border {
     height: 1px;

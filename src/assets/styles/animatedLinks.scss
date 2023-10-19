@@ -188,8 +188,8 @@
        transform: translate3d(220%, 0, 0);
        font-size: 35px;
 
-       // Media queries 
-       @include desktop {
+    // Media queries 
+    @include desktop {
         font-size: 32px;
     }
     @include tablet {

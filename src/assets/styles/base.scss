@@ -96,3 +96,9 @@ ul {
         scroll-margin-top: 50px;
     }
 }
+
+.cursor {
+    @include mobile {
+        display: none;
+    }
+}

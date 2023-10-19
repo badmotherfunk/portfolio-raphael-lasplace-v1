@@ -110,6 +110,12 @@ ul {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .cursor {
+    display: none;
+  }
+}
+
 @font-face {
   font-family: "Neue Montreal Regular";
   src: url("/NeueMontreal-Regular.528635e5.otf") format("otf");
@@ -334,7 +340,7 @@ ul {
 }
 @media screen and (max-width: 480px) {
   .available {
-    transform: translateX(-50%) scale(0.75);
+    transform: translateX(-50%) scale(0.7);
   }
 }
 .available__border {
@@ -1377,6 +1383,11 @@ span.animatedText2 {
 @media screen and (max-width: 768px) {
   .about__image {
     height: 230px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__image {
+    background-attachment: inherit;
   }
 }
 
