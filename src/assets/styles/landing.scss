@@ -85,6 +85,7 @@
     height: 100vh;
     color: $white-color;
     overflow: hidden;
+    z-index: 2;
     .header {
         position: absolute;
         left: 50%;
