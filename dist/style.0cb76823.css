@@ -3434,7 +3434,7 @@ footer {
   height: auto;
   background-color: #111111;
   padding: 20px 40px;
-  z-index: 2;
+  z-index: 1;
 }
 @media screen and (max-width: 768px) {
   footer {
