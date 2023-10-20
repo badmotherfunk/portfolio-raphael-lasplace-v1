@@ -445,7 +445,7 @@ ul {
   overflow-y: hidden;
   margin-top: 0;
   animation: dropDown 1s ease-in-out forwards;
-  z-index: 99;
+  z-index: 9999;
 }
 @keyframes dropDown {
   to {
@@ -1379,7 +1379,7 @@ span.animatedText2 {
   width: 100vw;
   height: auto;
   background-color: #111111;
-  z-index: 1;
+  z-index: 0;
 }
 
 .about__image {
@@ -1710,7 +1710,7 @@ span.animatedText2 {
   width: 100vw;
   height: 800px;
   background-color: #111111;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
   text-align: center;
 }
@@ -2093,7 +2093,7 @@ span.animatedText2 {
   padding-bottom: 110px;
   background-color: #111111;
   color: #111111;
-  z-index: 1;
+  z-index: 0;
 }
 
 .titre-travail-exp {
@@ -2557,7 +2557,7 @@ span.animatedText2 {
   transform: translate(-50%, -50%);
   width: 100vw;
   height: 100vh;
-  z-index: 99;
+  z-index: 999;
 }
 .modal__overlay {
   position: absolute;
@@ -2566,7 +2566,7 @@ span.animatedText2 {
   background-color: #111111;
   opacity: 0.8;
   cursor: pointer;
-  z-index: 99;
+  z-index: 999;
 }
 .modal__container {
   position: relative;

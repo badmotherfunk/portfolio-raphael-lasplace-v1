@@ -5804,6 +5804,7 @@ var wrapper = document.querySelector('.header__wrapper');
 var links = document.querySelectorAll('.animatedLinks');
 var contact = document.querySelector('.header__right');
 var home = document.querySelector('.home');
+var projects = document.querySelector('.projects-container');
 hamburgerContainer.addEventListener('click', function () {
   hamburger.classList.add('active');
   closeDropDown.classList.add('active');
@@ -5812,6 +5813,7 @@ hamburgerContainer.addEventListener('click', function () {
   wrapper.classList.remove('remove');
   home.classList.add('active');
   home.classList.remove('remove');
+  projects.style.zIndex = "0";
 });
 closeDropDown.addEventListener('click', function () {
   hamburger.classList.remove("active");
@@ -5820,6 +5822,7 @@ closeDropDown.addEventListener('click', function () {
   wrapper.classList.add('remove');
   setTimeout(function () {
     home.classList.add('remove');
+    projects.style.zIndex = "2";
   }, 1000);
 });
 home.addEventListener('click', function () {

@@ -175,6 +175,7 @@ const wrapper = document.querySelector('.header__wrapper');
 const links = document.querySelectorAll('.animatedLinks');
 const contact = document.querySelector('.header__right');
 const home = document.querySelector('.home')
+const projects = document.querySelector('.projects-container')
 
 hamburgerContainer.addEventListener('click', () => {
     hamburger.classList.add('active');
@@ -184,6 +185,7 @@ hamburgerContainer.addEventListener('click', () => {
     wrapper.classList.remove('remove');
     home.classList.add('active');
     home.classList.remove('remove');
+    projects.style.zIndex = "0";
 })
 
 closeDropDown.addEventListener('click', () => {
@@ -194,6 +196,7 @@ closeDropDown.addEventListener('click', () => {
 
     setTimeout(function() {
         home.classList.add('remove');
+        projects.style.zIndex = "2";
     }, 1000) 
 })
 
