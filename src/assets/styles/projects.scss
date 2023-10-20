@@ -7,7 +7,7 @@
     background-color: $black-color;
     overflow: hidden;
     cursor:grab;
-    z-index: 2;
+    z-index: 1;
 
     //Media queries
     @include tablet {
