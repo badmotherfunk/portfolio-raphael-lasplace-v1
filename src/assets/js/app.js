@@ -86,7 +86,7 @@ function animateCircles() {
 animateCircles();
 
 
-// // Counter size depending screen size
+// Counter size depending screen size
 var range = 1.1 / 300;
 var vw = range * Math.min(window.innerWidth, window.innerHeight);
 
@@ -165,33 +165,6 @@ let barInterval = setInterval(() => {
         });
     }
 }, 20)
-
-
-// Background sphere following mouse position
-let lastMouseX = 0,
-    lastMouseY = 0;
-let rotX = 0,
-    rotY = 0;
-
-const setRotX = gsap.quickSetter(".background", "rotationX");
-const setRotY = gsap.quickSetter(".background", "rotationY");
-
-document.addEventListener("mousemove", mouseMoved);
-
-function mouseMoved(ev) {
-  var deltaX = ev.pageX - lastMouseX;
-  var deltaY = ev.pageY - lastMouseY;
-
-  lastMouseX = ev.pageX;
-  lastMouseY = ev.pageY;
-
-  rotY -= deltaX * 0.01;
-  rotX += deltaY * 0.01;
-
-  setRotX(rotX + 'deg');
-  setRotY(rotY + 'deg');
-}
-
 
 // DropDown Menu
 const hamburgerContainer = document.querySelector('.dropDown');
