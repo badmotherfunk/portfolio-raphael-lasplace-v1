@@ -6,7 +6,7 @@ footer {
     height: auto;
     background-color: $black-color;
     padding: 20px 40px;
-    z-index: 1;
+    z-index: 0;
 
         //Media queries
         @include tablet {
