@@ -2935,13 +2935,13 @@ span.animatedText2 {
 @media screen and (max-width: 1024px) {
   .liveContainer {
     margin: 10px 0 10px 0;
-    padding: 6px 10px;
+    padding: 7px 11px;
   }
 }
 @media screen and (max-width: 768px) {
   .liveContainer {
     margin: 5px 0 20px 0;
-    padding: 5px 10px;
+    padding: 6px 10px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -3065,17 +3065,17 @@ span.animatedText2 {
 
 .githubIcon {
   color: rgb(53, 52, 52);
-  font-size: 45px;
+  font-size: 38px;
   display: flex;
 }
 @media screen and (max-width: 1024px) {
   .githubIcon {
-    font-size: 40px;
+    font-size: 33px;
   }
 }
 @media screen and (max-width: 768px) {
   .githubIcon {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -3089,7 +3089,7 @@ span.animatedText2 {
   font-size: 20px;
   font-family: "Neue Montreal Regular", sans-serif;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   margin-left: 5px;
   font-weight: 600;
 }
@@ -3106,7 +3106,6 @@ span.animatedText2 {
 @media screen and (max-width: 480px) {
   .githubButton {
     font-size: 15px;
-    margin-top: 3px;
   }
 }
 

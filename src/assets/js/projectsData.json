@@ -10,7 +10,8 @@
             "HTML",
             "CSS",
             "Animation",
-            "Responsive"
+            "Responsive",
+            "Figma"
         ]
     },
     {
@@ -21,7 +22,9 @@
         "tags": [
             "React",
             "Sass",
-            "Node.js"
+            "Node.js",
+            "Figma",
+            "Animation"
         ]
     },
     {
@@ -31,8 +34,12 @@
         "tags": [
             "React",
             "Redux",
+            "Green Code",
+            "MongoDb",
             "API",
-            "MongoDb"
+            "Axios",
+            "JWT",
+            "Swagger"
         ]
     },
     {
@@ -42,8 +49,11 @@
         "tags": [
             "HTML",
             "CSS",
-            "Javascript",
-            "API"
+            "JavaScript",
+            "Node.js",
+            "Figma",
+            "API",
+            "JWT"
         ]
     },
     {
@@ -54,7 +64,8 @@
         "tags": [
             "HTML",
             "CSS",
-            "Responsive"
+            "Responsive",
+            "Figma"
         ]
     },
     {
@@ -64,7 +75,9 @@
         "tags": [
             "Agile",
             "Kanban",
-            "Management"
+            "Management",
+            "User Stories",
+            "Trello"
         ]
     },
     {
@@ -76,7 +89,8 @@
             "SEO",
             "Accessibility",
             "Lighthouse",
-            "Schema.org"
+            "Schema.org",
+            "Wave"
         ]
     }
 ]

@@ -5547,56 +5547,52 @@ module.exports = {
     "description": "Ohmyfood is an online food booking site it allows users to access restaurant menus and make reservations.\n This project focused on the creation of CSS animations, the use of Sass and responsive design.",
     "link": "https://github.com/badmotherfunk/ohmyfood",
     "live": "https://badmotherfunk.github.io/ohmyfood/",
-    "tags": ["HTML", "CSS", "Animation", "Responsive"]
+    "tags": ["HTML", "CSS", "Animation", "Responsive", "Figma"]
   }, {
     "title": "Kasa",
     "description": "Kasa is an 10-years-old agency specialized in the private rental. They recently decided to upgrade their web app using Node-Js for the back-end, and React-Js for the front-end.\n The aim of this project is to set up a React application with reusable components and to make API calls to retrieve data.",
     "link": "https://github.com/badmotherfunk/kasa",
     "live": "https://badmotherfunk.github.io/kasa/",
-    "tags": ["React", "Sass", "Node.js"]
+    "tags": ["React", "Sass", "Node.js", "Figma", "Animation"]
   }, {
     "title": "ArgentBank",
     "description": "ArgentBank is an online banking site. It allows users to log in, view their transactions and modify their informations.\n The aim of this project was to implement a React application, set up user interactions using an API, and create the future Swagger implementation. \n Notably using Redux and MongoDb.",
     "link": "https://github.com/badmotherfunk/argent-bank-front-end",
-    "tags": ["React", "Redux", "API", "MongoDb"]
+    "tags": ["React", "Redux", "Green Code", "MongoDb", "API", "Axios", "JWT", "Swagger"]
   }, {
     "title": "Sophie Bluel",
     "description": "Sophie Bluel is an interior designer.\n The aim of this project was to create a portfolio that allows users to log in, add projects to the home page, filter projects, and delete projects via modals.\n This project involved making calls to an API, and creating projects dynamically in Javascript.",
     "link": "https://github.com/badmotherfunk/portfolio-sophie-buel",
-    "tags": ["HTML", "CSS", "Javascript", "API"]
+    "tags": ["HTML", "CSS", "JavaScript", "Node.js", "Figma", "API", "JWT"]
   }, {
     "title": "Booki",
     "description": "Booki is a company offering a vacation planning tool.\n The site allows users to find accommodation and activities in the city of their choice. \n The aim of this project was to create a prototype site by integrating the mock-up designed by the UI designer. With a focus on repsonsive design.",
     "link": "https://github.com/badmotherfunk/Booki",
     "live": "https://badmotherfunk.github.io/Booki/",
-    "tags": ["HTML", "CSS", "Responsive"]
+    "tags": ["HTML", "CSS", "Responsive", "Figma"]
   }, {
     "title": "Menu Maker by Qwenta",
     "description": "Menu maker by Qwenta is an online menu creation site.\n The aim of this project was to plan the development of the site, choosing the technologies to be used on both the front-end and back-end side.\n The aim was to familiarize ourselves with Agile methods and draw up the project's technical and functional specifications.",
     "link": "https://github.com/badmotherfunk/MenuMaker-by-Qwenta",
-    "tags": ["Agile", "Kanban", "Management"]
+    "tags": ["Agile", "Kanban", "Management", "User Stories", "Trello"]
   }, {
     "title": "Nina Carducci",
     "description": "Nina Carducci is a professional photographer based in France.\n She decided to update her website to solve performance problems and improve search engine ranking.\n The aim of this project was to optimize the website's performance, and implement best practices in accessibility and search engine optimization.",
     "link": "https://github.com/badmotherfunk/Nina-Carducci-web-site-optimisation",
     "live": "https://badmotherfunk.github.io/Nina-Carducci-web-site-optimisation/",
-    "tags": ["SEO", "Accessibility", "Lighthouse", "Schema.org"]
+    "tags": ["SEO", "Accessibility", "Lighthouse", "Schema.org", "Wave"]
   }]
 };
 },{}],"assets/images/projects/0.webp":[function(require,module,exports) {
 module.exports = "/0.3326da96.webp";
 },{}],"assets/images/projects/1.webp":[function(require,module,exports) {
 module.exports = "/1.d44dddc2.webp";
-},{}],"assets/images/projects/2.webp":[function(require,module,exports) {
-module.exports = "/2.644195e0.webp";
 },{}],"assets/images/projects/3.webp":[function(require,module,exports) {
 module.exports = "/3.b4955976.webp";
 },{}],"assets/images/projects/4.webp":[function(require,module,exports) {
 module.exports = "/4.2b330267.webp";
 },{}],"assets/images/projects/5.webp":[function(require,module,exports) {
 module.exports = "/5.79aaef61.webp";
-},{}],"assets/images/projects/6.webp":[function(require,module,exports) {
-module.exports = "/6.63f9d271.webp";
 },{}],"assets/images/projects/argentbank.webp":[function(require,module,exports) {
 module.exports = "/argentbank.fe256287.webp";
 },{}],"assets/images/projects/Booki.webp":[function(require,module,exports) {
@@ -5607,10 +5603,14 @@ module.exports = "/kasa.8a352e6c.webp";
 module.exports = "/menuMaker.af2a0e5f.webp";
 },{}],"assets/images/projects/ninaCarducci.webp":[function(require,module,exports) {
 module.exports = "/ninaCarducci.2d1c2805.webp";
+},{}],"assets/images/projects/2.webp":[function(require,module,exports) {
+module.exports = "/2.644195e0.webp";
 },{}],"assets/images/projects/ohmyfood.webp":[function(require,module,exports) {
 module.exports = "/ohmyfood.1ac0ca22.webp";
 },{}],"assets/images/projects/sophie-bluel.webp":[function(require,module,exports) {
 module.exports = "/sophie-bluel.9c60d988.webp";
+},{}],"assets/images/projects/6.webp":[function(require,module,exports) {
+module.exports = "/6.63f9d271.webp";
 },{}],"assets/images/projects/*.webp":[function(require,module,exports) {
 module.exports = {
   "0": require("./0.webp"),
@@ -5628,7 +5628,7 @@ module.exports = {
   "ohmyfood": require("./ohmyfood.webp"),
   "sophie-bluel": require("./sophie-bluel.webp")
 };
-},{"./0.webp":"assets/images/projects/0.webp","./1.webp":"assets/images/projects/1.webp","./2.webp":"assets/images/projects/2.webp","./3.webp":"assets/images/projects/3.webp","./4.webp":"assets/images/projects/4.webp","./5.webp":"assets/images/projects/5.webp","./6.webp":"assets/images/projects/6.webp","./argentbank.webp":"assets/images/projects/argentbank.webp","./Booki.webp":"assets/images/projects/Booki.webp","./kasa.webp":"assets/images/projects/kasa.webp","./menuMaker.webp":"assets/images/projects/menuMaker.webp","./ninaCarducci.webp":"assets/images/projects/ninaCarducci.webp","./ohmyfood.webp":"assets/images/projects/ohmyfood.webp","./sophie-bluel.webp":"assets/images/projects/sophie-bluel.webp"}],"assets/js/app.js":[function(require,module,exports) {
+},{"./0.webp":"assets/images/projects/0.webp","./1.webp":"assets/images/projects/1.webp","./3.webp":"assets/images/projects/3.webp","./4.webp":"assets/images/projects/4.webp","./5.webp":"assets/images/projects/5.webp","./argentbank.webp":"assets/images/projects/argentbank.webp","./Booki.webp":"assets/images/projects/Booki.webp","./kasa.webp":"assets/images/projects/kasa.webp","./menuMaker.webp":"assets/images/projects/menuMaker.webp","./ninaCarducci.webp":"assets/images/projects/ninaCarducci.webp","./2.webp":"assets/images/projects/2.webp","./ohmyfood.webp":"assets/images/projects/ohmyfood.webp","./sophie-bluel.webp":"assets/images/projects/sophie-bluel.webp","./6.webp":"assets/images/projects/6.webp"}],"assets/js/app.js":[function(require,module,exports) {
 "use strict";
 
 var _gsap = _interopRequireDefault(require("gsap"));
@@ -6213,7 +6213,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52467" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36958" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

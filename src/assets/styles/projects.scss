@@ -579,11 +579,11 @@
     //Media queries
     @include desktop {
         margin: 10px 0 10px 0;
-        padding: 6px 10px;
+        padding: 7px 11px;
     }
     @include tablet {
         margin: 5px 0 20px 0;
-        padding: 5px 10px;
+        padding: 6px 10px;
     }
     @include mobile {
         margin: 0 0 20px 0;
@@ -696,15 +696,15 @@
 
 .githubIcon {
     color: rgb(53, 52, 52);
-    font-size: 45px;
+    font-size: 38px;
     display: flex;
 
     //Media queries
     @include desktop {
-        font-size: 40px;
+        font-size: 33px;
     }
     @include tablet {
-        font-size: 35px;
+        font-size: 30px;
     }
     @include mobile {
         font-size: 28px;
@@ -716,7 +716,7 @@
     font-size: 20px;
     font-family: $text-font;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     margin-left: 5px;
     font-weight: 600;
 
@@ -729,7 +729,6 @@
     }
     @include mobile {
         font-size: 15px;
-        margin-top: 3px;
     }
     
 }
