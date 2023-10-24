@@ -43,6 +43,7 @@
       <div class="circle"></div>
       <div class="circle"></div>
     </div>
+
   <!-- Loader -->
 <div class="loader">
     <div class="opacity__overlay">
@@ -98,7 +99,7 @@
             <div class="noise"></div>
           </div>
           <div class="header__closeDropDown">
-            <img src="./assets/images/cross-small.svg" class="animated__closeDropDown"></img>
+            <img src="./assets/images/cross-small.svg" alt="Cross close dropdown" class="animated__closeDropDown"></img>
           </div>
             <ul class="header__left">
                 <li class="home">
@@ -130,9 +131,10 @@
         </div>
         <div class="header__border"></div>
     </header>
+
     <!-- Introduction -->
     <div class="introduction__image">
-      <img src="./assets/images/black-sand.webp" alt="abstract black sand" class="introduction__picture">
+      <img src="./assets/images/black-sand.webp" alt="Abstract black sand" class="introduction__picture">
     </div>
      <div class="available">
         <div class="available__border">
@@ -167,12 +169,13 @@
           </div>
       </div>
     </div>
+
     <!-- Socials -->
     <div class="socials disabledHover">
-        <a href="https://www.linkedin.com/in/rapha%C3%ABl-lasplace-869a93219/" target="_blank">
+        <a href="https://www.linkedin.com/in/rapha%C3%ABl-lasplace-869a93219/" target="_blank" aria-label="Linkedin Profile">
           <i class="fab fa-linkedin coloredIcon" style="color: #ffffff;"></i>
         </a>
-        <a href="https://github.com/badmotherfunk" target="_blank">
+        <a href="https://github.com/badmotherfunk" target="_blank" aria-label="Github Profile">
             <i class="fab fa-github coloredIcon" style="color: #ffffff;"></i>
         </a>
     </div>
@@ -185,6 +188,7 @@
         </div>
     </div>
 </section>
+
 <!-- About me -->
 <section class="about__container" id="about">
   <div class="opacity__overlay">
@@ -218,6 +222,8 @@
         </div>
     </div>
 </section>
+
+<!-- Section skills -->
 <section class="skills" id="skills">
   <div class="border__contact"></div>
   <div class="opacity__overlay">
@@ -441,7 +447,7 @@
 
           <div class="bloc bloc1">
               <div class="contenu-bloc">
-                  <p class="titre-section-bloc">About today</p>
+                  <h3 class="titre-section-bloc">About today</h3>
                   <p class="txt-section">I'm currently looking to join a company that will allow me to put my skills to good use. I would like to participate in the development of new projects while continuing to perfect my skills and contribute to the company's growth. 
                     <br>I also continue to train and work on projects independently every day.</p>
               </div>
@@ -449,14 +455,14 @@
                           
           <div class="bloc bloc2">
               <div class="contenu-bloc">
-                  <p class="titre-section-bloc">Openclassrooms, 2023</p>
+                  <h3 class="titre-section-bloc">Openclassrooms, 2023</h3>
                   <p class="txt-section">I completed the 9-month web integrator training course with Openclassrooms, which enabled me to carry out 12 projects in line with current business needs. This enabled me to confirm my knowledge and develop my skills. In particular, I was able to work on new concepts, find solutions on my own, learn about frameworks, state management, and API requests.</p>
               </div>
           </div>
                           
           <div class="bloc bloc3">
               <div class="contenu-bloc">
-                  <p class="titre-section-bloc">Self-taught training, 2021</p>
+                  <h3 class="titre-section-bloc">Self-taught training, 2021</h3>
                   <p class="txt-section">I spent 8 months teaching myself the basics of programming(HTML, CSS, Javascript). In particular, I took several online courses on the Udemy platform.
                     This gave me the desire to pursue a diploma course later on, to deepen my skills.</p>
               </div>
@@ -464,7 +470,7 @@
                           
           <div class="bloc bloc4">
               <div class="contenu-bloc">
-                  <p class="titre-section-bloc">Electronic and digital systems, 2013</p>
+                  <h3 class="titre-section-bloc">Electronic and digital systems, 2013</h3>
                   <p class="txt-section">I took a professional baccalaureate in electronic and digital systems with a telecommunications and network option in Nîmes in the south of France. This gave me a better understanding of how computers work, and how they communicate between clients and servers across the web.</p>
               </div>
           </div>  
@@ -538,7 +544,7 @@
       <img src="./assets/images/projects/ninaCarducci.webp" alt="Dancing bride and groom" class="image" draggable="false">
     </div> 
 
-    <i class="fas fa-chevron-right chevron"></i>
+    <i class="fas fa-chevron-right chevron" ></i>
   </div>
 
   <!-- Projects modal -->
@@ -558,7 +564,7 @@
     </div>
     <div class="contact__header__border"></div>
     <div class="contact__header__title bigHover">      
-      <label class="getInTouch__title" for="name">Let's get in touch</label>
+      <label class="getInTouch__title" for="message">Let's get in touch</label>
       <img src="./assets/images/arrowBack.svg" alt="Arrow Back" class="arrow__back">
     </div>
   </div>
@@ -575,8 +581,8 @@
         </div>
         
         <div class="form__info">
-          <label>I'm looking for </label>
-          <input type="text" placeholder="Type of service"  name="Looking for" autocomplete="off" maxlength="50" required>
+          <label for="service">I'm looking for </label>
+          <input type="text" placeholder="Type of service" id="service"  name="Looking for" autocomplete="off" maxlength="50" required>
         </div>
       </div>
 
@@ -588,11 +594,11 @@
       </div>
 
       <div class="form__flex contact__button">       
-          <textarea placeholder="Your Message" name="Message" required></textarea>
+          <textarea placeholder="Your Message" id="message" name="Message" required></textarea>
       </div>
 
       <div class="form__flex contact__button">
-        <button class="project__button disabledHover">
+        <button class="project__button disabledHover" aria-label="Send form button">
           <span>Send <i class="far fa-paper-plane" style="color: #ffffff;"></i></span>
         </button>
       </div>
@@ -602,6 +608,7 @@
 
 <div class="border__contact"></div>
 
+<!-- Footer -->
 <footer>
   <div class="opacity__overlay">
     <div class="noise"></div>
@@ -610,12 +617,12 @@
     <a href="/" class="footer__logo--link">
       <img src="./assets/images/Signature-logo.webp" alt="Logo signature Raphaël Lasplace" class="footer__logo disabledHover">
     </a>
-    <span class="footer__text bigHover">THANKS FOR YOUR VISIT</span>
+    <span class="footer__text">THANKS FOR YOUR VISIT</span>
     <div class="socials__footer disabledHover">
-      <a href="https://www.linkedin.com/in/rapha%C3%ABl-lasplace-869a93219/" target="_blank">
+      <a href="https://www.linkedin.com/in/rapha%C3%ABl-lasplace-869a93219/" target="_blank" aria-label="Linkedin profile">
         <i class="fab fa-linkedin coloredIcon" style="color: #ffffff;"></i>
       </a>
-      <a href="https://github.com/badmotherfunk" target="_blank">
+      <a href="https://github.com/badmotherfunk" target="_blank" aria-label="Github profile">
         <i class="fab fa-github coloredIcon" style="color: #ffffff;"></i>
       </a>
     </div>

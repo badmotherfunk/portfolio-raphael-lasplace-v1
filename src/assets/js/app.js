@@ -4,6 +4,7 @@ import { TimelineMax } from "gsap/gsap-core";
 const loaderBar = document.querySelector(".loader__bar--inner");
 const loaderCounter = document.querySelector(".loader__counter");
 
+// Mouse animation
 const handleMousePos = (e) => {
     const CURSOR = document.querySelector('.cursor');
     const CIRCLE = document.querySelector('.circle');
@@ -42,7 +43,8 @@ const handleMousePos = (e) => {
     };
   document.addEventListener('mousemove', handleMousePos);
 
-// Mouse animation
+
+//Mouse circles
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 
