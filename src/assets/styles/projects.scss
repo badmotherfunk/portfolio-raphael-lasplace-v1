@@ -27,7 +27,8 @@
     background-color: $white-color;
 }
 
-#image-track {
+[id="image-track"]
+{
     display: flex;
     gap: 2vmin;
     position: absolute;

@@ -2354,7 +2354,7 @@ span.animatedText2 {
   background-color: #FFFFFF;
 }
 
-#image-track {
+[id=image-track] {
   display: flex;
   gap: 2vmin;
   position: absolute;
@@ -2364,7 +2364,7 @@ span.animatedText2 {
   user-select: none; /* -- Prevent image highlighting -- */
 }
 @media screen and (max-width: 480px) {
-  #image-track {
+  [id=image-track] {
     gap: 3vmin;
   }
 }
@@ -3402,6 +3402,10 @@ span.animatedText2 {
   bottom: 13px;
   font-style: italic;
   font-size: 24px;
+}
+
+.form__flex label {
+  cursor: pointer;
 }
 
 .contact__button {

@@ -354,7 +354,6 @@ const projectsScene = new ScrollMagic.Scene({
     triggerElement: projectsTitle,
     reverse: false,
 })
-
 .setTween(tlprojects)
 .addTo(projectsController)
 

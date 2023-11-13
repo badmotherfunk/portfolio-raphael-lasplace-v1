@@ -266,6 +266,10 @@
     }
 }
 
+.form__flex label {
+    cursor: pointer;
+}
+
 .contact__button {
     display: flex;
     justify-content: center;
