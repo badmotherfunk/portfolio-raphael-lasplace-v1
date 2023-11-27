@@ -3,7 +3,7 @@
 "projectsData" : [
     {
         "title": "Twitch.tv (clone)",
-        "description": "I created a complete reproduction of the Twitch website in React.js. This involved reproducing all the graphics and components, and making multiple calls to the Twitch API to retrieve data.\n I also took care of the responsive part of the website.",        
+        "description": "I created a complete reproduction of the Twitch website in React.js. This involved reproducing all the graphics parts and components, and making multiple calls to the Twitch API to retrieve data.\n I also took care of the responsive part of the website.",        
         "link": "https://github.com/badmotherfunk/Twitch-clone-react",
         "live": "https://twitch-tv-clone.netlify.app/",
         "tags": [
