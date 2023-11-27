@@ -5544,10 +5544,10 @@ module.exports = "/cross-small.0e2a7d08.svg";
 module.exports = {
   "projectsData": [{
     "title": "Twitch.tv (clone)",
-    "description": "I created a complete reproduction of the Twitch website in React.js. This involved reproducing all the graphics and components and making multiple calls to the Twitch API to retrieve data.\n I also took care of the responsive part of the website.",
+    "description": "I created a complete reproduction of the Twitch website in React.js. This involved reproducing all the graphics and components, and making multiple calls to the Twitch API to retrieve data.\n I also took care of the responsive part of the website.",
     "link": "https://github.com/badmotherfunk/Twitch-clone-react",
     "live": "https://twitch-tv-clone.netlify.app/",
-    "tags": ["React", "CSS", "API", "Responsive"]
+    "tags": ["React", "CSS", "Animation", "API", "Responsive"]
   }, {
     "title": "Ohmyfood",
     "description": "Ohmyfood is an online food booking site it allows users to access restaurant menus and make reservations.\n This project focused on the creation of CSS animations, the use of Sass and responsive design.",
@@ -5564,6 +5564,7 @@ module.exports = {
     "title": "ArgentBank",
     "description": "ArgentBank is an online banking site. It allows users to log in, view their transactions and modify their informations.\n The aim of this project was to implement a React application, set up user interactions using an API, and create the future Swagger implementation. \n Notably using Redux and MongoDb.",
     "link": "https://github.com/badmotherfunk/argent-bank-front-end",
+    "live": "https://argent-bank-app.netlify.app/",
     "tags": ["React", "Redux", "Green Code", "MongoDb", "API", "Axios", "JWT", "Swagger"]
   }, {
     "title": "Sophie Bluel",
