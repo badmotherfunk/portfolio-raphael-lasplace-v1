@@ -1721,12 +1721,12 @@ span.animatedText2 {
 }
 @media screen and (max-width: 768px) {
   .skills {
-    height: 560px;
+    height: 580px;
   }
 }
 @media screen and (max-width: 480px) {
   .skills {
-    height: 450px;
+    height: 455px;
   }
 }
 .skills__text {
@@ -1754,7 +1754,9 @@ span.animatedText2 {
   }
 }
 .skills__text--left {
-  left: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
   top: 15px;
   font-family: "Playfair Display", serif;
   font-style: italic;
@@ -1763,11 +1765,18 @@ span.animatedText2 {
 @media screen and (max-width: 1024px) {
   .skills__text--left {
     top: 10px;
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .skills__text--left {
+    gap: 10px;
   }
 }
 @media screen and (max-width: 480px) {
   .skills__text--left {
     top: 5px;
+    gap: 7px;
   }
 }
 @keyframes moveleft {
@@ -1779,25 +1788,30 @@ span.animatedText2 {
   }
 }
 .skills__text--right {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
   right: 0;
-  top: 64px;
+  top: 75px;
   font-family: "Playfair Display", serif;
   font-style: italic;
   animation: moveright 30s linear infinite;
 }
 @media screen and (max-width: 1024px) {
   .skills__text--right {
-    top: 50px;
+    top: 60px;
+    gap: 15px;
   }
 }
 @media screen and (max-width: 768px) {
   .skills__text--right {
-    top: 45px;
+    top: 50px;
+    gap: 10px;
   }
 }
 @media screen and (max-width: 480px) {
   .skills__text--right {
-    top: 30px;
+    top: 36px;
   }
 }
 @keyframes moveright {
@@ -1823,6 +1837,7 @@ span.animatedText2 {
   color: #FFFFFF;
   z-index: 2;
   top: -5px;
+  padding-top: 15px;
 }
 @media screen and (max-width: 1024px) {
   .skills__header__text {
@@ -1840,6 +1855,7 @@ span.animatedText2 {
   .skills__header__text {
     font-size: 25px;
     top: -70px;
+    padding-top: 10px;
   }
 }
 .skills__header__border {
@@ -1876,22 +1892,44 @@ span.animatedText2 {
   position: relative;
   width: 100%;
   height: 1px;
-  top: 120px;
+  top: 136px;
   background-color: #FFFFFF;
 }
 @media screen and (max-width: 1024px) {
   .skills__border {
-    top: 95px;
+    top: 110px;
   }
 }
 @media screen and (max-width: 768px) {
   .skills__border {
-    top: 85px;
+    top: 92px;
   }
 }
 @media screen and (max-width: 480px) {
   .skills__border {
-    top: 58px;
+    top: 66px;
+  }
+}
+
+.skills__text__content {
+  border: 2px solid #FFFFFF;
+  padding: 0px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  .skills__text__content {
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .skills__text__content {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills__text__content {
+    padding: 0 15px;
   }
 }
 

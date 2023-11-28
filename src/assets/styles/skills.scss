@@ -14,10 +14,10 @@
       height: 730px;
     }
     @include tablet {
-      height: 560px;
+      height: 580px;
     }
     @include mobile {
-      height: 450px;
+      height: 455px;
     }
     &__text {
         height: 145px;
@@ -40,7 +40,11 @@
         }
     }
     &__text--left {
-        left: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 18px;
+
+        // left: 0;
         top: 15px;
         font-family: $third-font;
         font-style: italic;
@@ -49,9 +53,14 @@
         // Media queries 
         @include desktop {
          top: 10px;
+         gap: 15px;
+        }
+        @include tablet {
+          gap: 10px;
         }
         @include mobile {
           top: 5px;
+          gap: 7px;
         }
 
         @keyframes moveleft {
@@ -64,21 +73,26 @@
         }
     }
     &__text--right {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
         right: 0;
-        top: 64px;
+        top: 75px;
         font-family: $third-font;
         font-style: italic;
         animation: moveright 30s linear infinite;
 
         // Media queries 
         @include desktop {
-          top: 50px;
+          top: 60px;
+          gap: 15px;
         }
         @include tablet {
-          top: 45px;
+          top: 50px;
+          gap: 10px;
         }
         @include mobile {
-          top: 30px;
+          top: 36px;
         }
 
         @keyframes moveright {
@@ -105,6 +119,7 @@
         color: $white-color;
         z-index: 2;
         top: -5px;
+        padding-top: 15px;
 
         // Media queries
         @include desktop {
@@ -118,6 +133,7 @@
         @include mobile {
           font-size: 25px;
           top: -70px;
+          padding-top: 10px;
         }
     }
     &__header__border {
@@ -150,19 +166,37 @@
     position: relative;
     width: 100%;
     height: 1px;
-    top: 120px;
+    top: 136px;
     background-color: $white-color;
 
     // Media queries
     @include desktop {
-      top: 95px;
+      top: 110px;
     }
     @include tablet {
-      top: 85px;
+      top: 92px;
     }
     @include mobile {
-      top: 58px;
+      top: 66px;
     }
+}
+
+.skills__text__content {
+  border: 2px solid $white-color;
+  padding: 0px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+
+  // Media queries
+  @include desktop {
+    padding: 0 25px;
+  }
+  @include tablet {
+    padding: 0 20px;
+  }
+  @include mobile {
+    padding: 0 15px;
+  }
 }
 
 
