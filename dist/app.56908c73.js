@@ -5590,26 +5590,28 @@ module.exports = {
     "tags": ["SEO", "Accessibility", "Lighthouse", "Schema.org", "Wave"]
   }]
 };
-},{}],"assets/images/projects/0.webp":[function(require,module,exports) {
-module.exports = "/0.3326da96.webp";
 },{}],"assets/images/projects/1.webp":[function(require,module,exports) {
 module.exports = "/1.d44dddc2.webp";
 },{}],"assets/images/projects/2.webp":[function(require,module,exports) {
 module.exports = "/2.644195e0.webp";
+},{}],"assets/images/projects/0.webp":[function(require,module,exports) {
+module.exports = "/0.3326da96.webp";
 },{}],"assets/images/projects/3.webp":[function(require,module,exports) {
 module.exports = "/3.b4955976.webp";
-},{}],"assets/images/projects/5.webp":[function(require,module,exports) {
-module.exports = "/5.79aaef61.webp";
-},{}],"assets/images/projects/6.webp":[function(require,module,exports) {
-module.exports = "/6.63f9d271.webp";
-},{}],"assets/images/projects/7.webp":[function(require,module,exports) {
-module.exports = "/7.dc9c40e2.webp";
 },{}],"assets/images/projects/4.webp":[function(require,module,exports) {
 module.exports = "/4.2b330267.webp";
+},{}],"assets/images/projects/5.webp":[function(require,module,exports) {
+module.exports = "/5.79aaef61.webp";
 },{}],"assets/images/projects/argentbank.webp":[function(require,module,exports) {
 module.exports = "/argentbank.fe256287.webp";
 },{}],"assets/images/projects/Booki.webp":[function(require,module,exports) {
 module.exports = "/Booki.d19f975d.webp";
+},{}],"assets/images/projects/6.webp":[function(require,module,exports) {
+module.exports = "/6.63f9d271.webp";
+},{}],"assets/images/projects/kasa.webp":[function(require,module,exports) {
+module.exports = "/kasa.8a352e6c.webp";
+},{}],"assets/images/projects/7.webp":[function(require,module,exports) {
+module.exports = "/7.dc9c40e2.webp";
 },{}],"assets/images/projects/menuMaker.webp":[function(require,module,exports) {
 module.exports = "/menuMaker.af2a0e5f.webp";
 },{}],"assets/images/projects/ninaCarducci.webp":[function(require,module,exports) {
@@ -5618,8 +5620,6 @@ module.exports = "/ninaCarducci.2d1c2805.webp";
 module.exports = "/ohmyfood.1ac0ca22.webp";
 },{}],"assets/images/projects/Twitch.webp":[function(require,module,exports) {
 module.exports = "/Twitch.b6444835.webp";
-},{}],"assets/images/projects/kasa.webp":[function(require,module,exports) {
-module.exports = "/kasa.8a352e6c.webp";
 },{}],"assets/images/projects/sophie-bluel.webp":[function(require,module,exports) {
 module.exports = "/sophie-bluel.9c60d988.webp";
 },{}],"assets/images/projects/*.webp":[function(require,module,exports) {
@@ -5634,14 +5634,14 @@ module.exports = {
   "7": require("./7.webp"),
   "argentbank": require("./argentbank.webp"),
   "Booki": require("./Booki.webp"),
+  "kasa": require("./kasa.webp"),
   "menuMaker": require("./menuMaker.webp"),
   "ninaCarducci": require("./ninaCarducci.webp"),
   "ohmyfood": require("./ohmyfood.webp"),
   "Twitch": require("./Twitch.webp"),
-  "kasa": require("./kasa.webp"),
   "sophie-bluel": require("./sophie-bluel.webp")
 };
-},{"./0.webp":"assets/images/projects/0.webp","./1.webp":"assets/images/projects/1.webp","./2.webp":"assets/images/projects/2.webp","./3.webp":"assets/images/projects/3.webp","./5.webp":"assets/images/projects/5.webp","./6.webp":"assets/images/projects/6.webp","./7.webp":"assets/images/projects/7.webp","./4.webp":"assets/images/projects/4.webp","./argentbank.webp":"assets/images/projects/argentbank.webp","./Booki.webp":"assets/images/projects/Booki.webp","./menuMaker.webp":"assets/images/projects/menuMaker.webp","./ninaCarducci.webp":"assets/images/projects/ninaCarducci.webp","./ohmyfood.webp":"assets/images/projects/ohmyfood.webp","./Twitch.webp":"assets/images/projects/Twitch.webp","./kasa.webp":"assets/images/projects/kasa.webp","./sophie-bluel.webp":"assets/images/projects/sophie-bluel.webp"}],"assets/js/app.js":[function(require,module,exports) {
+},{"./1.webp":"assets/images/projects/1.webp","./2.webp":"assets/images/projects/2.webp","./0.webp":"assets/images/projects/0.webp","./3.webp":"assets/images/projects/3.webp","./4.webp":"assets/images/projects/4.webp","./5.webp":"assets/images/projects/5.webp","./argentbank.webp":"assets/images/projects/argentbank.webp","./Booki.webp":"assets/images/projects/Booki.webp","./6.webp":"assets/images/projects/6.webp","./kasa.webp":"assets/images/projects/kasa.webp","./7.webp":"assets/images/projects/7.webp","./menuMaker.webp":"assets/images/projects/menuMaker.webp","./ninaCarducci.webp":"assets/images/projects/ninaCarducci.webp","./ohmyfood.webp":"assets/images/projects/ohmyfood.webp","./Twitch.webp":"assets/images/projects/Twitch.webp","./sophie-bluel.webp":"assets/images/projects/sophie-bluel.webp"}],"assets/js/app.js":[function(require,module,exports) {
 "use strict";
 
 var _gsap = _interopRequireDefault(require("gsap"));
@@ -6228,7 +6228,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53792" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4943" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
