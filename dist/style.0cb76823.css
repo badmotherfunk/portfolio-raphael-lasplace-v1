@@ -2967,14 +2967,9 @@ span.animatedText2 {
 
 .buttonsGlobal {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 20px;
-}
-@media screen and (max-width: 1024px) {
-  .buttonsGlobal {
-    flex-direction: row-reverse;
-  }
 }
 @media screen and (max-width: 768px) {
   .buttonsGlobal {

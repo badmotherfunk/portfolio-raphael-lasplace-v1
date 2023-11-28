@@ -563,14 +563,11 @@
 
 .buttonsGlobal {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 20px;
 
     //Media queries
-    @include desktop {
-        flex-direction: row-reverse;
-    }
     @include tablet {
         margin: 15px 0 10px 0;
         gap: 25px;
