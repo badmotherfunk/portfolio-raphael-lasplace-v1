@@ -5543,8 +5543,8 @@ module.exports = "/cross-small.0e2a7d08.svg";
 },{}],"assets/js/projectsData.json":[function(require,module,exports) {
 module.exports = {
   "projectsData": [{
-    "title": "Twitch.tv (clone)",
-    "description": "I created a complete reproduction of the Twitch website in React.js. This involved reproducing all the graphics parts and components, and making multiple calls to the Twitch API to retrieve data.\n I also took care of the responsive part of the website.",
+    "title": "Twitch.tv",
+    "description": "I created a complete reproduction of the Twitch website in React.js.\n This involved reproducing all the graphics parts and components, and making multiple calls to the Twitch API to retrieve data.\n I also took care of the responsive part of the website.",
     "link": "https://github.com/badmotherfunk/Twitch-clone-react",
     "live": "https://twitch-tv-clone.netlify.app/",
     "tags": ["React", "CSS", "Animation", "API", "Responsive"]

@@ -173,13 +173,26 @@
     font-style: italic;
     font-size: 26px;
     padding-bottom: 10px;
+    border-bottom: 2px solid $black-color;
+    width: fit-content;
+    height: 38px;
+    margin-bottom: 15px;
 
     //Media queries
+    @include desktop {
+        margin-bottom: 25px;
+    }
     @include tablet {
         font-size: 20px;
+        margin-top: 20px;
+        height: 28px;
     }
     @include mobile {
+        height: auto;
         font-size: 17px;
+        margin-bottom: 10px;
+        margin-top: 0;
+        border: none;
     }
 }
 
