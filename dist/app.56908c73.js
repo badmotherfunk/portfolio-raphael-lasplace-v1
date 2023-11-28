@@ -5570,7 +5570,7 @@ module.exports = {
     "title": "Sophie Bluel",
     "description": "Sophie Bluel is an interior designer.\n The aim of this project was to create a portfolio that allows users to log in, add projects to the home page, filter projects, and delete projects via modals.\n This project involved making calls to an API, and creating projects dynamically in Javascript.",
     "link": "https://github.com/badmotherfunk/portfolio-sophie-buel",
-    "tags": ["HTML", "CSS", "JavaScript", "Node.js", "Figma", "API", "JWT"]
+    "tags": ["HTML", "CSS", "JavaScript", "Node.js", "Figma", "API", "CRUD"]
   }, {
     "title": "Booki",
     "description": "Booki is a company offering a vacation planning tool.\n The site allows users to find accommodation and activities in the city of their choice. \n The aim of this project was to create a prototype site by integrating the mock-up designed by the UI designer. With a focus on repsonsive design.",
