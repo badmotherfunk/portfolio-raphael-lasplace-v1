@@ -99,6 +99,7 @@ ul {
 
 .cursor {
     @include mobile {
-        display: none;
+        display: none !important;
+        visibility: hidden;
     }
 }

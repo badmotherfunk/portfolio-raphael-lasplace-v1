@@ -112,7 +112,8 @@ ul {
 
 @media screen and (max-width: 480px) {
   .cursor {
-    display: none;
+    display: none !important;
+    visibility: hidden;
   }
 }
 
