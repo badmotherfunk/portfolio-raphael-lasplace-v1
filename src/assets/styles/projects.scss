@@ -363,12 +363,12 @@
             width: 125px;
         }
         @include tablet {
-            width: 100px;
+            width: 105px;
             height: 90px;
             margin-bottom: 15px;
         }
         @include mobile {
-            width: 90px;
+            width: 95px;
             margin-bottom: 19px;
         }
     }
@@ -728,7 +728,7 @@
 
     //Media queries
     @include desktop {
-        font-size: 30px;
+        font-size: 29px;
     }
     @include tablet {
         font-size: 30px;
