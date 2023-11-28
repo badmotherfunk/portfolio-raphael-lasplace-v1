@@ -2754,8 +2754,7 @@ span.animatedText2 {
 }
 @media screen and (max-width: 1024px) {
   .modal__container__button--container a {
-    width: 135px;
-    height: 105px;
+    width: 125px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2767,8 +2766,8 @@ span.animatedText2 {
 }
 @media screen and (max-width: 480px) {
   .modal__container__button--container a {
-    width: 83px;
-    height: 70px;
+    width: 90px;
+    margin-bottom: 19px;
   }
 }
 
@@ -2986,7 +2985,7 @@ span.animatedText2 {
 @media screen and (max-width: 480px) {
   .buttonsGlobal {
     margin: 15px 0 10px 0;
-    gap: 30px;
+    gap: 20px;
   }
 }
 
@@ -3001,7 +3000,7 @@ span.animatedText2 {
   padding: 8px 15px;
   cursor: pointer;
   box-shadow: 3px 3px 4px rgb(92, 92, 92);
-  background-color: rgb(53, 52, 52);
+  background-color: rgb(236, 236, 236);
 }
 @media screen and (max-width: 1024px) {
   .liveContainer {
@@ -3012,7 +3011,7 @@ span.animatedText2 {
 @media screen and (max-width: 768px) {
   .liveContainer {
     margin: 5px 0 20px 0;
-    padding: 6px 10px;
+    padding: 7px 10px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -3026,11 +3025,11 @@ span.animatedText2 {
   box-shadow: none;
   top: 3px;
   left: 3px;
-  background: rgb(66, 66, 66);
+  color: rgb(66, 66, 66);
 }
 
 .liveButton {
-  color: #FFFFFF;
+  color: rgb(53, 52, 52);
   font-family: "Neue Montreal Regular", sans-serif;
   font-weight: bold;
 }
@@ -3058,7 +3057,7 @@ span.animatedText2 {
   width: 10px;
   height: 10px;
   margin-left: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   z-index: 1;
 }
@@ -3102,27 +3101,33 @@ span.animatedText2 {
 }
 .githubLink {
   display: flex;
-  width: 100%;
+  border: 1px solid rgb(105, 105, 105);
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+  box-shadow: 3px 3px 4px rgb(92, 92, 92);
+  padding: 0 20px;
 }
 @media screen and (max-width: 1024px) {
   .githubLink {
-    padding-top: 5px;
+    padding: 3.5px;
   }
 }
 @media screen and (max-width: 768px) {
   .githubLink {
-    padding-top: 3px;
+    padding: 1.5px 0;
   }
 }
 @media screen and (max-width: 480px) {
   .githubLink {
-    padding-top: 0;
-    padding-bottom: 2px;
+    padding: 2px;
   }
 }
 
 .githubLink:hover {
   position: relative;
+  box-shadow: none;
   top: 3px;
   left: 3px;
   transform: scale(0.98);
@@ -3141,7 +3146,7 @@ span.animatedText2 {
 }
 @media screen and (max-width: 1024px) {
   .githubIcon {
-    font-size: 33px;
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3151,32 +3156,31 @@ span.animatedText2 {
 }
 @media screen and (max-width: 480px) {
   .githubIcon {
-    font-size: 28px;
+    font-size: 27px;
   }
 }
 
 .githubButton {
   color: rgb(53, 52, 52);
-  font-size: 20px;
   font-family: "Neue Montreal Regular", sans-serif;
   display: flex;
   align-items: flex-end;
   margin-left: 5px;
-  font-weight: 600;
+  font-weight: bold;
 }
 @media screen and (max-width: 1024px) {
   .githubButton {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 768px) {
   .githubButton {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 480px) {
   .githubButton {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
