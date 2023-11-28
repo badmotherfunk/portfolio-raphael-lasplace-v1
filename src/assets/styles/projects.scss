@@ -270,10 +270,10 @@
         color: $black-color;
         font-family: $third-font;
         font-style: italic;
-        font-size: 50px;
+        font-size: 45px;
         width: fit-content;
         border-bottom: 2px solid $black-color;
-        height: 70px;
+        height: 63px;
 
         // Media queries
         @include desktop {
@@ -296,20 +296,19 @@
         display: flex;
         color: $black-color;
         font-family: $text-font;
-        width: 40%;
         font-size: 20px;
         flex-shrink: 1;
         margin-top: 10px;
         margin-bottom: 40px;
 
+        align-items: center;
+
         // Media queries
         @include desktop {
-            width: 50%;
             font-size: 17px;
             margin-bottom: 0;
         }
         @include tablet {
-            width: 100%;
             font-size: 16px;
         }
         @include mobile {
@@ -321,17 +320,13 @@
         display: flex;
         width: 60%;
         height: auto;
+        position: relative;
+        top: 60px;
 
-        @include desktop {
-            width: 50%;
-        }
         @include tablet {
             width: 100%;
-            margin-top: 20px;
-        }
-        @include mobile {
-            margin-top: 0;
             margin: 30px 0 10px 0;
+            top: 0;
         }
     
     }
@@ -339,7 +334,7 @@
     &__container__image__container img{
         width: 100%;
         height: auto;
-        object-fit:contain; 
+        object-fit: contain; 
     }
 
     &__container__button--container {
@@ -386,11 +381,12 @@
 
 .description__image__container {
     display: flex;
-    flex-direction: row;
     width: 100%;
     height: auto;
-    gap: 30px;
-    margin-top: 30px;
+    justify-content: space-between;
+
+    align-items: center;
+
 
     // Media queries
     @include desktop {
@@ -403,6 +399,22 @@
         margin-top: 10px;
     }
 }
+
+.containerTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 35%;
+
+    @include tablet {
+        width: 100%;
+        gap: 15px;
+    }
+    @include mobile {
+        gap: 5px;
+    }
+}
+
 
 .tags__container {
     display: flex;
@@ -525,8 +537,8 @@
 .modal-cross {
     position: absolute;
     width: 55px;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     cursor: pointer;
     filter: invert(97%) sepia(0%) saturate(7482%) hue-rotate(90deg) brightness(108%) contrast(102%);
 

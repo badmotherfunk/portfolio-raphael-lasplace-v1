@@ -453,6 +453,10 @@ function generatedProjects(e) {
     const crossIcon = document.createElement('img');
     crossIcon.className = 'modal-cross bigHover'
     crossIcon.src = crossIconImg;
+
+    //Title & description container 
+    const containerTitle = document.createElement('div')
+    containerTitle.className = "containerTitle"
     
     //Title
     const title = document.createElement('h3');
@@ -497,10 +501,14 @@ function generatedProjects(e) {
     //Icon
     modal.appendChild(crossIcon);
     //Title
-    modal.appendChild(title);
+    // modal.appendChild(title);
     //Description & image
     modal.appendChild(descriptionImageContainer)
-    descriptionImageContainer.appendChild(description)
+    // descriptionImageContainer.appendChild(title)
+    // descriptionImageContainer.appendChild(description)
+    descriptionImageContainer.appendChild(containerTitle)
+    containerTitle.appendChild(title)
+    containerTitle.appendChild(description)
     descriptionImageContainer.appendChild(imageContainer);
     imageContainer.appendChild(picture);
     //Button

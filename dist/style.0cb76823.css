@@ -1916,7 +1916,6 @@ span.animatedText2 {
   border: 2px solid #FFFFFF;
   padding: 0px 30px;
   border-radius: 50px;
-  cursor: pointer;
 }
 @media screen and (max-width: 1024px) {
   .skills__text__content {
@@ -2663,10 +2662,10 @@ span.animatedText2 {
   color: #111111;
   font-family: "Playfair Display", serif;
   font-style: italic;
-  font-size: 50px;
+  font-size: 45px;
   width: fit-content;
   border-bottom: 2px solid #111111;
-  height: 70px;
+  height: 63px;
 }
 @media screen and (max-width: 1024px) {
   .modal__container__title {
@@ -2692,22 +2691,20 @@ span.animatedText2 {
   display: flex;
   color: #111111;
   font-family: "Neue Montreal Regular", sans-serif;
-  width: 40%;
   font-size: 20px;
   flex-shrink: 1;
   margin-top: 10px;
   margin-bottom: 40px;
+  align-items: center;
 }
 @media screen and (max-width: 1024px) {
   .modal__container__description {
-    width: 50%;
     font-size: 17px;
     margin-bottom: 0;
   }
 }
 @media screen and (max-width: 768px) {
   .modal__container__description {
-    width: 100%;
     font-size: 16px;
   }
 }
@@ -2720,22 +2717,14 @@ span.animatedText2 {
   display: flex;
   width: 60%;
   height: auto;
-}
-@media screen and (max-width: 1024px) {
-  .modal__container__image__container {
-    width: 50%;
-  }
+  position: relative;
+  top: 60px;
 }
 @media screen and (max-width: 768px) {
   .modal__container__image__container {
     width: 100%;
-    margin-top: 20px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .modal__container__image__container {
-    margin-top: 0;
     margin: 30px 0 10px 0;
+    top: 0;
   }
 }
 .modal__container__image__container img {
@@ -2789,11 +2778,10 @@ span.animatedText2 {
 
 .description__image__container {
   display: flex;
-  flex-direction: row;
   width: 100%;
   height: auto;
-  gap: 30px;
-  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
 }
 @media screen and (max-width: 1024px) {
   .description__image__container {
@@ -2806,6 +2794,24 @@ span.animatedText2 {
     gap: 0;
     align-items: center;
     margin-top: 10px;
+  }
+}
+
+.containerTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 35%;
+}
+@media screen and (max-width: 768px) {
+  .containerTitle {
+    width: 100%;
+    gap: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .containerTitle {
+    gap: 5px;
   }
 }
 
@@ -2933,8 +2939,8 @@ span.animatedText2 {
 .modal-cross {
   position: absolute;
   width: 55px;
-  top: 30px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
   filter: invert(97%) sepia(0%) saturate(7482%) hue-rotate(90deg) brightness(108%) contrast(102%);
 }
