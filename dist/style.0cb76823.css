@@ -1776,7 +1776,7 @@ span.animatedText2 {
 }
 @media screen and (max-width: 480px) {
   .skills__text--left {
-    top: 5px;
+    top: 7px;
     gap: 7px;
   }
 }
@@ -1812,7 +1812,7 @@ span.animatedText2 {
 }
 @media screen and (max-width: 480px) {
   .skills__text--right {
-    top: 36px;
+    top: 37px;
   }
 }
 @keyframes moveright {
@@ -1930,6 +1930,7 @@ span.animatedText2 {
 @media screen and (max-width: 480px) {
   .skills__text__content {
     padding: 0 15px;
+    border: 1px solid #FFFFFF;
   }
 }
 
