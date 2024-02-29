@@ -151,13 +151,11 @@ let barInterval = setInterval(() => {
         gsap.to(".introduction", {
             delay: 1,
             duration: 2,
-            zIndex: 5,
             right: "-300%",
         });
         gsap.to(".introduction", {
             delay: 1,
             duration: 2, ease: "power2.out", x: 0,
-            zIndex: 5,
             right: "0",
         });
         gsap.to(".loader", {
@@ -177,7 +175,7 @@ const wrapper = document.querySelector('.header__wrapper');
 const links = document.querySelectorAll('.animatedLinks');
 const contact = document.querySelector('.header__right');
 const home = document.querySelector('.home')
-const projects = document.querySelector('.projects-container')
+// const landing = document.querySelector('.landing')
 
 hamburgerContainer.addEventListener('click', () => {
     hamburger.classList.add('active');
@@ -187,7 +185,7 @@ hamburgerContainer.addEventListener('click', () => {
     wrapper.classList.remove('remove');
     home.classList.add('active');
     home.classList.remove('remove');
-    projects.style.zIndex = "0";
+    // landing.style.zIndex = "99";
 })
 
 closeDropDown.addEventListener('click', () => {
@@ -198,7 +196,7 @@ closeDropDown.addEventListener('click', () => {
 
     setTimeout(function() {
         home.classList.add('remove');
-        projects.style.zIndex = "2";
+        // landing.style.zIndex = "0";
     }, 1000) 
 })
 

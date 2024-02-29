@@ -15,6 +15,19 @@
         ]
     },
     {
+        "title": "Space Tourism",
+        "description": "Space tourism is a multi-page website offering trips into space to explore planets.\n This project is a challenge from the FrontEnd Mentor website.\n This challenge involves creating the various pages, manipulating data from a JSON file, and managing the responsive design.",        
+        "link": "https://github.com/badmotherfunk/Space-tourism-website",
+        "live": "https://travel-space-tourism.netlify.app",
+        "tags": [
+            "React",
+            "CSS",
+            "Data",
+            "Responsive",
+            "Figma"
+        ]
+    },
+    {
         "title": "Ohmyfood",
         "description": "Ohmyfood is an online food booking site it allows users to access restaurant menus and make reservations.\n This project focused on the creation of CSS animations, the use of Sass and responsive design.",        
         "link": "https://github.com/badmotherfunk/ohmyfood",

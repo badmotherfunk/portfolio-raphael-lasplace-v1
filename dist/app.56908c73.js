@@ -5544,10 +5544,16 @@ module.exports = "/cross-small.0e2a7d08.svg";
 module.exports = {
   "projectsData": [{
     "title": "Twitch.tv",
-    "description": "I created a complete reproduction of the Twitch website in React.js.\n This involved reproducing all the graphics parts and components, and making multiple calls to the Twitch API to retrieve data.\n I also took care of the responsive part of the website.",
+    "description": "I created a complete reproduction of the Twitch website in React.js.\n This involved reproducing all the graphics parts and components, and making multiple calls to the Twitch API to retrieve data.\n I'm currently working on the responsive part of the website.",
     "link": "https://github.com/badmotherfunk/Twitch-clone-react",
     "live": "https://twitch-tv-clone.netlify.app/",
     "tags": ["React", "CSS", "Animation", "API", "Responsive"]
+  }, {
+    "title": "Space Tourism",
+    "description": "Space tourism is a multi-page website offering trips into space to explore planets.\n This project is a challenge from the FrontEnd Mentor website.\n This challenge involves creating the various pages, manipulating data from a JSON file, and managing the responsive design.",
+    "link": "https://github.com/badmotherfunk/Space-tourism-website",
+    "live": "https://travel-space-tourism.netlify.app",
+    "tags": ["React", "CSS", "Data", "Responsive", "Figma"]
   }, {
     "title": "Ohmyfood",
     "description": "Ohmyfood is an online food booking site it allows users to access restaurant menus and make reservations.\n This project focused on the creation of CSS animations, the use of Sass and responsive design.",
@@ -5592,22 +5598,24 @@ module.exports = {
 };
 },{}],"assets/images/projects/0.webp":[function(require,module,exports) {
 module.exports = "/0.3326da96.webp";
-},{}],"assets/images/projects/2.webp":[function(require,module,exports) {
-module.exports = "/2.644195e0.webp";
 },{}],"assets/images/projects/1.webp":[function(require,module,exports) {
 module.exports = "/1.d44dddc2.webp";
-},{}],"assets/images/projects/5.webp":[function(require,module,exports) {
-module.exports = "/5.79aaef61.webp";
-},{}],"assets/images/projects/4.webp":[function(require,module,exports) {
-module.exports = "/4.2b330267.webp";
 },{}],"assets/images/projects/3.webp":[function(require,module,exports) {
 module.exports = "/3.b4955976.webp";
-},{}],"assets/images/projects/argentbank.webp":[function(require,module,exports) {
-module.exports = "/argentbank.fe256287.webp";
+},{}],"assets/images/projects/2.webp":[function(require,module,exports) {
+module.exports = "/2.644195e0.webp";
+},{}],"assets/images/projects/4.webp":[function(require,module,exports) {
+module.exports = "/4.2b330267.webp";
+},{}],"assets/images/projects/5.webp":[function(require,module,exports) {
+module.exports = "/5.79aaef61.webp";
 },{}],"assets/images/projects/6.webp":[function(require,module,exports) {
 module.exports = "/6.63f9d271.webp";
 },{}],"assets/images/projects/7.webp":[function(require,module,exports) {
 module.exports = "/7.dc9c40e2.webp";
+},{}],"assets/images/projects/8.webp":[function(require,module,exports) {
+module.exports = "/8.57a409d2.webp";
+},{}],"assets/images/projects/argentbank.webp":[function(require,module,exports) {
+module.exports = "/argentbank.fe256287.webp";
 },{}],"assets/images/projects/Booki.webp":[function(require,module,exports) {
 module.exports = "/Booki.d19f975d.webp";
 },{}],"assets/images/projects/kasa.webp":[function(require,module,exports) {
@@ -5620,6 +5628,8 @@ module.exports = "/ninaCarducci.2d1c2805.webp";
 module.exports = "/ohmyfood.1ac0ca22.webp";
 },{}],"assets/images/projects/sophie-bluel.webp":[function(require,module,exports) {
 module.exports = "/sophie-bluel.9c60d988.webp";
+},{}],"assets/images/projects/spaceTourism.webp":[function(require,module,exports) {
+module.exports = "/spaceTourism.f7140359.webp";
 },{}],"assets/images/projects/Twitch.webp":[function(require,module,exports) {
 module.exports = "/Twitch.b6444835.webp";
 },{}],"assets/images/projects/*.webp":[function(require,module,exports) {
@@ -5632,6 +5642,7 @@ module.exports = {
   "5": require("./5.webp"),
   "6": require("./6.webp"),
   "7": require("./7.webp"),
+  "8": require("./8.webp"),
   "argentbank": require("./argentbank.webp"),
   "Booki": require("./Booki.webp"),
   "kasa": require("./kasa.webp"),
@@ -5639,9 +5650,10 @@ module.exports = {
   "ninaCarducci": require("./ninaCarducci.webp"),
   "ohmyfood": require("./ohmyfood.webp"),
   "sophie-bluel": require("./sophie-bluel.webp"),
+  "spaceTourism": require("./spaceTourism.webp"),
   "Twitch": require("./Twitch.webp")
 };
-},{"./0.webp":"assets/images/projects/0.webp","./2.webp":"assets/images/projects/2.webp","./1.webp":"assets/images/projects/1.webp","./5.webp":"assets/images/projects/5.webp","./4.webp":"assets/images/projects/4.webp","./3.webp":"assets/images/projects/3.webp","./argentbank.webp":"assets/images/projects/argentbank.webp","./6.webp":"assets/images/projects/6.webp","./7.webp":"assets/images/projects/7.webp","./Booki.webp":"assets/images/projects/Booki.webp","./kasa.webp":"assets/images/projects/kasa.webp","./menuMaker.webp":"assets/images/projects/menuMaker.webp","./ninaCarducci.webp":"assets/images/projects/ninaCarducci.webp","./ohmyfood.webp":"assets/images/projects/ohmyfood.webp","./sophie-bluel.webp":"assets/images/projects/sophie-bluel.webp","./Twitch.webp":"assets/images/projects/Twitch.webp"}],"assets/js/app.js":[function(require,module,exports) {
+},{"./0.webp":"assets/images/projects/0.webp","./1.webp":"assets/images/projects/1.webp","./3.webp":"assets/images/projects/3.webp","./2.webp":"assets/images/projects/2.webp","./4.webp":"assets/images/projects/4.webp","./5.webp":"assets/images/projects/5.webp","./6.webp":"assets/images/projects/6.webp","./7.webp":"assets/images/projects/7.webp","./8.webp":"assets/images/projects/8.webp","./argentbank.webp":"assets/images/projects/argentbank.webp","./Booki.webp":"assets/images/projects/Booki.webp","./kasa.webp":"assets/images/projects/kasa.webp","./menuMaker.webp":"assets/images/projects/menuMaker.webp","./ninaCarducci.webp":"assets/images/projects/ninaCarducci.webp","./ohmyfood.webp":"assets/images/projects/ohmyfood.webp","./sophie-bluel.webp":"assets/images/projects/sophie-bluel.webp","./spaceTourism.webp":"assets/images/projects/spaceTourism.webp","./Twitch.webp":"assets/images/projects/Twitch.webp"}],"assets/js/app.js":[function(require,module,exports) {
 "use strict";
 
 var _gsap = _interopRequireDefault(require("gsap"));
@@ -5791,7 +5803,6 @@ var barInterval = setInterval(function () {
     _gsap.default.to(".introduction", {
       delay: 1,
       duration: 2,
-      zIndex: 5,
       right: "-300%"
     });
     _gsap.default.to(".introduction", {
@@ -5799,7 +5810,6 @@ var barInterval = setInterval(function () {
       duration: 2,
       ease: "power2.out",
       x: 0,
-      zIndex: 5,
       right: "0"
     });
     _gsap.default.to(".loader", {
@@ -5819,7 +5829,8 @@ var wrapper = document.querySelector('.header__wrapper');
 var links = document.querySelectorAll('.animatedLinks');
 var contact = document.querySelector('.header__right');
 var home = document.querySelector('.home');
-var projects = document.querySelector('.projects-container');
+// const landing = document.querySelector('.landing')
+
 hamburgerContainer.addEventListener('click', function () {
   hamburger.classList.add('active');
   closeDropDown.classList.add('active');
@@ -5828,8 +5839,9 @@ hamburgerContainer.addEventListener('click', function () {
   wrapper.classList.remove('remove');
   home.classList.add('active');
   home.classList.remove('remove');
-  projects.style.zIndex = "0";
+  // landing.style.zIndex = "99";
 });
+
 closeDropDown.addEventListener('click', function () {
   hamburger.classList.remove("active");
   closeDropDown.classList.remove('active');
@@ -5837,7 +5849,7 @@ closeDropDown.addEventListener('click', function () {
   wrapper.classList.add('remove');
   setTimeout(function () {
     home.classList.add('remove');
-    projects.style.zIndex = "2";
+    // landing.style.zIndex = "0";
   }, 1000);
 });
 home.addEventListener('click', function () {
@@ -6236,7 +6248,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "29287" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59459" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
