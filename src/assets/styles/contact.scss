@@ -1,11 +1,11 @@
 @import "./breakpoints.scss";
 
 .section__contact {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     padding: 40px;
     width: 100vw;
     height: auto;
-    z-index: 0;
 
     // Media queries
     @include tablet {
@@ -34,7 +34,7 @@
 }
 
 .contact {
-    position: relative;
+    display: flex;
     background: $black-color;
     font-family: $third-font;
 
@@ -148,6 +148,7 @@
         color: $white-color;
         font-family: $third-font;
         font-style: italic;
+        z-index: 1;
 
         
         // Media queries

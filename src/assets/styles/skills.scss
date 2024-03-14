@@ -1,26 +1,41 @@
 @import "./breakpoints.scss";
 
+
 .skills {
-    position: relative;
-    width: 100vw;
-    height: 800px;
+  display: flex;
+  flex-direction: column;
+  // height: 100vh;
+    // height: 800px;
     background-color: $black-color;
     z-index: 0;
     overflow: hidden;
     text-align: center;
 
     // Media queries
-    @include desktop {
-      height: 730px;
-    }
-    @include tablet {
-      height: 580px;
-    }
-    @include mobile {
-      height: 455px;
-    }
+    // @include desktop {
+    //   height: 730px;
+    // }
+    // @include tablet {
+    //   height: 580px;
+    // }
+    // @include mobile {
+    //   height: 455px;
+    // }
     &__text {
-        height: 145px;
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 140px;
+
+      @include desktop {
+        height: 110px;
+      }
+      @include tablet {
+        height: 90px;
+      }
+      @include mobile {
+        height: 68px;
+      }
     }
     &__text__p {
         position: absolute;
@@ -43,8 +58,6 @@
         display: flex;
         flex-direction: row;
         gap: 18px;
-
-        // left: 0;
         top: 15px;
         font-family: $third-font;
         font-style: italic;
@@ -124,15 +137,12 @@
         // Media queries
         @include desktop {
           font-size: 45px;
-          top: -35px;
         }
         @include tablet {
           font-size: 38px;
-          top: -50px;
         }
         @include mobile {
           font-size: 25px;
-          top: -70px;
           padding-top: 10px;
         }
     }
@@ -146,16 +156,13 @@
 
         // Media queries
         @include desktop {
-          top: -40px;
           width: 175px;
         }
         @include tablet {
-          top: -54px;
           width: 150px;
           right: 10px;
         }
         @include mobile {
-          top: -76px;
           height: 1px;
           width: 98px;
           right: 7px;
@@ -163,22 +170,20 @@
     }
 }
 .skills__border {
-    position: relative;
     width: 100%;
     height: 1px;
-    top: 136px;
     background-color: $white-color;
 
-    // Media queries
-    @include desktop {
-      top: 110px;
-    }
-    @include tablet {
-      top: 92px;
-    }
-    @include mobile {
-      top: 66px;
-    }
+    // // Media queries
+    // @include desktop {
+    //   top: 110px;
+    // }
+    // @include tablet {
+    //   top: 92px;
+    // }
+    // @include mobile {
+    //   top: 66px;
+    // }
 }
 
 .skills__text__content {
@@ -199,9 +204,18 @@
   }
 }
 
+.skills-container {
+  @include tablet {
+    height: 400px;
+  }
+  @include mobile {
+    height: 290px;
+  }
+}
 
 // Pyramid section skills
 .section-skills {
+  position: absolute;
     display: flex;
     justify-content: center;
     position: relative;
@@ -209,18 +223,14 @@
     width: 100%;
     height: auto;
     transform: rotate(-90deg);
-    padding: 10px;
 
     // Media queries
-    @include desktop {
-      bottom: 85px;
-    }
     @include tablet {
-      bottom: 165px;
+      bottom: 120px;
       transform: scale(0.7) rotate(-90deg);
     }
     @include mobile {
-      bottom: 225px;
+      bottom: 170px;
       transform: scale(0.54) rotate(-90deg);
     }
   }
@@ -287,6 +297,7 @@
         transition: color .5s;
       }
     }
+    
   }
   
   .box-face, .box-back {

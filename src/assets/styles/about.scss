@@ -1,7 +1,10 @@
 @import './breakpoints.scss';
 
 .about__container {
-    position: relative;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
     width: 100vw;
     height: auto;
     background-color: $black-color;
@@ -9,6 +12,7 @@
 }
 
 .about__image {
+    display: flex;
     width: 100%;
     height: 310px;
     background-attachment: fixed;
@@ -16,6 +20,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('../images/Raphael_stage.webp');
+    z-index: 2;
 
     // Media queries
     @include tablet {
@@ -95,6 +100,7 @@
         align-items: center;
         margin-bottom: 50px;
         width: 75%;
+        max-width: 1730px;
 
         // Media queries
         @include desktop {
@@ -132,6 +138,7 @@
             font-size: 17px;
             line-height: 25px;
             padding: 10px 0 5px 0;
+            text-align: center;
         }
     }
     &__text__styled {
@@ -198,6 +205,7 @@
     font-size: 22px;
     padding: 30px 0 100px 0;
     width: 75%;
+    max-width: 1730px;
 
     // Media queries
     @include desktop {
@@ -246,6 +254,7 @@
         @include mobile {
             padding-top: 5px;
             font-size: 15px;
+            text-align: center;
         }
 
     }
@@ -262,6 +271,7 @@
         @include mobile {
             padding: 5px 0 10px 0;
             font-size: 15px;
+            text-align: center;
         }
     }
     &__number {
@@ -279,7 +289,6 @@
             font-size: 15px;
         }
     }
-
 }
 
 .noise__about::before {

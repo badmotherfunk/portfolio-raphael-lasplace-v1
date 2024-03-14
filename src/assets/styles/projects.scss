@@ -1,13 +1,13 @@
 @import "./breakpoints.scss";
 
 .projects-container {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     background-color: $black-color;
     overflow: hidden;
     cursor:grab;
-    z-index: 1;
 
     //Media queries
     @include tablet {
@@ -27,19 +27,27 @@
     background-color: $white-color;
 }
 
+.projects__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 [id="image-track"]
 {
     display: flex;
+    align-items: center;
     gap: 2vmin;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 45%;
     transform: translate(0%, -50%); 
     user-select: none; /* -- Prevent image highlighting -- */
 
     //Media queries
     @include mobile {
         gap: 3vmin;
+        top: 40%;
     }
 }
 
@@ -48,6 +56,7 @@
     align-items: center;
     flex-direction: column;
     padding: 30px;
+    z-index: 1;
 
     &__h2 {
         font-family: $third-font;
@@ -382,7 +391,6 @@
     width: 100%;
     height: auto;
     justify-content: space-between;
-
     align-items: center;
 
 
@@ -394,7 +402,6 @@
         flex-direction: column;
         gap: 0;
         align-items: center;
-        margin-top: 10px;
     }
 }
 

@@ -1,12 +1,11 @@
 @import "./breakpoints.scss";
 
 footer {
-    position: relative;
+    display: flex;
     width: 100%;
     height: auto;
     background-color: $black-color;
     padding: 20px 40px;
-    z-index: 0;
 
         //Media queries
         @include tablet {
@@ -25,6 +24,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 
     //Media queries
     @include mobile {
@@ -73,6 +73,7 @@ footer {
     font-size: 18px;
     text-align: center;
     width: 100%;
+    z-index: 1;
 
     //Media queries
     @include desktop {

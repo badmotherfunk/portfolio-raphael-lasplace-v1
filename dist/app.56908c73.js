@@ -5598,32 +5598,32 @@ module.exports = {
 };
 },{}],"assets/images/projects/0.webp":[function(require,module,exports) {
 module.exports = "/0.3326da96.webp";
-},{}],"assets/images/projects/1.webp":[function(require,module,exports) {
-module.exports = "/1.d44dddc2.webp";
 },{}],"assets/images/projects/3.webp":[function(require,module,exports) {
 module.exports = "/3.b4955976.webp";
 },{}],"assets/images/projects/2.webp":[function(require,module,exports) {
 module.exports = "/2.644195e0.webp";
-},{}],"assets/images/projects/4.webp":[function(require,module,exports) {
-module.exports = "/4.2b330267.webp";
-},{}],"assets/images/projects/5.webp":[function(require,module,exports) {
-module.exports = "/5.79aaef61.webp";
+},{}],"assets/images/projects/1.webp":[function(require,module,exports) {
+module.exports = "/1.d44dddc2.webp";
 },{}],"assets/images/projects/6.webp":[function(require,module,exports) {
 module.exports = "/6.63f9d271.webp";
 },{}],"assets/images/projects/7.webp":[function(require,module,exports) {
 module.exports = "/7.dc9c40e2.webp";
-},{}],"assets/images/projects/8.webp":[function(require,module,exports) {
-module.exports = "/8.57a409d2.webp";
 },{}],"assets/images/projects/argentbank.webp":[function(require,module,exports) {
 module.exports = "/argentbank.fe256287.webp";
+},{}],"assets/images/projects/8.webp":[function(require,module,exports) {
+module.exports = "/8.57a409d2.webp";
 },{}],"assets/images/projects/Booki.webp":[function(require,module,exports) {
 module.exports = "/Booki.d19f975d.webp";
 },{}],"assets/images/projects/kasa.webp":[function(require,module,exports) {
 module.exports = "/kasa.8a352e6c.webp";
-},{}],"assets/images/projects/menuMaker.webp":[function(require,module,exports) {
-module.exports = "/menuMaker.af2a0e5f.webp";
 },{}],"assets/images/projects/ninaCarducci.webp":[function(require,module,exports) {
 module.exports = "/ninaCarducci.2d1c2805.webp";
+},{}],"assets/images/projects/menuMaker.webp":[function(require,module,exports) {
+module.exports = "/menuMaker.af2a0e5f.webp";
+},{}],"assets/images/projects/5.webp":[function(require,module,exports) {
+module.exports = "/5.79aaef61.webp";
+},{}],"assets/images/projects/4.webp":[function(require,module,exports) {
+module.exports = "/4.2b330267.webp";
 },{}],"assets/images/projects/ohmyfood.webp":[function(require,module,exports) {
 module.exports = "/ohmyfood.1ac0ca22.webp";
 },{}],"assets/images/projects/sophie-bluel.webp":[function(require,module,exports) {
@@ -5646,14 +5646,14 @@ module.exports = {
   "argentbank": require("./argentbank.webp"),
   "Booki": require("./Booki.webp"),
   "kasa": require("./kasa.webp"),
-  "menuMaker": require("./menuMaker.webp"),
   "ninaCarducci": require("./ninaCarducci.webp"),
+  "menuMaker": require("./menuMaker.webp"),
   "ohmyfood": require("./ohmyfood.webp"),
   "sophie-bluel": require("./sophie-bluel.webp"),
   "spaceTourism": require("./spaceTourism.webp"),
   "Twitch": require("./Twitch.webp")
 };
-},{"./0.webp":"assets/images/projects/0.webp","./1.webp":"assets/images/projects/1.webp","./3.webp":"assets/images/projects/3.webp","./2.webp":"assets/images/projects/2.webp","./4.webp":"assets/images/projects/4.webp","./5.webp":"assets/images/projects/5.webp","./6.webp":"assets/images/projects/6.webp","./7.webp":"assets/images/projects/7.webp","./8.webp":"assets/images/projects/8.webp","./argentbank.webp":"assets/images/projects/argentbank.webp","./Booki.webp":"assets/images/projects/Booki.webp","./kasa.webp":"assets/images/projects/kasa.webp","./menuMaker.webp":"assets/images/projects/menuMaker.webp","./ninaCarducci.webp":"assets/images/projects/ninaCarducci.webp","./ohmyfood.webp":"assets/images/projects/ohmyfood.webp","./sophie-bluel.webp":"assets/images/projects/sophie-bluel.webp","./spaceTourism.webp":"assets/images/projects/spaceTourism.webp","./Twitch.webp":"assets/images/projects/Twitch.webp"}],"assets/js/app.js":[function(require,module,exports) {
+},{"./0.webp":"assets/images/projects/0.webp","./3.webp":"assets/images/projects/3.webp","./2.webp":"assets/images/projects/2.webp","./1.webp":"assets/images/projects/1.webp","./6.webp":"assets/images/projects/6.webp","./7.webp":"assets/images/projects/7.webp","./argentbank.webp":"assets/images/projects/argentbank.webp","./8.webp":"assets/images/projects/8.webp","./Booki.webp":"assets/images/projects/Booki.webp","./kasa.webp":"assets/images/projects/kasa.webp","./ninaCarducci.webp":"assets/images/projects/ninaCarducci.webp","./menuMaker.webp":"assets/images/projects/menuMaker.webp","./5.webp":"assets/images/projects/5.webp","./4.webp":"assets/images/projects/4.webp","./ohmyfood.webp":"assets/images/projects/ohmyfood.webp","./sophie-bluel.webp":"assets/images/projects/sophie-bluel.webp","./spaceTourism.webp":"assets/images/projects/spaceTourism.webp","./Twitch.webp":"assets/images/projects/Twitch.webp"}],"assets/js/app.js":[function(require,module,exports) {
 "use strict";
 
 var _gsap = _interopRequireDefault(require("gsap"));
@@ -6024,34 +6024,66 @@ var handleOnUp = function handleOnUp() {
 };
 var handleOnMove = function handleOnMove(e) {
   if (track.dataset.mouseDownAt === "0") return;
-  var mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-    maxDelta = window.innerWidth / 2;
-  var percentage = mouseDelta / maxDelta * -100,
-    nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-    nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-  track.dataset.percentage = nextPercentage;
-  track.animate({
-    transform: "translate(".concat(nextPercentage, "%, -50%)")
-  }, {
-    duration: 1200,
-    fill: "forwards"
-  });
-  var _iterator = _createForOfIteratorHelper(track.getElementsByClassName("image")),
-    _step;
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var image = _step.value;
-      image.animate({
-        objectPosition: "".concat(100 + nextPercentage, "% center")
-      }, {
-        duration: 1200,
-        fill: "forwards"
-      });
+  if (window.matchMedia("(max-width: 480px)").matches) {
+    var mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+      maxDelta = window.innerWidth / 0.5;
+    var percentage = mouseDelta / maxDelta * -100,
+      nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+      nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+    track.dataset.percentage = nextPercentage;
+    track.animate({
+      transform: "translate(".concat(nextPercentage, "%, -50%)")
+    }, {
+      duration: 1200,
+      fill: "forwards"
+    });
+    var _iterator = _createForOfIteratorHelper(track.getElementsByClassName("image")),
+      _step;
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var image = _step.value;
+        image.animate({
+          objectPosition: "".concat(100 + nextPercentage, "% center")
+        }, {
+          duration: 1200,
+          fill: "forwards"
+        });
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
     }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
+  } else {
+    var _mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+      _maxDelta = window.innerWidth / 2;
+    var _percentage = _mouseDelta / _maxDelta * -100,
+      _nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + _percentage,
+      _nextPercentage = Math.max(Math.min(_nextPercentageUnconstrained, 0), -100);
+    track.dataset.percentage = _nextPercentage;
+    track.animate({
+      transform: "translate(".concat(_nextPercentage, "%, -50%)")
+    }, {
+      duration: 1200,
+      fill: "forwards"
+    });
+    var _iterator2 = _createForOfIteratorHelper(track.getElementsByClassName("image")),
+      _step2;
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var _image = _step2.value;
+        _image.animate({
+          objectPosition: "".concat(100 + _nextPercentage, "% center")
+        }, {
+          duration: 1200,
+          fill: "forwards"
+        });
+      }
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
+    }
   }
 };
 
@@ -6248,7 +6280,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59459" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "11262" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

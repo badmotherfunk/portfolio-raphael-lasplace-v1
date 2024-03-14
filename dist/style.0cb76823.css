@@ -22,6 +22,7 @@
 
 * {
   scrollbar-width: thin;
+  z-index: 1;
 }
 
 /* Works on Chrome, Edge, and Safari */
@@ -54,6 +55,7 @@ body {
 }
 
 body {
+  position: relative;
   background-color: #000;
   color: #FFFFFF;
   font-family: "Neue Montreal Light", sans-serif;
@@ -281,12 +283,9 @@ ul {
 .opacity__overlay {
   background: #111111;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.5;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.3;
 }
 
 .noise::before {
@@ -297,7 +296,7 @@ ul {
   height: 100%;
   content: "";
   opacity: 0.1;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
   background: url("/noise400.62d23a24.gif");
 }
@@ -378,7 +377,8 @@ ul {
 }
 
 .landing {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   color: #FFFFFF;
@@ -588,6 +588,11 @@ ul {
   transition: transform 0.3s ease-in-out;
 }
 
+.social-content {
+  position: relative;
+  width: 100%;
+}
+
 .socials {
   position: absolute;
   left: 50%;
@@ -698,13 +703,11 @@ ul {
 }
 
 .introduction {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  right: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .introduction__global {
   margin-bottom: 30px;
@@ -712,7 +715,7 @@ ul {
 .introduction__image {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -2;
 }
 .introduction__picture {
@@ -738,6 +741,7 @@ ul {
 @media screen and (max-width: 480px) {
   .introduction__container {
     padding: 0 20px;
+    justify-content: center;
   }
 }
 .introduction__hey {
@@ -829,6 +833,7 @@ ul {
   .introduction__text {
     font-size: 17px;
     line-height: 30px;
+    text-align: center;
   }
 }
 
@@ -1143,7 +1148,7 @@ span.media__text {
 }
 @media screen and (max-width: 480px) {
   .animatedText {
-    font-size: 22px;
+    font-size: 21px;
   }
 }
 .animatedText:before {
@@ -1182,7 +1187,7 @@ span.media__text {
 }
 @media screen and (max-width: 480px) {
   .animatedText span {
-    height: 31px;
+    height: 30px;
   }
 }
 .animatedText:hover:before {
@@ -1212,8 +1217,8 @@ span.media__text {
 }
 @media screen and (max-width: 480px) {
   .animatedText:hover span {
-    width: 102px;
-    height: 31px;
+    width: 98px;
+    height: 30px;
   }
 }
 
@@ -1259,7 +1264,7 @@ span.animatedText {
 }
 @media screen and (max-width: 480px) {
   .animatedText2 {
-    font-size: 22px;
+    font-size: 21px;
   }
 }
 .animatedText2:before {
@@ -1298,7 +1303,7 @@ span.animatedText {
 }
 @media screen and (max-width: 480px) {
   .animatedText2 span {
-    height: 31px;
+    height: 30px;
     width: 81px;
   }
 }
@@ -1329,8 +1334,8 @@ span.animatedText {
 }
 @media screen and (max-width: 480px) {
   .animatedText2:hover span {
-    width: 76px;
-    height: 31px;
+    width: 72px;
+    height: 30px;
   }
 }
 
@@ -1350,7 +1355,7 @@ span.animatedText2 {
 }
 @media screen and (max-width: 480px) {
   span.animatedText2 {
-    font-size: 22px;
+    font-size: 21px;
   }
 }
 
@@ -1374,7 +1379,9 @@ span.animatedText2 {
 }
 
 .about__container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
   width: 100vw;
   height: auto;
   background-color: #111111;
@@ -1382,6 +1389,7 @@ span.animatedText2 {
 }
 
 .about__image {
+  display: flex;
   width: 100%;
   height: 310px;
   background-attachment: fixed;
@@ -1389,6 +1397,7 @@ span.animatedText2 {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/Raphael_stage.e57b0c9e.webp");
+  z-index: 2;
 }
 @media screen and (max-width: 768px) {
   .about__image {
@@ -1477,6 +1486,7 @@ span.animatedText2 {
   align-items: center;
   margin-bottom: 50px;
   width: 75%;
+  max-width: 1730px;
 }
 @media screen and (max-width: 1024px) {
   .about__quote {
@@ -1521,6 +1531,7 @@ span.animatedText2 {
     font-size: 17px;
     line-height: 25px;
     padding: 10px 0 5px 0;
+    text-align: center;
   }
 }
 .about__text__styled {
@@ -1593,6 +1604,7 @@ span.animatedText2 {
   font-size: 22px;
   padding: 30px 0 100px 0;
   width: 75%;
+  max-width: 1730px;
 }
 @media screen and (max-width: 1024px) {
   .about__description__container {
@@ -1652,6 +1664,7 @@ span.animatedText2 {
   .about__description__container__text {
     padding-top: 5px;
     font-size: 15px;
+    text-align: center;
   }
 }
 .about__description__container__text2 {
@@ -1671,6 +1684,7 @@ span.animatedText2 {
   .about__description__container__text2 {
     padding: 5px 0 10px 0;
     font-size: 15px;
+    text-align: center;
   }
 }
 .about__description__container__number {
@@ -1705,31 +1719,33 @@ span.animatedText2 {
 }
 
 .skills {
-  position: relative;
-  width: 100vw;
-  height: 800px;
+  display: flex;
+  flex-direction: column;
   background-color: #111111;
   z-index: 0;
   overflow: hidden;
   text-align: center;
 }
+.skills__text {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 140px;
+}
 @media screen and (max-width: 1024px) {
-  .skills {
-    height: 730px;
+  .skills__text {
+    height: 110px;
   }
 }
 @media screen and (max-width: 768px) {
-  .skills {
-    height: 580px;
+  .skills__text {
+    height: 90px;
   }
 }
 @media screen and (max-width: 480px) {
-  .skills {
-    height: 455px;
+  .skills__text {
+    height: 68px;
   }
-}
-.skills__text {
-  height: 145px;
 }
 .skills__text__p {
   position: absolute;
@@ -1841,19 +1857,16 @@ span.animatedText2 {
 @media screen and (max-width: 1024px) {
   .skills__header__text {
     font-size: 45px;
-    top: -35px;
   }
 }
 @media screen and (max-width: 768px) {
   .skills__header__text {
     font-size: 38px;
-    top: -50px;
   }
 }
 @media screen and (max-width: 480px) {
   .skills__header__text {
     font-size: 25px;
-    top: -70px;
     padding-top: 10px;
   }
 }
@@ -1867,20 +1880,17 @@ span.animatedText2 {
 }
 @media screen and (max-width: 1024px) {
   .skills__header__border {
-    top: -40px;
     width: 175px;
   }
 }
 @media screen and (max-width: 768px) {
   .skills__header__border {
-    top: -54px;
     width: 150px;
     right: 10px;
   }
 }
 @media screen and (max-width: 480px) {
   .skills__header__border {
-    top: -76px;
     height: 1px;
     width: 98px;
     right: 7px;
@@ -1888,26 +1898,9 @@ span.animatedText2 {
 }
 
 .skills__border {
-  position: relative;
   width: 100%;
   height: 1px;
-  top: 136px;
   background-color: #FFFFFF;
-}
-@media screen and (max-width: 1024px) {
-  .skills__border {
-    top: 110px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .skills__border {
-    top: 92px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .skills__border {
-    top: 66px;
-  }
 }
 
 .skills__text__content {
@@ -1932,7 +1925,19 @@ span.animatedText2 {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .skills-container {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .skills-container {
+    height: 290px;
+  }
+}
+
 .section-skills {
+  position: absolute;
   display: flex;
   justify-content: center;
   position: relative;
@@ -1940,22 +1945,16 @@ span.animatedText2 {
   width: 100%;
   height: auto;
   transform: rotate(-90deg);
-  padding: 10px;
-}
-@media screen and (max-width: 1024px) {
-  .section-skills {
-    bottom: 85px;
-  }
 }
 @media screen and (max-width: 768px) {
   .section-skills {
-    bottom: 165px;
+    bottom: 120px;
     transform: scale(0.7) rotate(-90deg);
   }
 }
 @media screen and (max-width: 480px) {
   .section-skills {
-    bottom: 225px;
+    bottom: 170px;
     transform: scale(0.54) rotate(-90deg);
   }
 }
@@ -2129,13 +2128,13 @@ span.animatedText2 {
 }
 
 .travail-exp {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: auto;
   padding-bottom: 110px;
   background-color: #111111;
   color: #111111;
-  z-index: 0;
 }
 
 .titre-travail-exp {
@@ -2167,6 +2166,7 @@ span.animatedText2 {
   align-items: center;
   flex-direction: column;
   margin: 30px 0 90px 0;
+  z-index: 1;
 }
 
 .experiences__border {
@@ -2382,13 +2382,13 @@ span.animatedText2 {
 }
 
 .projects-container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   background-color: #111111;
   overflow: hidden;
   cursor: grab;
-  z-index: 1;
 }
 @media screen and (max-width: 768px) {
   .projects-container {
@@ -2411,18 +2411,26 @@ span.animatedText2 {
   background-color: #FFFFFF;
 }
 
+.projects__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 [id=image-track] {
   display: flex;
+  align-items: center;
   gap: 2vmin;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 45%;
   transform: translate(0%, -50%);
   user-select: none; /* -- Prevent image highlighting -- */
 }
 @media screen and (max-width: 480px) {
   [id=image-track] {
     gap: 3vmin;
+    top: 40%;
   }
 }
 
@@ -2431,6 +2439,7 @@ span.animatedText2 {
   align-items: center;
   flex-direction: column;
   padding: 30px;
+  z-index: 1;
 }
 .projects__title__h2 {
   font-family: "Playfair Display", serif;
@@ -2790,7 +2799,6 @@ span.animatedText2 {
     flex-direction: column;
     gap: 0;
     align-items: center;
-    margin-top: 10px;
   }
 }
 
@@ -3179,11 +3187,11 @@ span.animatedText2 {
 }
 
 .section__contact {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   padding: 40px;
   width: 100vw;
   height: auto;
-  z-index: 0;
 }
 @media screen and (max-width: 768px) {
   .section__contact {
@@ -3216,7 +3224,7 @@ span.animatedText2 {
 }
 
 .contact {
-  position: relative;
+  display: flex;
   background: #111111;
   font-family: "Playfair Display", serif;
 }
@@ -3343,6 +3351,7 @@ span.animatedText2 {
   color: #FFFFFF;
   font-family: "Playfair Display", serif;
   font-style: italic;
+  z-index: 1;
 }
 @media screen and (max-width: 1024px) {
   .form__info {
@@ -3504,12 +3513,11 @@ span.animatedText2 {
 }
 
 footer {
-  position: relative;
+  display: flex;
   width: 100%;
   height: auto;
   background-color: #111111;
   padding: 20px 40px;
-  z-index: 0;
 }
 @media screen and (max-width: 768px) {
   footer {
@@ -3530,6 +3538,7 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 @media screen and (max-width: 480px) {
   .footer {
@@ -3583,6 +3592,7 @@ footer {
   font-size: 18px;
   text-align: center;
   width: 100%;
+  z-index: 1;
 }
 @media screen and (max-width: 1024px) {
   .footer__text {

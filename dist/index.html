@@ -21,6 +21,9 @@
     <meta name="theme-color" content="#151515">
 <script src="/style.0cb76823.js"></script></head>
 <body>
+    <div class="opacity__overlay">
+      <div class="noise"></div>
+    </div>
     <!-- Mouse animation -->   
     <div class="cursor">
       <div class="circle"></div>
@@ -89,9 +92,7 @@
   </div>
     <!-- Header -->
     <header class="header">
-      <div class="opacity__overlay overlay__header">
-        <div class="noise"></div>
-      </div>
+
         <div class="header__name">
             <a href="mailto:raphael.lasplace@gmail.com" class="animatedMail disabledHover" data-text="@gmail.com">raphael.lasplace</a>
         </div>
@@ -131,6 +132,7 @@
             <img src="/hamburger.9c9c4043.svg" alt="Hamburger icon" class="dropDown__hamburger">
         </div>
         <div class="header__border"></div>
+
     </header>
 
     <!-- Introduction -->
@@ -172,29 +174,29 @@
     </div>
 
     <!-- Socials -->
-    <div class="socials disabledHover">
+    <div class="social-content">
+      <div class="socials disabledHover">
         <a href="https://www.linkedin.com/in/rapha%C3%ABl-lasplace-869a93219/" target="_blank" aria-label="Linkedin Profile">
           <i class="fab fa-linkedin coloredIcon" style="color: #ffffff;"></i>
         </a>
         <a href="https://github.com/badmotherfunk" target="_blank" aria-label="Github Profile">
-            <i class="fab fa-github coloredIcon" style="color: #ffffff;"></i>
+          <i class="fab fa-github coloredIcon" style="color: #ffffff;"></i>
         </a>
-    </div>
-    <div class="scrollDown">
+      </div>
+      <div class="scrollDown">
         <div class="scrollDown__wheel">
-            <div class="scrollDown__wheel--inner"></div>
+          <div class="scrollDown__wheel--inner"></div>
         </div>
         <div class="scrollDown__arrows">
-            <span class="scrollDown__arrow"></span>
+          <span class="scrollDown__arrow"></span>
         </div>
+      </div>
     </div>
 </section>
 
 <!-- About me -->
 <section class="about__container" id="about">
-  <div class="opacity__overlay">
-    <div class="noise"></div>
-  </div>
+
     <div class="about__image" role="img" aria-label="Raphaël playing bass on stage"></div>
     <div class="about__image__black__border"></div>
     <div class="about">
@@ -222,14 +224,12 @@
                 I usually work in vanilla javascript, but I'm always curious to learn new things that can improve my knowledge and possibilities in my working environment.</p>
         </div>
     </div>
+
 </section>
 
 <!-- Section skills -->
 <section class="skills" id="skills">
   <div class="border__contact"></div>
-  <div class="opacity__overlay">
-    <div class="noise"></div>
-  </div>
 
     <div class="skills__text">
         <div class="skills__text__p skills__text--left">
@@ -284,6 +284,7 @@
           <p class="skills__text__content">Swagger</p>
           <p class="skills__text__content">Figma</p>
           <p class="skills__text__content">Postman</p>
+          <p class="skills__text__content">WordPress</p>
           
           <p class="skills__text__content">HTML</p>
           <p class="skills__text__content">CSS</p>
@@ -301,15 +302,20 @@
           <p class="skills__text__content">Swagger</p>
           <p class="skills__text__content">Figma</p>
           <p class="skills__text__content">Postman</p>
+          <p class="skills__text__content">WordPress</p>
 
         </div>
 
-        <div class="skills__border"></div>
     </div>
+    <div class="skills__border"></div>
+
     <div class="skills__header">
         <h2 class="skills__header__text title bigHover">My skills.</h2>
         <div class="skills__header__border"></div>
     </div>
+
+    <div class="skills-container">
+
 
     <div class="section-skills disabledHover">
         <div class="wall">
@@ -401,14 +407,13 @@
           </div>
         </div>
     </div>
+  </div>
+
 </section>
 
  <!-- Section Experiences -->
  <section class="travail-exp" id="exp">
   <div class="border__contact"></div>
-  <div class="opacity__overlay">
-    <div class="noise"></div>
-  </div>
 
   <div class="experiences__title">
     <h2 class="titre-travail-exp bigHover">Experiences.</h2>
@@ -448,7 +453,7 @@
           <div class="bloc bloc2">
               <div class="contenu-bloc">
                   <h3 class="titre-section-bloc">Openclassrooms, 2023</h3>
-                  <p class="txt-section">I completed the 9-month web integrator training course with Openclassrooms, which enabled me to carry out 12 projects in line with current business needs. This enabled me to confirm my knowledge and develop my skills. In particular, I was able to work on new concepts, find solutions on my own, learn about frameworks, state management, and API requests.</p>
+                  <p class="txt-section">I completed the 9-month web integrator training course with Openclassrooms, which enabled me to carry out 12 projects in line with current business needs. It allowed me to confirm my knowledge and develop my skills. In particular, I was able to work on new concepts, find solutions on my own, learn about frameworks, state management, and API requests.</p>
               </div>
           </div>
                           
@@ -470,19 +475,22 @@
       </div>
 
   </div>
+
 </section>
 
 <!-- Projects section -->
 <section class="projects-container" id="projects">
-  <div class="opacity__overlay">
+  <!-- <div class="opacity__overlay">
     <div class="noise"></div>
-  </div>
+  </div> -->
   <div class="projects-border"></div>
   <div class="projects__title">
     <h2 class="projects__title__h2 bigHover">Projects.</h2>
     <div class="projects__title__border"></div>
     <span class="projects__advice"><i class="fa-regular fa-hand-back-fist"></i>&nbsp;&nbsp;Grab & drag left or right to scroll content</span>
   </div>
+
+  <div class="projects__container">
 
   <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0" data-percentage="0">
     <i class="fas fa-chevron-left chevron"></i>
@@ -552,6 +560,7 @@
 
     <i class="fas fa-chevron-right chevron"></i>
   </div>
+</div>
 
   <!-- Projects modal -->
   <div class="modal"></div>
@@ -561,9 +570,7 @@
 <!-- Contact -->
 <div class="border__contact"></div>
 <section class="section__contact contact" id="contact">
-  <div class="opacity__overlay">
-    <div class="noise"></div>
-  </div>
+
   <div class="contact__wrapper">
     <div class="contact__header">
       <h2 class="contact__header__h2 bigHover">Contact.</h2>
@@ -606,15 +613,14 @@
       </div>
     </form>
   </div>
+
 </section>
 
 <div class="border__contact"></div>
 
 <!-- Footer -->
 <footer>
-  <div class="opacity__overlay">
-    <div class="noise"></div>
-  </div>
+
   <div class="footer">
     <a href="#homepage" class="footer__logo--link">
       <img src="/Signature-logo.93e2a612.webp" alt="Logo signature Raphaël Lasplace" class="footer__logo disabledHover">
@@ -629,6 +635,7 @@
       </a>
     </div>
   </div>
+  
 </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
