@@ -3,7 +3,7 @@
 "projectsData" : [
     {
         "title": "Twitch.tv",
-        "description": "I created a complete reproduction of the Twitch website in React.js.\n This involved reproducing all the graphics parts and components, and making multiple calls to the Twitch API to retrieve data.\n I'm currently working on the responsive part of the website.",        
+        "description": "I created a complete reproduction of the Twitch website in React.js.\n This project involved reproducing all the graphics parts and components, and making multiple calls to the Twitch API to retrieve data.\n I've also managed the responsive part of the website.",        
         "link": "https://github.com/badmotherfunk/Twitch-clone-react",
         "live": "https://twitch-tv-clone.netlify.app/",
         "tags": [
@@ -15,8 +15,22 @@
         ]
     },
     {
+        "title": "Audiophile e-commerce",
+        "description": "Audiophile is an e-commerce website for audio equipment.\n This project is a FrontEnd Mentor challenge.\n The challenge involved creating different pages, manipulating data in a JSON file, adding articles to the shopping cart, validating a payment form, and managing responsive design.",        
+        "link": "https://github.com/badmotherfunk/Audiophile-e-commerce-website",
+        "live": "https://audiophile-gear.netlify.app",
+        "tags": [
+            "React",
+            "SCSS",
+            "Data",
+            "Responsive",
+            "Green Code",
+            "Figma"
+        ]
+    },
+    {
         "title": "Space Tourism",
-        "description": "Space tourism is a multi-page website offering trips into space to explore planets.\n This project is a challenge from the FrontEnd Mentor website.\n This challenge involves creating the various pages, manipulating data from a JSON file, and managing the responsive design.",        
+        "description": "Space tourism is a multi-page website offering trips into space to explore planets.\n This project is a challenge from the FrontEnd Mentor website.\n The challenge involved creating the various pages, manipulating data from a JSON file, and managing the responsive design.",        
         "link": "https://github.com/badmotherfunk/Space-tourism-website",
         "live": "https://travel-space-tourism.netlify.app",
         "tags": [
@@ -24,6 +38,7 @@
             "CSS",
             "Data",
             "Responsive",
+            "Green Code",
             "Figma"
         ]
     },
