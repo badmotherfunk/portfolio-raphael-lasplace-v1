@@ -150,12 +150,12 @@ let barInterval = setInterval(() => {
         });
         gsap.to(".introduction", {
             delay: 1,
-            duration: 2,
-            right: "-300%",
+            duration: 1.5,
+            right: "-3500%",
         });
         gsap.to(".introduction", {
             delay: 1,
-            duration: 2, ease: "power2.out", x: 0,
+            duration: 1.5, ease: "power2.out", x: 0,
             right: "0",
         });
         gsap.to(".loader", {
@@ -196,7 +196,7 @@ closeDropDown.addEventListener('click', () => {
 
     setTimeout(function() {
         home.classList.add('remove');
-        // landing.style.zIndex = "0";
+        landing.style.zIndex = "0";
     }, 1000) 
 })
 
@@ -423,6 +423,7 @@ window.ontouchend = e => handleOnUp(e.touches[0]);
 window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
+
 
 
 // PROJECT MODAL

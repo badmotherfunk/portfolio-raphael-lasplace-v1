@@ -708,6 +708,8 @@ ul {
   align-items: center;
   width: 100%;
   height: 100%;
+  position: relative;
+  right: 0;
 }
 .introduction__global {
   margin-bottom: 30px;
