@@ -5504,13 +5504,19 @@ module.exports = {
     "tags": ["React", "CSS", "Animation", "API", "Responsive"]
   }, {
     "title": "Audiophile",
-    "description": "Audiophile is an e-commerce website for audio equipment.\n This project is a FrontEnd Mentor challenge.\n The challenge involved creating different pages, manipulating data in a JSON file, adding articles to the shopping cart, validating a payment form, and managing responsive design.",
+    "description": "Audiophile is an e-commerce website for audio equipment.\n This project is a Frontend Mentor challenge.\n The challenge involved creating different pages, manipulating data in a JSON file, adding articles to the shopping cart, validating a payment form, and managing responsive design.",
     "link": "https://github.com/badmotherfunk/Audiophile-e-commerce-website",
     "live": "https://audiophile-gear.netlify.app",
     "tags": ["React", "Sass", "Data", "Responsive", "Green Code", "Figma"]
   }, {
+    "title": "Designo",
+    "description": "Designo is a multi-pages website for a design agency.\n This project is a challenge from the Frontend Mentor website.\n This challenge involved creating different pages and components with the support of models, manipulating data from a JSON file, and managing responsive design.",
+    "link": "https://github.com/badmotherfunk/Audiophile-e-commerce-website",
+    "live": "https://audiophile-gear.netlify.app",
+    "tags": ["Next.js", "CSS", "Data", "Responsive", "Green Code", "Figma"]
+  }, {
     "title": "Space Tourism",
-    "description": "Space tourism is a multi-page website offering trips into space to explore planets.\n This project is a challenge from the FrontEnd Mentor website.\n The challenge involved creating the various pages, manipulating data from a JSON file, and managing the responsive design.",
+    "description": "Space tourism is a multi-page website offering trips into space to explore planets.\n This project is a challenge from the Frontend Mentor website.\n The challenge involved creating the various pages, manipulating data from a JSON file, and managing the responsive design.",
     "link": "https://github.com/badmotherfunk/Space-tourism-website",
     "live": "https://travel-space-tourism.netlify.app",
     "tags": ["React", "CSS", "Data", "Responsive", "Green Code", "Figma"]
@@ -5556,44 +5562,48 @@ module.exports = {
     "tags": ["SEO", "Accessibility", "Lighthouse", "Schema.org", "Wave"]
   }]
 };
-},{}],"assets/images/projects/1.webp":[function(require,module,exports) {
-module.exports = "/1.d44dddc2.webp";
 },{}],"assets/images/projects/0.webp":[function(require,module,exports) {
 module.exports = "/0.3326da96.webp";
+},{}],"assets/images/projects/1.webp":[function(require,module,exports) {
+module.exports = "/1.d44dddc2.webp";
+},{}],"assets/images/projects/10.webp":[function(require,module,exports) {
+module.exports = "/10.81bec11c.webp";
 },{}],"assets/images/projects/2.webp":[function(require,module,exports) {
 module.exports = "/2.644195e0.webp";
 },{}],"assets/images/projects/3.webp":[function(require,module,exports) {
 module.exports = "/3.b4955976.webp";
 },{}],"assets/images/projects/4.webp":[function(require,module,exports) {
 module.exports = "/4.2b330267.webp";
-},{}],"assets/images/projects/6.webp":[function(require,module,exports) {
-module.exports = "/6.63f9d271.webp";
 },{}],"assets/images/projects/5.webp":[function(require,module,exports) {
 module.exports = "/5.79aaef61.webp";
+},{}],"assets/images/projects/6.webp":[function(require,module,exports) {
+module.exports = "/6.63f9d271.webp";
 },{}],"assets/images/projects/7.webp":[function(require,module,exports) {
 module.exports = "/7.dc9c40e2.webp";
 },{}],"assets/images/projects/8.webp":[function(require,module,exports) {
 module.exports = "/8.57a409d2.webp";
-},{}],"assets/images/projects/argentbank.webp":[function(require,module,exports) {
-module.exports = "/argentbank.fe256287.webp";
 },{}],"assets/images/projects/9.webp":[function(require,module,exports) {
 module.exports = "/9.8545f7ee.webp";
+},{}],"assets/images/projects/argentbank.webp":[function(require,module,exports) {
+module.exports = "/argentbank.fe256287.webp";
+},{}],"assets/images/projects/audiophile.webp":[function(require,module,exports) {
+module.exports = "/audiophile.ca5397ae.webp";
 },{}],"assets/images/projects/Booki.webp":[function(require,module,exports) {
 module.exports = "/Booki.d19f975d.webp";
+},{}],"assets/images/projects/designo.webp":[function(require,module,exports) {
+module.exports = "/designo.0666ffd8.webp";
 },{}],"assets/images/projects/kasa.webp":[function(require,module,exports) {
 module.exports = "/kasa.8a352e6c.webp";
 },{}],"assets/images/projects/menuMaker.webp":[function(require,module,exports) {
 module.exports = "/menuMaker.af2a0e5f.webp";
 },{}],"assets/images/projects/ninaCarducci.webp":[function(require,module,exports) {
 module.exports = "/ninaCarducci.2d1c2805.webp";
-},{}],"assets/images/projects/ohmyfood.webp":[function(require,module,exports) {
-module.exports = "/ohmyfood.1ac0ca22.webp";
 },{}],"assets/images/projects/sophie-bluel.webp":[function(require,module,exports) {
 module.exports = "/sophie-bluel.9c60d988.webp";
 },{}],"assets/images/projects/spaceTourism.webp":[function(require,module,exports) {
 module.exports = "/spaceTourism.f7140359.webp";
-},{}],"assets/images/projects/audiophile.webp":[function(require,module,exports) {
-module.exports = "/audiophile.ca5397ae.webp";
+},{}],"assets/images/projects/ohmyfood.webp":[function(require,module,exports) {
+module.exports = "/ohmyfood.1ac0ca22.webp";
 },{}],"assets/images/projects/Twitch.webp":[function(require,module,exports) {
 module.exports = "/Twitch.b6444835.webp";
 },{}],"assets/images/projects/*.webp":[function(require,module,exports) {
@@ -5608,18 +5618,20 @@ module.exports = {
   "7": require("./7.webp"),
   "8": require("./8.webp"),
   "9": require("./9.webp"),
+  "10": require("./10.webp"),
   "argentbank": require("./argentbank.webp"),
+  "audiophile": require("./audiophile.webp"),
   "Booki": require("./Booki.webp"),
+  "designo": require("./designo.webp"),
   "kasa": require("./kasa.webp"),
   "menuMaker": require("./menuMaker.webp"),
   "ninaCarducci": require("./ninaCarducci.webp"),
-  "ohmyfood": require("./ohmyfood.webp"),
   "sophie-bluel": require("./sophie-bluel.webp"),
   "spaceTourism": require("./spaceTourism.webp"),
-  "audiophile": require("./audiophile.webp"),
+  "ohmyfood": require("./ohmyfood.webp"),
   "Twitch": require("./Twitch.webp")
 };
-},{"./1.webp":"assets/images/projects/1.webp","./0.webp":"assets/images/projects/0.webp","./2.webp":"assets/images/projects/2.webp","./3.webp":"assets/images/projects/3.webp","./4.webp":"assets/images/projects/4.webp","./6.webp":"assets/images/projects/6.webp","./5.webp":"assets/images/projects/5.webp","./7.webp":"assets/images/projects/7.webp","./8.webp":"assets/images/projects/8.webp","./argentbank.webp":"assets/images/projects/argentbank.webp","./9.webp":"assets/images/projects/9.webp","./Booki.webp":"assets/images/projects/Booki.webp","./kasa.webp":"assets/images/projects/kasa.webp","./menuMaker.webp":"assets/images/projects/menuMaker.webp","./ninaCarducci.webp":"assets/images/projects/ninaCarducci.webp","./ohmyfood.webp":"assets/images/projects/ohmyfood.webp","./sophie-bluel.webp":"assets/images/projects/sophie-bluel.webp","./spaceTourism.webp":"assets/images/projects/spaceTourism.webp","./audiophile.webp":"assets/images/projects/audiophile.webp","./Twitch.webp":"assets/images/projects/Twitch.webp"}],"assets/js/app.js":[function(require,module,exports) {
+},{"./0.webp":"assets/images/projects/0.webp","./1.webp":"assets/images/projects/1.webp","./10.webp":"assets/images/projects/10.webp","./2.webp":"assets/images/projects/2.webp","./3.webp":"assets/images/projects/3.webp","./4.webp":"assets/images/projects/4.webp","./5.webp":"assets/images/projects/5.webp","./6.webp":"assets/images/projects/6.webp","./7.webp":"assets/images/projects/7.webp","./8.webp":"assets/images/projects/8.webp","./9.webp":"assets/images/projects/9.webp","./argentbank.webp":"assets/images/projects/argentbank.webp","./audiophile.webp":"assets/images/projects/audiophile.webp","./Booki.webp":"assets/images/projects/Booki.webp","./designo.webp":"assets/images/projects/designo.webp","./kasa.webp":"assets/images/projects/kasa.webp","./menuMaker.webp":"assets/images/projects/menuMaker.webp","./ninaCarducci.webp":"assets/images/projects/ninaCarducci.webp","./sophie-bluel.webp":"assets/images/projects/sophie-bluel.webp","./spaceTourism.webp":"assets/images/projects/spaceTourism.webp","./ohmyfood.webp":"assets/images/projects/ohmyfood.webp","./Twitch.webp":"assets/images/projects/Twitch.webp"}],"assets/js/app.js":[function(require,module,exports) {
 "use strict";
 
 var _gsap = _interopRequireDefault(require("gsap"));
@@ -6245,7 +6257,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "16785" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1289" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

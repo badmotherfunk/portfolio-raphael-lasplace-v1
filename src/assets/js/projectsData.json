@@ -16,7 +16,7 @@
     },
     {
         "title": "Audiophile",
-        "description": "Audiophile is an e-commerce website for audio equipment.\n This project is a FrontEnd Mentor challenge.\n The challenge involved creating different pages, manipulating data in a JSON file, adding articles to the shopping cart, validating a payment form, and managing responsive design.",        
+        "description": "Audiophile is an e-commerce website for audio equipment.\n This project is a Frontend Mentor challenge.\n The challenge involved creating different pages, manipulating data in a JSON file, adding articles to the shopping cart, validating a payment form, and managing responsive design.",        
         "link": "https://github.com/badmotherfunk/Audiophile-e-commerce-website",
         "live": "https://audiophile-gear.netlify.app",
         "tags": [
@@ -29,8 +29,22 @@
         ]
     },
     {
+        "title": "Designo",
+        "description": "Designo is a multi-pages website for a design agency.\n This project is a challenge from the Frontend Mentor website.\n This challenge involved creating different pages and components with the support of models, manipulating data from a JSON file, and managing responsive design.",        
+        "link": "https://github.com/badmotherfunk/Audiophile-e-commerce-website",
+        "live": "https://audiophile-gear.netlify.app",
+        "tags": [
+            "Next.js",
+            "CSS",
+            "Data",
+            "Responsive",
+            "Green Code",
+            "Figma"
+        ]
+    },
+    {
         "title": "Space Tourism",
-        "description": "Space tourism is a multi-page website offering trips into space to explore planets.\n This project is a challenge from the FrontEnd Mentor website.\n The challenge involved creating the various pages, manipulating data from a JSON file, and managing the responsive design.",        
+        "description": "Space tourism is a multi-page website offering trips into space to explore planets.\n This project is a challenge from the Frontend Mentor website.\n The challenge involved creating the various pages, manipulating data from a JSON file, and managing the responsive design.",        
         "link": "https://github.com/badmotherfunk/Space-tourism-website",
         "live": "https://travel-space-tourism.netlify.app",
         "tags": [
