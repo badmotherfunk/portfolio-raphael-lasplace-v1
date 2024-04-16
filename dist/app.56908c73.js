@@ -5511,8 +5511,8 @@ module.exports = {
   }, {
     "title": "Designo",
     "description": "Designo is a multi-pages website for a design agency.\n This project is a challenge from the Frontend Mentor website.\n This challenge involved creating different pages and components with the support of models, manipulating data from a JSON file, and managing responsive design.",
-    "link": "https://github.com/badmotherfunk/Audiophile-e-commerce-website",
-    "live": "https://audiophile-gear.netlify.app",
+    "link": "https://github.com/badmotherfunk/designo",
+    "live": "https://designo-web-design.netlify.app/",
     "tags": ["Next.js", "CSS", "Data", "Responsive", "Green Code", "Figma"]
   }, {
     "title": "Space Tourism",
